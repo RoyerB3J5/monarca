@@ -20,11 +20,11 @@ export default {
     services: [
       {
         label: 'Mobile Dog Grooming',
-        href: '/mobile-dog-grooming',
+        href: 'mobile-dog-grooming',
       },
       {
         label: 'Mobile Cat Grooming',
-        href: '/mobile-cat-grooming',
+        href: 'mobile-cat-grooming',
       },
     ],
     buttons: [

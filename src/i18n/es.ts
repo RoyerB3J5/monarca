@@ -20,11 +20,11 @@ export default {
     services: [
       {
         label: 'Peluquería móvil para perros',
-        href: '/mobile-dog-grooming',
+        href: 'mobile-dog-grooming',
       },
       {
         label: 'Peluquería móvil para gatos',
-        href: '/mobile-cat-grooming',
+        href: 'mobile-cat-grooming',
       },
     ],
     buttons: [
