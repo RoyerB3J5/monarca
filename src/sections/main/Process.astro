@@ -1,0 +1,124 @@
+---
+import { Icon } from 'astro-icon/components';
+import Button from '../../components/Button.astro';
+type Translations = typeof import('../../i18n/es').default;
+type ProcessContent = Translations['main']['process'];
+interface Props {
+  content: ProcessContent;
+}
+const { content } = Astro.props as Props;
+---
+
+<section
+  class="bg-primary-dark w-full flex justify-center items-center relative h-auto"
+>
+  
+  <img src="/images/main/bg-pets.webp" alt="Fondo de Monarcas" width="1599" height="914" class="absolute w-full h-full inset-0 top-0 z-0 object-cover object-top" decoding="async" loading="lazy" />
+  <div
+    class="h-full w-full max-w-screen md:max-w-7xl flex flex-col justify-center items-center px-5 xl:px-0 gap-[59px] pt-[70px] pb-[220px] relative" data-aos="fade-down" data-aos-offset="300"
+  >
+    <div class="flex flex-col justify-center items-center gap-3 text-white" >
+      <h2 class="text-[36px] leading-[130%] font-title">{content.title}</h2>
+      <p class="text-[16px] leading-[130%] text-center font-normal">
+        {content.description}
+      </p>
+    </div>
+    <div class="w-full flex justify-center items-center gap-6">
+      {
+        content.items.map((item, index) => {
+          return (
+            <div
+              class={`${index === 1 ? 'w-[40%]' : 'w-[30%]'} min-h-[407px] flex flex-col justify-start items-center rounded-[20px] bg-white overflow-hidden relative`}
+            >
+              {/* */}
+              <div
+                class={`w-full pt-[34px] px-[22px] flex flex-col justify-center items-center gap-5 text-white z-20  relative ${item.back}`}
+              >
+                <h3 class="text-[36px] leading-[120%] font-title text-center">
+                  {item.title}
+                </h3>
+                <p class="text-center text-[16px] leading-[120%] font-normal">
+                  {item.description}
+                </p>
+              </div>
+              <Icon name={item.icon} class="w-full h-auto z-20" />
+              <img
+                src={`/images/main/${item.image}.webp`}
+                alt={item.title}
+                width="600"
+                height="400"
+                class={`h-auto absolute ${index === 1 ? 'z-30 bottom-5 w-[414px] left-1/2 -translate-x-1/2' : index === 2 ? 'z-0 scale-150 -bottom-[100px] w-full left-1/2 -translate-x-1/2' : 'z-0 -bottom-8 scale-150 w-full left-1/2 -translate-x-1/2'}`}
+              />
+            </div>
+          );
+        })
+      }
+    </div>
+    <div class="w-full h-auto absolute bottom-0 translate-y-1/2 left-0">
+      <div
+        class="w-full flex justify-start items-center banner-back rounded-[15px] relative overflow-visible h-[270px] gap-10"
+      >
+        <img
+          src="/images/main/back-banner.webp"
+          alt="Banner de fondo"
+          width="900"
+          height="506"
+          class="w-[350px] h-full rounded-l-[15px] rounded-tr-[200px]"
+        />
+        <div
+          class="h-full w-auto py-6 flex flex-col justify-center items-start gap-5 max-w-[555px]"
+        >
+          <div class="flex justify-start items-center gap-5">
+            <Icon name={'fingerprint'} class="w-[35px] h-auto" />
+            <h3 class="text-[32px] leading-[120%] font-title text-white">
+              {content.banner.title}
+            </h3>
+          </div>
+          <p class="text-[16px] leading-[120%] text-white">
+            {content.banner.description}
+          </p>
+          <div class="flex justify-start items-center gap-5">
+            {
+              content.banner.buttons.map((button) => (
+                <Button
+                  text={button.label}
+                  href={button.href}
+                  extraBtnClass="bg-primary"
+                  iconName="arrow"
+                  iconClass="text-primary"
+                />
+              ))
+            }
+          </div>
+        </div>
+        <img
+          src="/images/main/pet-decoration.webp"
+          alt="Pet decoration"
+          width="894"
+          height="894"
+          class="absolute bottom-0 right-0 w-[290px] h-auto rounded-r-[15px] rounded-tl-[70px] z-10"
+          loading="lazy"
+          decoding="async"
+        />
+        <img
+          src="/images/main/pets.webp"
+          alt="Decoration de Animals"
+          width="527"
+          height="600"
+          class="absolute bottom-0 w-[257px] h-auto left-6"
+          decoding="async"
+          loading="lazy"
+        />
+        <img
+          src="/images/main/mask-banner.webp"
+          alt="Fondo"
+          decoding="async"
+          loading="lazy"
+          width="866"
+          height="271"
+          class="absolute top-0 left-1/2 -translate-x-1/2"
+        />
+      </div>
+    </div>
+  </div>
+</section>

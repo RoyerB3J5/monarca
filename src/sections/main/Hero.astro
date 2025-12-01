@@ -1,0 +1,72 @@
+---
+import { Icon } from 'astro-icon/components';
+import Button from '../../components/Button.astro';
+type Translations = typeof import('../../i18n/es').default;
+type HeroContent = Translations['main']['hero'];
+interface Props {
+  content: HeroContent;
+}
+const { content } = Astro.props as Props;
+---
+
+<section
+  class="w-full min-h-[88vh] flex items-center justify-center overflow-hidden relative"
+>
+    <Icon
+    name={'ondulate'}
+    class={'absolute -bottom-px w-full h-auto z-10 left-0 rotate-180'}
+    style="color: #FFFFFF"
+  />
+  <img
+    data-aos="fade-left"
+    src="/images/main/image-1.webp"
+    alt="Imagen de Perro"
+    width="1200"
+    height="800"
+    class="absolute right-[2%] top-0 h-full w-auto object-contain"
+  />
+  <Icon
+    name={'back-main'}
+    class={'w-[55vw] h-auto absolute left-0 top-0 -z-10'}
+  />
+  <img
+    src={`/images/main/back.webp`}
+    alt="Imagen de Fondo de Monarcas - Mobile Pet Grooming"
+    width="1920"
+    height="1279"
+    class="absolute inset-0 w-full h-full object-cover -z-20"
+    loading="eager"
+    decoding="async"
+  />
+  <div
+    class="h-full w-full max-w-screen md:max-w-7xl flex justify-between items-center px-5 xl:px-0"
+    data-aos="fade-right"
+  >
+    <div class="flex flex-col justify-center items-start gap-[34px]">
+      <div class="flex flex-col justify-center items-start gap-3 text-white">
+        <h2
+          class="text-[20px] font-normal uppercase leading-[120%] tracking-[4px]"
+        >
+          {content.description}
+        </h2>
+        <h1
+          set:html={content.title}
+          class="font-title text-[60px] leading-[110%]"
+        />
+      </div>
+      <div class="flex justify-center items-center gap-3">
+        {
+          content.buttons.map((btn) => (
+            <Button
+              text={btn.label}
+              href={btn.href}
+              extraBtnClass={`bg-${btn.color}`}
+              iconName={'arrow'}
+              iconClass={`text-${btn.color}`}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

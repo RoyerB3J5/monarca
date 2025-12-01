@@ -1,0 +1,18 @@
+---
+import CarouselReview from '../../components/CarouselReview.astro';
+
+type Translations = typeof import('../../i18n/es').default;
+type AboutContent = Translations['main']['about'];
+interface Props {
+  content: AboutContent;
+}
+const { content } = Astro.props as Props;
+---
+<section class="w-full h-auto carousel-back flex flex-col justify-center items-end pt-10 3xl:pt-14 pb-5 3xl:pb-9 gap-[100px] relative z-10">
+  <img src="/images/main/parents-pet.webp" alt="Imagen de Parents Pets" width="591" height="727" loading="lazy" decoding="async" class="img-carousel absolute w-[35%] 3xl:w-auto left-0 bottom-0 ml-[2%] 3xl:ml-[5%]" data-aos="flip-up" />
+  <div class="flex justify-center items-center pr-[8%] gap-20 text-white">
+    <h2 class="text-[38px] leading-10 font-title" set:html={content.title}></h2>
+    <p class="text-[18px] leading-[23px] font-normal" set:html={content.description}></p>
+  </div>
+  <CarouselReview />
+</section>
