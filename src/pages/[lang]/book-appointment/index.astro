@@ -13,8 +13,29 @@ export const defaultRedirect = '/en';
 const lang = Astro.params.lang as Language;
 const translations = { es, en };
 const t = translations[lang];
+const content = t.book;
 ---
 
 <Layout lang={lang} t={t}>
-  <section class="h-[80vh]"></section>
+  <section
+    class="h-full w-full max-w-screen md:max-w-7xl flex flex-col md:flex-row justify-center items-start px-5 xl:px-0 gap-[50px] lg:gap-[73px] pt-[130px] md:pt-[173px] pb-[30px] md:pb-[50px]"
+  >
+    <div class="flex flex-col justify-center items-start gap-[69px]">
+      <div class="flex flex-col justify-center items-start gap-3">
+        <p class="text-[20px] tracking-[4px] leading-[120%] uppercase text-paragraph font-normal">WIDGET</p>
+        <h1 class="text-[56px] leading-[110%] font-normal text-primary-dark font-title">{content.title}</h1>
+        <p class="text-[20px]  leading-[120%] uppercase text-paragraph font-normal">{content.description}</p>
+      </div>
+      <img
+        src="/images/book/dog.webp"
+        alt="Dog Monarca"
+        width="340"
+        height="370"
+        class="w-[370px] h-auto"
+      />
+    </div>
+    <div class="bg-[#FFF0C4] flex flex-col justify-center items-center gap-[50px] p-8 md:p-[60px] rounded-3xl max-w-none md:max-w-[47%]">
+      <p set:html={content.formText} class="text-[20px] text-center font-normal"></p>
+    </div>
+  </section>
 </Layout>

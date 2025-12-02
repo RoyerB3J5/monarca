@@ -7,6 +7,12 @@ interface Props {
   content: HeroContent;
 }
 const { content } = Astro.props as Props;
+
+// Obtener la ruta actual y normalizar el path sin prefijo de idioma
+const currentPath = Astro.url.pathname;
+// Detectar el idioma actual ('en' o 'es')
+const match = currentPath.match(/^\/(en|es)/);
+const lang = match ? match[1] : 'en';
 ---
 
 <section
@@ -59,7 +65,7 @@ const { content } = Astro.props as Props;
           content.buttons.map((btn) => (
             <Button
               text={btn.label}
-              href={btn.href}
+              href={`/${lang}/${btn.href}`}
               extraBtnClass={`bg-${btn.color}`}
               iconName={'arrow'}
               iconClass={`text-${btn.color}`}

@@ -1,0 +1,65 @@
+---
+import Button from '../../components/Button.astro';
+
+type Translations = typeof import('../../i18n/es').default;
+type GroomingContent = Translations['services']['gromming'];
+interface Props {
+  content: GroomingContent;
+}
+const { content } = Astro.props as Props;
+// Obtener la ruta actual y normalizar el path sin prefijo de idioma
+const currentPath = Astro.url.pathname;
+// Detectar el idioma actual ('en' o 'es')
+const match = currentPath.match(/^\/(en|es)/);
+const lang = match ? match[1] : 'en';
+---
+
+<section
+  class="h-full w-full max-w-screen md:max-w-7xl flex flex-col justify-center items-center px-5 xl:px-0 gap-[130px] md:gap-[50px] lg:gap-[105px] pt-[130px] md:pt-[173px]"
+>
+  <div class="flex flex-col justify-center items-center gap-[18px]">
+    <h2
+      class="font-title text-[60px] leading-[120%] text-center text-primary-dark"
+    >
+      {content.title}
+    </h2>
+    <p
+      class="text-[16px] text-center text-paragraph leading-[120%]"
+      set:html={content.description}
+    />
+  </div>
+  <div
+    class="w-full flex flex-col md:flex-row justify-center items-center gap-[120px] md:gap-[58px]"
+  >
+    {
+      content.items.map((item) => (
+        <div class="w-full md:w-1/2 rounded-4xl bg-primary px-5 md:pr-[23px] md:pl-0 pt-[100px] pb-5 md:py-14 flex justify-center md:justify-end items-center relative ">
+          <img
+            src={`/images/main/${item.image}.webp`}
+            alt={item.title}
+            width={item.with}
+            height={item.height}
+            class="w-[200px] md:w-[315px] h-auto absolute left-1/2 md:left-3 top-0 md:top-auto md:bottom-10 -translate-x-1/2 md:translate-x-0 -translate-y-1/2 md:translate-y-0"
+          />
+          <div class="flex flex-col justify-center items-start gap-[18px] max-w-none md:max-w-[246px]">
+            <p class="text-[42px] leading-[120%] font-title text-white">
+              {item.title}
+            </p>
+            <p class="text-[14px] leading-[120%] uppercase tracking-[2px] text-white">
+              {item.description}
+            </p>
+            <Button
+              text={item.button.label}
+              href={`/${lang}/services${item.button.href}`}
+              extraBtnClass="bg-white"
+              iconName="arrow"
+              textClass="text-primary"
+              iconClass="text-white"
+              iconCircleClass="bg-primary"
+            />
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

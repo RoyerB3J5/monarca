@@ -30,7 +30,7 @@ export default {
     buttons: [
       {
         label: 'Reservar cita',
-        href: '/book-appointment',
+        href: '#',
         icon: 'arrow',
         background: 'bg-primary',
       },
@@ -44,17 +44,17 @@ export default {
   },
   main: {
     hero: {
-      title: 'with Monarca <br/> Grooming. We Pamper <br/> Your Pets at Home',
-      description: 'Mobile Pet Grooming in Florida',
+      title: 'Con Monarca <br/> Grooming. Mimamos <br/> a tus mascotas en casa',
+      description: 'Peluquería móvil para mascotas en Florida',
       buttons: [
         {
-          label: 'Get now',
+          label: 'Obtener ahora',
           href: '#',
           color: 'secondary',
         },
         {
-          label: 'Book now',
-          href: '#',
+          label: 'Reservar ahora',
+          href: 'book-appointment',
           color: 'primary',
         },
       ],
@@ -64,38 +64,38 @@ export default {
         {
           icon: 'pets',
           numer: '12,540+',
-          title: 'Happy Pets',
+          title: 'Mascotas felices',
           description:
-            'Mobile dog and cat grooming that keeps pets calm, clean and loved.',
+            'Peluquería móvil para perros y gatos que mantiene a las mascotas calmadas, limpias y queridas.',
         },
         {
           icon: 'client',
           numer: '100%',
-          title: 'Client Satisfaction',
+          title: 'Satisfacción del cliente',
           description:
-            'Trusted mobile grooming focused on care, quality and happy pets.',
+            'Peluquería móvil de confianza enfocada en el cuidado, la calidad y la satisfacción.',
         },
         {
           icon: 'pets-2',
           numer: '20+ Years',
-          title: 'Expert Groomers',
+          title: 'Peluqueros expertos',
           description:
-            'A family legacy in gentle grooming with premium results.',
+            'Una tradición familiar en peluquería cuidadosa con resultados premium.',
         },
       ],
       gromming: {
-        title: 'Discover Our Mobile Grooming Services',
+        title: 'Descubre nuestros servicios de peluquería móvil',
         description:
-          'Monarca Grooming offers gentle, stress free mobile grooming for dogs and cats in Florida. With more than twenty years of family experience, we provide calm handling, premium care and consistent results right at your doorstep.',
+          'Monarca Grooming ofrece peluquería móvil suave y sin estrés para perros y gatos en Florida. Con más de veinte años de experiencia familiar, ofrecemos un manejo tranquilo, cuidado premium y resultados consistentes en la puerta de tu casa.',
         items: [
           {
             with: '309',
             height: '345',
             image: 'dog-grooming',
-            title: 'Mobile Dog Grooming',
-            description: 'Professional dog grooming at home',
+            title: 'Peluquería móvil para perros',
+            description: 'Peluquería profesional a domicilio',
             button: {
-              label: 'View Service',
+              label: 'Ver servicio',
               href: '/mobile-dog-grooming',
             },
           },
@@ -103,117 +103,382 @@ export default {
             with: '315',
             height: '311',
             image: 'cat-grooming',
-            title: 'Mobile Cat Grooming',
-            description: 'Calm and gentle cat grooming at your home.',
+            title: 'Peluquería móvil para gatos',
+            description:
+              'Peluquería tranquila y delicada para gatos en tu hogar',
             button: {
-              label: 'View Service',
+              label: 'Ver servicio',
               href: '/mobile-cat-grooming',
             },
           },
         ],
       },
       choose: {
-        title: 'Why Choose Monarca Grooming',
+        title: 'Por qué elegir Monarca Grooming',
         description:
-          'At Monarca Grooming, we treat every pet as family because they truly matter. From the moment our grooming van arrives at your home, your pet becomes our priority. Our mission is to create calm, clean and happy pets while giving every pet parent confidence and peace of mind.',
+          'En Monarca Grooming tratamos a cada mascota como familia. Desde que nuestra unidad móvil llega a tu hogar, tu mascota es nuestra prioridad. Nuestra misión es ofrecer mascotas calmadas, limpias y felices, dando tranquilidad y confianza a los dueños.',
         items: [
           {
             icon: 'choose-1',
-            title: 'Experienced Groomers',
+            title: 'Peluqueros experimentados',
             description:
-              'Our team brings more than twenty years of combined experience in professional grooming. Every service is delivered with patience, empathy and respect for your pet’s individual needs. We believe grooming is not only about appearance but also comfort, trust and genuine connection.',
+              'Nuestro equipo aporta más de veinte años de experiencia combinada en peluquería profesional. Cada servicio se realiza con paciencia, empatía y respeto por las necesidades individuales de tu mascota.',
           },
           {
             icon: 'choose-2',
-            title: 'Fully Mobile Service That Comes to you',
+            title: 'Servicio totalmente móvil que viene a ti',
             description:
-              'No driving, no stress and no waiting rooms. Our fully equipped grooming vans provide a clean, safe and soothing environment right outside your home.  Your pet receives high quality care in the most comfortable place they know.',
+              'Sin desplazamientos, sin estrés y sin salas de espera. Nuestras unidades móviles están equipadas para ofrecer un entorno limpio, seguro y tranquilo justo fuera de tu casa.',
           },
         ],
       },
     },
     process: {
-      title: 'A Simple and Caring Process',
+      title: 'Un proceso sencillo y cuidadoso',
       description:
-        'In just 3 easy steps, your pet enjoys a calm and gentle grooming experience.',
+        'En solo 3 pasos sencillos, tu mascota disfruta de una experiencia de peluquería calmada, gentil y sin estrés.',
       items: [
         {
           icon: 'process-1',
           back: 'bg-primary',
-          title: '1. Easy Booking',
+          title: '1. Reserva fácil',
           description:
-            'We schedule your appointment through our system and confirm all the details to ensure a smooth and stress free experience for you and your pet.',
+            'Agendamos tu cita a través de nuestro sistema y confirmamos todos los detalles para garantizar una experiencia fluida y sin estrés para ti y tu mascota.',
           image: 'bg-process-1',
         },
         {
           icon: 'process-2',
           back: 'bg-secondary',
-          title: '2. We Come to You',
+          title: '2. Nosotros vamos a ti',
           description:
-            'Our fully equipped mobile grooming van arrives at your home with everything needed to groom your pet safely, calmly and comfortably.',
+            'Nuestra unidad móvil totalmente equipada llega a tu hogar con todo lo necesario para arreglar a tu mascota de forma segura, tranquila y cómoda.',
           image: 'bg-process-2',
         },
         {
           icon: 'process-3',
           back: 'bg-primary',
-          title: '3. Professional and Loving Grooming',
+          title: '3. Peluquería profesional y con cariño',
           description:
-            'Your pet receives patient, gentle and high quality grooming guided by more than twenty years of family experience and genuine love for animals.',
+            'Tu mascota recibe un cuidado paciente, profesional y de alta calidad, guiado por más de veinte años de experiencia familiar y un genuino amor por los animales.',
           image: 'bg-process-3',
         },
       ],
       banner: {
-        title: 'Give Your Pet the Comfort and Care They Deserve',
+        title: 'Brinda confort y cuidado a tu mascota',
         description:
-          'Schedule your mobile grooming appointment with Monarca Grooming and enjoy gentle, stress free grooming at home. Our team brings experience, patience and calm handling to every dog and cat we care for in Florida.',
+          'Programa tu cita de peluquería móvil con Monarca Grooming y disfruta de una experiencia suave y sin estrés en casa. Nuestro equipo aporta experiencia, paciencia y un manejo tranquilo para cada perro y gato que atendemos en Florida.',
         buttons: [
           {
-            label: 'Call Now!',
+            label: '¡Llama ahora!',
             href: '#',
           },
           {
-            label: 'Book Now!',
+            label: '¡Reserva ahora!',
             href: '#',
           },
         ],
       },
     },
     results: {
-      title: 'Happy Pets. Beautiful Results.',
+      title: 'Mascotas felices. Resultados hermosos.',
       description:
-        'See our latest transformations, happy pets and real moments from our grooming days. Every photo is a reminder of our mission to bring calm, comfort and beautiful results to every <br/> dog and cat we care for in Florida. Updated often with real clients, real smiles and grooming done with heart.',
+        'Mira nuestras últimas transformaciones, mascotas felices y momentos reales de nuestras jornadas de peluquería. Cada foto recuerda nuestra misión de ofrecer calma, confort y resultados hermosos para cada perro y gato que atendemos en Florida.',
     },
     about: {
-      title: 'What Pet Parents Say <br/> About Monarca Grooming',
+      title: 'Lo que los dueños dicen <br/> sobre Monarca Grooming',
       description:
-        'Backed by real five star reviews from families who trust <br/> us with their pets, Monarca Grooming is known for <br/> gentle care, clean results and a calm grooming <br/> experience right at home.',
+        'Respaldados por reseñas reales de cinco estrellas de familias que confían en nosotros, Monarca Grooming es conocido por un cuidado amable, resultados limpios y una experiencia de peluquería calmada en casa.',
+    },
+  },
+  book: {
+    title: 'Reserva tu cita de peluquería móvil para mascotas en segundos',
+    description: 'Perfecto, pero prefiero llamar',
+    formText:
+      '¡Gracias por elegirnos! Si la disponibilidad en línea no se ajusta a tus necesidades, te invitamos a contactarnos directamente. Por favor llama o envía un SMS al <a href="tel:+19546820083">(954) 682-0083</a> o al <a href="tel:+15612144684">(561) 214-4684</a>. Con frecuencia podemos ofrecer más opciones de las que aparecen en el sistema. Queremos asegurarnos de brindarte el mejor servicio posible.',
+  },
+  services: {
+    gromming: {
+      title: 'Descubre nuestros servicios de peluquería móvil',
+      description:
+        'Monarca Grooming ofrece peluquería móvil suave y sin estrés para perros y gatos en Florida. Con más de veinte años de experiencia familiar, ofrecemos un manejo tranquilo, cuidado premium y resultados consistentes en la puerta de tu casa.',
+      items: [
+        {
+          with: '309',
+          height: '345',
+          image: 'dog-grooming',
+          title: 'Peluquería móvil para perros',
+          description: 'Peluquería profesional a domicilio',
+          button: {
+            label: 'Ver servicio',
+            href: '/mobile-dog-grooming',
+          },
+        },
+        {
+          with: '315',
+          height: '311',
+          image: 'cat-grooming',
+          title: 'Peluquería móvil para gatos',
+          description: 'Peluquería tranquila y delicada para gatos en tu hogar',
+          button: {
+            label: 'Ver servicio',
+            href: '/mobile-cat-grooming',
+          },
+        },
+      ],
+    },
+    information: {
+      title: 'Brinda confort y cuidado a tu mascota',
+      description:
+        'Programa tu cita de peluquería móvil con Monarca Grooming y disfruta de una experiencia suave y sin estrés en casa. Nuestro equipo aporta experiencia, paciencia y un manejo tranquilo para cada perro y gato que atendemos en Florida.',
+      buttons: [
+        {
+          label: 'Obtener ahora',
+          href: '#',
+          color: 'secondary',
+        },
+        {
+          label: 'Reservar ahora',
+          href: 'book-appointment',
+          color: 'primary',
+        },
+      ],
+    },
+  },
+  'mobile-dog-grooming': {
+    hero: {
+      subtitle: 'Cuidado tranquilo y personalizado en tu hogar',
+      title: 'Peluquería móvil para perros',
+      description:
+        'Tu perro disfruta de una sesión de peluquería tranquila justo en la puerta de tu casa. Nuestro equipo, formado en familia, aporta más de veinte años de experiencia para ofrecer un manejo cariñoso, resultados limpios y un estilo que se adapta al pelaje y la personalidad de tu perro. Los servicios incluyen baño, secado, cepillado, corte completo o recorte, corte de uñas, limpieza de oídos y cuidado sanitario y de almohadillas.',
+      items: [
+        'Atención individual para una visita relajada',
+        'Mayor comodidad y confianza después de cada sesión',
+        'Estilo fiel a la raza y acabado cuidado',
+        'Piel limpia y pelaje saludable y brillante',
+      ],
+      button: 'Reservar ahora',
+    },
+    included: {
+      title: 'Qué incluye nuestro servicio de peluquería móvil para perros',
+      items: [
+        {
+          title: 'Baño tibio con champú suave',
+          description:
+            'Un baño reconfortante con champú suave y seguro para mascotas que limpia, refresca y prepara a tu perro para la sesión completa de peluquería.',
+          icon: 'warm',
+        },
+        {
+          title: 'Secado y cepillado completo',
+          description:
+            'Secado profesional y cepillado completo para eliminar nudos, dejar el pelaje suelto y facilitar el corte y el acabado.',
+          icon: 'blow',
+        },
+        {
+          title: 'Corte y estilismo (por raza o personalizado)',
+          description:
+            'Cortes y peinados adaptados a la raza o al estilo deseado por el propietario, con acabados cuidados.',
+          icon: 'haircut',
+        },
+        {
+          title: 'Corte de uñas y cuidado de almohadillas',
+          description:
+            'Servicio de limado o corte de uñas y revisión y cuidado de las almohadillas para mayor confort.',
+          icon: 'nail',
+        },
+        {
+          title: 'Limpieza de oídos',
+          description:
+            'Limpieza suave de oídos para mantener la higiene y detectar posibles problemas.',
+          icon: 'ear',
+        },
+        {
+          title: 'Y más servicios',
+          description:
+            'Ofrecemos servicios adicionales según las necesidades del animal y las solicitudes del propietario.',
+          icon: 'more',
+        },
+      ],
+      image: 'dog-services',
+    },
+    process: {
+      title: 'Un proceso sencillo y cuidadoso para tu perro',
+      description:
+        'En solo 3 pasos sencillos, tu perro disfruta de una experiencia de peluquería calmada, gentil y sin estrés en casa.',
+      items: [
+        {
+          icon: 'process-1',
+          back: 'bg-primary',
+          title: '1. Reserva fácil',
+          description:
+            'Agendamos tu cita a través de nuestro sistema y confirmamos todos los detalles para garantizar una experiencia fluida y sin estrés para ti y tu mascota.',
+          image: 'bg-process-1',
+        },
+        {
+          icon: 'process-2',
+          back: 'bg-secondary',
+          title: '2. Nosotros vamos a ti',
+          description:
+            'Nuestra unidad móvil totalmente equipada llega a tu hogar con todo lo necesario para arreglar a tu mascota de forma segura, tranquila y cómoda.',
+          image: 'bg-process-2',
+        },
+        {
+          icon: 'process-3',
+          back: 'bg-primary',
+          title: '3. Peluquería profesional y con cariño',
+          description:
+            'Tu mascota recibe un cuidado paciente, profesional y de alta calidad, guiado por más de veinte años de experiencia familiar y un genuino amor por los animales.',
+          image: 'bg-process-3',
+        },
+      ],
+    },
+    information: {
+      title: 'Brinda confort y cuidado a tu mascota',
+      description:
+        'Programa tu cita de peluquería móvil con Monarca Grooming y disfruta de una experiencia suave y sin estrés en casa. Nuestro equipo aporta experiencia, paciencia y un manejo tranquilo para cada perro y gato que atendemos en Florida.',
+      buttons: [
+        {
+          label: 'Obtener ahora',
+          href: '#',
+          color: 'secondary',
+        },
+        {
+          label: 'Reservar ahora',
+          href: 'book-appointment',
+          color: 'primary',
+        },
+      ],
+    },
+  },
+  'mobile-cat-grooming': {
+    hero: {
+      subtitle: 'Peluquería delicada diseñada para la comodidad de tu gato',
+      title: 'Peluquería móvil para gatos',
+      description:
+        'Nuestro servicio móvil de peluquería para gatos ofrece un manejo calmado y una rutina tranquila directamente en tu hogar. Utilizamos técnicas suaves, equipos silenciosos y atención paciente para que tu gato se mantenga limpio, cómodo y perfectamente arreglado. Tanto si tu gato tiene pelo largo como corto, hacemos la peluquería más fácil, segura y menos estresante para ambos.',
+      items: [
+        'Reduce la muda y las bolas de pelo',
+        'Favorece la salud de la piel y el pelaje',
+        'Previene los enredos',
+        'Crea una experiencia de peluquería más calmada',
+      ],
+      button: 'Reservar ahora',
+    },
+    included: {
+      title: 'Qué incluye nuestro servicio de peluquería móvil para gatos',
+      items: [
+        {
+          title: 'Baño tibio con champú suave',
+          description:
+            'Un baño reconfortante con champú suave y seguro para mascotas que limpia, refresca y prepara a tu gato para la sesión completa de peluquería.',
+          icon: 'warm',
+        },
+        {
+          title: 'Secado y cepillado completo',
+          description:
+            'Secado cuidadoso y cepillado para eliminar pelo suelto y evitar enredos.',
+          icon: 'blow',
+        },
+        {
+          title: 'Corte y estilismo (por raza o personalizado)',
+          description:
+            'Cortes y acabados adaptados a las necesidades del gato y las preferencias del propietario.',
+          icon: 'haircut',
+        },
+        {
+          title: 'Corte de uñas y cuidado de almohadillas',
+          description:
+            'Servicio de corte de uñas y revisión de las almohadillas para mayor confort.',
+          icon: 'nail',
+        },
+        {
+          title: 'Limpieza de oídos',
+          description:
+            'Limpieza suave de oídos para mantener la higiene y prevenir molestias.',
+          icon: 'ear',
+        },
+        {
+          title: 'Y más servicios',
+          description:
+            'Servicios adicionales disponibles según las necesidades específicas de tu mascota.',
+          icon: 'more',
+        },
+      ],
+      image: 'cat-services',
+    },
+    process: {
+      title: 'Un proceso sencillo y cuidadoso para tu gato',
+      description:
+        'En solo 3 pasos sencillos, tu gato disfruta de una experiencia de peluquería calmada, gentil y sin estrés en casa.',
+      items: [
+        {
+          icon: 'process-1',
+          back: 'bg-primary',
+          title: '1. Reserva fácil',
+          description:
+            'Agendamos tu cita a través de nuestro sistema y confirmamos todos los detalles para garantizar una experiencia fluida y sin estrés para ti y tu mascota.',
+          image: 'bg-process-1',
+        },
+        {
+          icon: 'process-2',
+          back: 'bg-secondary',
+          title: '2. Nosotros vamos a ti',
+          description:
+            'Nuestra unidad móvil totalmente equipada llega a tu hogar con todo lo necesario para arreglar a tu mascota de forma segura, tranquila y cómoda.',
+          image: 'bg-process-2',
+        },
+        {
+          icon: 'process-3',
+          back: 'bg-primary',
+          title: '3. Peluquería profesional y con cariño',
+          description:
+            'Tu mascota recibe un cuidado paciente, profesional y de alta calidad, guiado por más de veinte años de experiencia familiar y un genuino amor por los animales.',
+          image: 'bg-process-3',
+        },
+      ],
+    },
+    information: {
+      title: 'Brinda confort y cuidado a tu mascota',
+      description:
+        'Programa tu cita de peluquería móvil con Monarca Grooming y disfruta de una experiencia suave y sin estrés en casa. Nuestro equipo aporta experiencia, paciencia y un manejo tranquilo para cada perro y gato que atendemos en Florida.',
+      buttons: [
+        {
+          label: 'Obtener ahora',
+          href: '#',
+          color: 'secondary',
+        },
+        {
+          label: 'Reservar ahora',
+          href: 'book-appointment',
+          color: 'primary',
+        },
+      ],
     },
   },
   footer: {
-    description: '25 years taking care of your best friends',
+    description: '25 años cuidando a tus mejores amigos',
     service: {
-      title: ' Services',
+      title: 'Servicios',
       items: [
         {
-          title: 'Mobile Dog Grooming',
+          title: 'Peluquería móvil para perros',
           href: '/mobile-dog-grooming',
         },
         {
-          title: 'Mobile Dog Grooming',
-          href: '/mobile-dog-grooming',
+          title: 'Peluquería móvil para gatos',
+          href: '/mobile-cat-grooming',
         },
       ],
     },
     schedules: {
-      title: 'Business Hours',
-      items: ['Monday - Sunday', '8:00 AM - 6:00 PM', 'Cookies Polityes'],
+      title: 'Horario',
+      items: ['Lunes - Domingo', '8:00 AM - 6:00 PM', 'Política de cookies'],
     },
     contact: {
-      title: 'Contact Us',
+      title: 'Contáctanos',
       items: [
         {
           icon: 'map-1',
-          text: 'We serve all of Florida.',
+          text: 'Atendemos toda la Florida.',
           href: '#',
         },
         {

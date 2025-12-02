@@ -30,7 +30,7 @@ export default {
     buttons: [
       {
         label: 'Book a appointment',
-        href: '/book-appointment',
+        href: '#',
         icon: 'arrow',
         background: 'bg-primary',
       },
@@ -54,7 +54,7 @@ export default {
         },
         {
           label: 'Book now',
-          href: '#',
+          href: 'book-appointment',
           color: 'primary',
         },
       ],
@@ -173,7 +173,7 @@ export default {
           },
           {
             label: 'Book Now!',
-            href: '#',
+            href: '/en/book-appointment',
           },
         ],
       },
@@ -189,10 +189,274 @@ export default {
         'Backed by real five star reviews from families who trust <br/> us with their pets, Monarca Grooming is known for <br/> gentle care, clean results and a calm grooming <br/> experience right at home.',
     },
   },
+  book: {
+    title: 'Book Your Mobile Pet Grooming Appointment in Seconds',
+    description: 'Awesome, but I want to call instead',
+    formText:
+      'Thank you for choosing us!  If the online availability does not fit your needs, we invite you to contact us directly.  Please call or text us at <a href="tel:+19546820083">(954) 682-0083</a> or <a href="tel:+15612144684">(561) 214-4684</a>.  We are frequently able to offer more options than what is shown in the system. We want to ensure we provide you with the best service possible.',
+  },
+  services: {
+    gromming: {
+      title: 'Discover Our Mobile Grooming Services',
+      description:
+        'Monarca Grooming offers gentle, stress free mobile grooming for dogs and cats in Florida. With more than twenty years of family experience, we provide calm <br/> handling, premium care and consistent results right at your doorstep.',
+      items: [
+        {
+          with: '309',
+          height: '345',
+          image: 'dog-grooming',
+          title: 'Mobile Dog Grooming',
+          description: 'Professional dog grooming at home',
+          button: {
+            label: 'View Service',
+            href: '/mobile-dog-grooming',
+          },
+        },
+        {
+          with: '315',
+          height: '311',
+          image: 'cat-grooming',
+          title: 'Mobile Cat Grooming',
+          description: 'Calm and gentle cat grooming at your home.',
+          button: {
+            label: 'View Service',
+            href: '/mobile-cat-grooming',
+          },
+        },
+      ],
+    },
+    information: {
+      title: 'Give Your Pet the Comfort and Care They Deserve',
+      description:
+        'Schedule your mobile grooming appointment with Monarca Grooming and enjoy gentle, stress free grooming at home. Our team brings experience, patience and calm handling to every dog and cat we care for in Florida.',
+      buttons: [
+        {
+          label: 'Get now',
+          href: '#',
+          color: 'secondary',
+        },
+        {
+          label: 'Book now',
+          href: 'book-appointment',
+          color: 'primary',
+        },
+      ],
+    },
+  },
+  'mobile-dog-grooming': {
+    hero: {
+      subtitle: 'Calm, one-to-one care at your home',
+      title: 'Mobile Dog Grooming',
+      description:
+        'Your dog enjoys a quiet grooming session right at your doorstep. Our family trained team brings more than twenty years of experience to deliver gentle handling, clean results and a look that fits your dog’s coat and personality. Services include bath, blow dry, brushing, full or tidy haircut, nail trim, ear cleaning, sanitary and paw pad care.',
+      items: [
+        'One-to-one handling for a relaxed visit',
+        'Greater comfort and confidence after each session',
+        'Breed-true styling and tidy finishing',
+        'Clean skin and a healthy, shiny coat',
+      ],
+      button: 'Book Now!',
+    },
+    included: {
+      title: 'What’s Included in Our Mobile Dog Grooming Service',
+      items: [
+        {
+          title: 'Warm Bath with Gentle Shampoo',
+          description:
+            'A soothing bath using soft, pet safe shampoo that cleans, refreshes and prepares your dog for the full grooming session.',
+          icon: 'warm',
+        },
+        {
+          title: 'Blow Dry and Full Brushing',
+          description:
+            'A soothing bath using soft, pet safe shampoo that cleans, refreshes and prepares your dog for the full grooming session.',
+          icon: 'blow',
+        },
+        {
+          title: 'Haircut and Styling (Breed or Custom)',
+          description:
+            'A soothing bath using soft, pet safe shampoo that cleans, refreshes and prepares your dog for the full grooming session.',
+          icon: 'haircut',
+        },
+        {
+          title: 'Nail Trimming and Paw Pad Care',
+          description:
+            'A soothing bath using soft, pet safe shampoo that cleans, refreshes and prepares your dog for the full grooming session.',
+          icon: 'nail',
+        },
+        {
+          title: 'Ear Cleaning',
+          description:
+            'A soothing bath using soft, pet safe shampoo that cleans, refreshes and prepares your dog for the full grooming session.',
+          icon: 'ear',
+        },
+        {
+          title: 'And More Services',
+          description:
+            'A soothing bath using soft, pet safe shampoo that cleans, refreshes and prepares your dog for the full grooming session.',
+          icon: 'more',
+        },
+      ],
+      image: 'dog-services',
+    },
+    process: {
+      title: 'A Simple and Caring Process for Your Dog',
+      description:
+        'In just 3 easy steps, your dog enjoys a calm, gentle and stress free grooming experience at home.',
+      items: [
+        {
+          icon: 'process-1',
+          back: 'bg-primary',
+          title: '1. Easy Booking',
+          description:
+            'We schedule your appointment through our system and confirm all the details to ensure a smooth and stress free experience for you and your pet.',
+          image: 'bg-process-1',
+        },
+        {
+          icon: 'process-2',
+          back: 'bg-secondary',
+          title: '2. We Come to You',
+          description:
+            'Our fully equipped mobile grooming van arrives at your home with everything needed to groom your pet safely, calmly and comfortably.',
+          image: 'bg-process-2',
+        },
+        {
+          icon: 'process-3',
+          back: 'bg-primary',
+          title: '3. Professional and Loving Grooming',
+          description:
+            'Your pet receives patient, gentle and high quality grooming guided by more than twenty years of family experience and genuine love for animals.',
+          image: 'bg-process-3',
+        },
+      ],
+    },
+    information: {
+      title: 'Give Your Pet the Comfort and Care They Deserve',
+      description:
+        'Schedule your mobile grooming appointment with Monarca Grooming and enjoy gentle, stress free grooming at home. Our team brings experience, patience and calm handling to every dog and cat we care for in Florida.',
+      buttons: [
+        {
+          label: 'Get now',
+          href: '#',
+          color: 'secondary',
+        },
+        {
+          label: 'Book now',
+          href: 'book-appointment',
+          color: 'primary',
+        },
+      ],
+    },
+  },
+  'mobile-cat-grooming': {
+    hero: {
+      subtitle: 'Gentle grooming designed for your cat’s comfort',
+      title: 'Mobile Cat Grooming',
+      description:
+        'Our mobile cat grooming service brings calm handling and a peaceful routine directly to your home. We use soft techniques, quiet equipment and patient care to help your cat stay clean, comfortable and beautifully maintained. Whether your cat is long-haired or short-haired, we make grooming easier, safer and less stressful for both of you.',
+      items: [
+        'Reduces Shedding and Hairballs',
+        'Supports Skin and Coat Health',
+        'Prevents Matting',
+        'Creates a Calmer Grooming Experience',
+      ],
+      button: 'Book Now!',
+    },
+    included: {
+      title: 'What’s Included in Our Mobile Cat Grooming Service',
+      items: [
+        {
+          title: 'Warm Bath with Gentle Shampoo',
+          description:
+            'A soothing bath using soft, pet safe shampoo that cleans, refreshes and prepares your cat for the full grooming session.',
+          icon: 'warm',
+        },
+        {
+          title: 'Blow Dry and Full Brushing',
+          description:
+            'A soothing bath using soft, pet safe shampoo that cleans, refreshes and prepares your cat for the full grooming session.',
+          icon: 'blow',
+        },
+        {
+          title: 'Haircut and Styling (Breed or Custom)',
+          description:
+            'A soothing bath using soft, pet safe shampoo that cleans, refreshes and prepares your cat for the full grooming session.',
+          icon: 'haircut',
+        },
+        {
+          title: 'Nail Trimming and Paw Pad Care',
+          description:
+            'A soothing bath using soft, pet safe shampoo that cleans, refreshes and prepares your cat for the full grooming session.',
+          icon: 'nail',
+        },
+        {
+          title: 'Ear Cleaning',
+          description:
+            'A soothing bath using soft, pet safe shampoo that cleans, refreshes and prepares your cat for the full grooming session.',
+          icon: 'ear',
+        },
+        {
+          title: 'And More Services',
+          description:
+            'A soothing bath using soft, pet safe shampoo that cleans, refreshes and prepares your cat for the full grooming session.',
+          icon: 'more',
+        },
+      ],
+      image: 'cat-services',
+    },
+    process: {
+      title: 'A Simple and Caring Process for Your Cat',
+      description:
+        'In just 3 easy steps, your cat enjoys a calm, gentle and stress free grooming experience at home.',
+      items: [
+        {
+          icon: 'process-1',
+          back: 'bg-primary',
+          title: '1. Easy Booking',
+          description:
+            'We schedule your appointment through our system and confirm all the details to ensure a smooth and stress free experience for you and your pet.',
+          image: 'bg-process-1',
+        },
+        {
+          icon: 'process-2',
+          back: 'bg-secondary',
+          title: '2. We Come to You',
+          description:
+            'Our fully equipped mobile grooming van arrives at your home with everything needed to groom your pet safely, calmly and comfortably.',
+          image: 'bg-process-2',
+        },
+        {
+          icon: 'process-3',
+          back: 'bg-primary',
+          title: '3. Professional and Loving Grooming',
+          description:
+            'Your pet receives patient, gentle and high quality grooming guided by more than twenty years of family experience and genuine love for animals.',
+          image: 'bg-process-3',
+        },
+      ],
+    },
+    information: {
+      title: 'Give Your Pet the Comfort and Care They Deserve',
+      description:
+        'Schedule your mobile grooming appointment with Monarca Grooming and enjoy gentle, stress free grooming at home. Our team brings experience, patience and calm handling to every dog and cat we care for in Florida.',
+      buttons: [
+        {
+          label: 'Get now',
+          href: '#',
+          color: 'secondary',
+        },
+        {
+          label: 'Book now',
+          href: 'book-appointment',
+          color: 'primary',
+        },
+      ],
+    },
+  },
   footer: {
     description: '25 years taking care of your best friends',
     service: {
-      title:' Services',
+      title: ' Services',
       items: [
         {
           title: 'Mobile Dog Grooming',
@@ -204,33 +468,29 @@ export default {
         },
       ],
     },
-    schedules:{
-      title:'Business Hours',
-      items:[
-        'Monday - Sunday',
-        '8:00 AM - 6:00 PM',
-        'Cookies Polityes'
-      ]
+    schedules: {
+      title: 'Business Hours',
+      items: ['Monday - Sunday', '8:00 AM - 6:00 PM', 'Cookies Polityes'],
     },
-    contact:{
-      title:'Contact Us',
-      items:[
+    contact: {
+      title: 'Contact Us',
+      items: [
         {
-          icon:'map-1',
-          text:'We serve all of Florida.',
-          href:'#'
+          icon: 'map-1',
+          text: 'We serve all of Florida.',
+          href: '#',
         },
         {
-          icon:'mail-1',
-          text:'monarca.grooming@gmail.com',
-          href:'https://mail.google.com/mail/?view=cm&fs=1&to=monarca.grooming@gmail.com'
+          icon: 'mail-1',
+          text: 'monarca.grooming@gmail.com',
+          href: 'https://mail.google.com/mail/?view=cm&fs=1&to=monarca.grooming@gmail.com',
         },
         {
-          icon:'phone-1',
-          text:'(954) 868-4929',
-          href:'tel:+19548684929'
-        }
-      ]
-    }
+          icon: 'phone-1',
+          text: '(954) 868-4929',
+          href: 'tel:+19548684929',
+        },
+      ],
+    },
   },
 };

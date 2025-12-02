@@ -23,7 +23,7 @@ const lang = match ? match[1] : 'en';
   id="site-header"
 >
   <div
-    class={`${normalized == '/' ? 'bg-none xl:px-0':'bg-primary lg:top-5 xl:px-12'} w-[calc(100%-24px)] xl:w-full sm:max-w-7xl py-0 lg:min-h-[90px] flex justify-between items-center px-7 md:px-4  relative  rounded-[20px] mx-auto shadow-lg sm:shadow-none`}
+    class={`${normalized == '/' ? 'bg-none xl:px-0' : 'bg-primary lg:top-5 xl:px-12 pb-1'} w-[calc(100%-24px)] xl:w-full sm:max-w-7xl py-0 lg:min-h-[90px] flex justify-between items-center px-5 md:px-4  relative  rounded-[20px] mx-auto shadow-lg sm:shadow-none`}
   >
     <!-- Menú desktop (lg y arriba) -->
     <div
@@ -88,7 +88,7 @@ const lang = match ? match[1] : 'en';
         alt="Logo de Monarca - Mobile Pet Grooming"
         width="1280"
         height="810"
-        class="cursor-pointer w-[130px] h-auto"
+        class="cursor-pointer w-[120px] md:w-[130px] h-auto"
       />
     </a>
     <div class="flex justify-center items-center gap-3">
@@ -97,14 +97,14 @@ const lang = match ? match[1] : 'en';
         href={content?.buttons[0].href}
         extraBtnClass={`border ${normalized == '/' ? 'border-transparent ' : 'border-transparent'} bg-secondary hidden sm:flex`}
         iconName={content?.buttons[0].icon}
-        iconClass='text-secondary'
+        iconClass="text-secondary"
       />
       <Button
         text={content?.buttons[1].label}
         href={content?.buttons[1].href}
         extraBtnClass={`border ${normalized == '/' ? 'border-primary ' : 'border-white'}  bg-primary hidden sm:flex`}
         iconName={content?.buttons[1].icon}
-        iconClass='text-primary'
+        iconClass="text-primary"
       />
       <div class="flex lg:hidden justify-center items-center gap-7">
         <button
@@ -144,13 +144,12 @@ const lang = match ? match[1] : 'en';
     href="/"
     aria-label="Ir a la página principal"
     title="Inicio Monarca - Mobile Pet Grooming"
-    class=""
   >
     <img
-      src="/logo.svg"
+      src="/images/logo-shapehub.webp"
       alt="Logo de Monarca - Mobile Pet Grooming"
-      width="162"
-      height="42"
+      width="1280"
+      height="810"
       class="cursor-pointer w-[190px] h-auto"
     />
   </a>
@@ -205,12 +204,14 @@ const lang = match ? match[1] : 'en';
       href={content?.buttons[0].href}
       extraBtnClass={`border border-white bg-primary w-full`}
       iconName={content?.buttons[0].icon}
+      iconClass='text-primary'
     />
     <Button
       text={content?.buttons[1].label}
       href={content?.buttons[1].href}
       extraBtnClass={`border border-secondary bg-secondary w-full`}
       iconName={content?.buttons[1].icon}
+      iconClass='text-secondary'
     />
   </div>
 
