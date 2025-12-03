@@ -2,6 +2,7 @@
 import en from '../../../i18n/en';
 import es from '../../../i18n/es';
 import Layout from '../../../layouts/Layout.astro';
+import Hero from '../../../sections/services/Hero.astro';
 import type { Language } from '../../../types/language.type';
 
 export function getStaticPaths() {
@@ -23,9 +24,9 @@ export const defaultRedirect = '/en';
 const { lang, service } = Astro.params as { lang: Language; service: string };
 const translations = { es, en };
 const t = translations[lang];
-
+const serviceData = t.services[service as keyof typeof t.services];
 ---
 
 <Layout lang={lang} t={t}>
-  <section class="h-[80vh]"></section>
+  <Hero content={serviceData.hero} />
 </Layout>

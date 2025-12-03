@@ -32,7 +32,7 @@ const icons = [
 
 <footer class="w-full flex flex-col justify-center items-center z-20">
   <div
-    class={`w-full ${normalized === '/' ? 'bg-secondary' : ''} relative h-full flex justify-center items-center pb-8 md:pb-5 pt-[100px] md:pt-0`}
+    class={`w-full ${normalized === '/' ? 'bg-[#FFB839]' : ''} relative h-full flex justify-center items-center pb-8 md:pb-6 pt-[100px] md:pt-0`}
   >
     <img
       src="/images/line-footer.svg"
@@ -44,7 +44,9 @@ const icons = [
     <div
       class="h-full w-full max-w-screen md:max-w-7xl flex flex-col md:flex-row justify-between items-end px-5 xl:px-0 text-white z-4 gap-8"
     >
-      <div class="w-full md:w-auto flex flex-col justify-center items-center md:items-start gap-5 md:gap-[34px]">
+      <div
+        class="w-full md:w-auto flex flex-col justify-center items-center md:items-start gap-5 md:gap-[25px]"
+      >
         <a href="/">
           <img
             src="/images/logo-shapehub.webp"
@@ -54,9 +56,10 @@ const icons = [
             class="w-[200px] md:w-[308px] h-auto"
           />
         </a>
-        <p class="text-[20px] leading-[120%] font-normal">
-          {content?.description}
-        </p>
+        <p
+          class="text-[24px] tracking-[3.6px] uppercase leading-[120%] font-normal"
+          set:html={content?.description}
+        />
         <div class="flex justify-center items-center gap-3">
           {
             icons.map((item) => (
@@ -71,8 +74,12 @@ const icons = [
           }
         </div>
       </div>
-      <div class="w-full md:w-auto flex flex-col md:flex-row justify-center items-center md:items-start gap-7 md:gap-14 text-white">
-        <div class="flex flex-col justify-center items-center md:items-start gap-3">
+      <div
+        class="w-full md:w-auto flex flex-col md:flex-row justify-center items-center md:items-start gap-7 md:gap-16 text-white"
+      >
+        <div
+          class="flex flex-col justify-center items-center md:items-start gap-3"
+        >
           <h4 class="text-[20px] uppercase leading-[120%] font-medium">
             {content?.service.title}
           </h4>
@@ -89,7 +96,9 @@ const icons = [
             }
           </div>
         </div>
-        <div class="flex flex-col justify-center items-center md:items-start gap-3">
+        <div
+          class="flex flex-col justify-center items-center md:items-start gap-3"
+        >
           <h4 class="text-[20px] uppercase leading-[120%] font-medium">
             {content?.schedules.title}
           </h4>
@@ -101,11 +110,15 @@ const icons = [
             }
           </div>
         </div>
-        <div class="flex flex-col justify-center items-center md:items-start gap-3">
+        <div
+          class="flex flex-col justify-center items-center md:items-start gap-3"
+        >
           <h4 class="text-[20px] uppercase leading-[120%] font-medium">
             {content?.contact.title}
           </h4>
-          <div class="flex flex-col justify-center items-center md:items-start gap-3">
+          <div
+            class="flex flex-col justify-center items-center md:items-start gap-3"
+          >
             {
               content?.contact.items.map((item) => (
                 <div class="flex justify-start items-center gap-3">

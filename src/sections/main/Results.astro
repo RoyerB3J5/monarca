@@ -15,18 +15,18 @@ const { content } = Astro.props as Props;
   <Icon
     name={'ondulate'}
     class={'absolute -bottom-px w-full h-auto z-10 left-0 rotate-180'}
-    style="color: #D0A045"
+    style="color: #FFB839"
   />
   <div
     class="w-full max-w-screen md:max-w-7xl flex flex-col justify-center items-center px-5 xl:px-0 gap-5"
   >
     <h2
-      class="text-[48px] font-normal font-title leading-[120%] text-primary-dark"
+      class="text-[40px] font-normal font-title leading-[120%] text-primary-dark"
     >
       {content.title}
     </h2>
     <p
-      class="text-[16px] leading-[120%] font-normal text-center text-paragraph"
+      class="text-[20px] leading-[120%] font-normal text-center text-paragraph"
       set:html={content.description}
     />
   </div>

@@ -1,6 +1,5 @@
 ---
 import Button from './Button.astro';
-import { ImMobile } from 'react-icons/im';
 import { Icon } from 'astro-icon/components';
 
 type Translations = typeof import('../i18n/en').default;
@@ -48,10 +47,16 @@ const lang = match ? match[1] : 'en';
                   href={`/${lang}${item.href}`}
                   class=" relative transition-colors duration-300 flex justify-center items-center gap-[7px]"
                 >
-                  {item.icon && <Icon name={item.icon} class={'w-5 h-5'} />}
+                  {item.icon && (
+                    <img
+                      src={`/images/${item.icon}.png`}
+                      alt={`${item.label} icon`}
+                      class="w-5 h-5"
+                    />
+                  )}
 
                   <p
-                    class="text-[16px] font-medium leading-[120%] hover:text-secondary"
+                    class="text-[20px] font-normal leading-[120%] hover:text-secondary"
                     set:html={item.label}
                   />
                   <span
@@ -170,7 +175,13 @@ const lang = match ? match[1] : 'en';
               href={`/${lang}${item.href}`}
               class="relative transition-colors duration-300 flex justify-center items-center gap-[7px]"
             >
-              {item.icon && <Icon name={item.icon} class={'w-6 h-6'} />}
+              {item.icon && (
+                <img
+                  src={`/images/${item.icon}.png`}
+                  alt={`${item.label} icon`}
+                  class="w-6 h-6"
+                />
+              )}
 
               <p
                 class="text-[18px] font-medium leading-[120%] hover:text-secondary"
@@ -204,14 +215,14 @@ const lang = match ? match[1] : 'en';
       href={content?.buttons[0].href}
       extraBtnClass={`border border-white bg-primary w-full`}
       iconName={content?.buttons[0].icon}
-      iconClass='text-primary'
+      iconClass="text-primary"
     />
     <Button
       text={content?.buttons[1].label}
       href={content?.buttons[1].href}
       extraBtnClass={`border border-secondary bg-secondary w-full`}
       iconName={content?.buttons[1].icon}
-      iconClass='text-secondary'
+      iconClass="text-secondary"
     />
   </div>
 

@@ -2,7 +2,7 @@
 import Button from '../../components/Button.astro';
 
 type Translations = typeof import('../../i18n/es').default;
-type GroomingContent = Translations['services']['gromming'];
+type GroomingContent = Translations['servicesPage']['grooming'];
 interface Props {
   content: GroomingContent;
 }
@@ -19,12 +19,12 @@ const lang = match ? match[1] : 'en';
 >
   <div class="flex flex-col justify-center items-center gap-[18px]">
     <h2
-      class="font-title text-[60px] leading-[120%] text-center text-primary-dark"
+      class="font-title text-[40px] leading-[120%] text-center text-primary-dark"
     >
       {content.title}
     </h2>
     <p
-      class="text-[16px] text-center text-paragraph leading-[120%]"
+      class="text-[20px] text-center text-paragraph leading-[120%]"
       set:html={content.description}
     />
   </div>

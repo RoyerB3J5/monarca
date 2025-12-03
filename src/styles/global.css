@@ -21,7 +21,7 @@
   --font-subtitle: 'Kumbh Sans', 'NeueMontreal', sans-serif;
   --color-primary: #1e5ebe;
   --color-primary-dark: #101c38;
-  --color-secondary: #d0a045;
+  --color-secondary: #f3a71d;
   --color-accent-1: #cbf9ea;
   --color-accent-2: #5995ff;
   --color-paragraph: #1d1d1d;
@@ -32,8 +32,8 @@
 .banner-back {
   background: linear-gradient(
     90deg,
-    #8d6111 2.4%,
-    #f6c56b 53.37%,
+    #8d6111 0%,
+    #f6c56b 37.5%,
     #f3a71d 69.23%,
     #926412 99.99%
   );
@@ -42,8 +42,8 @@
   /* moved gradient center upwards (52.5% horizontally, 30% vertically) */
   background: radial-gradient(
     47.79% 46.89% at 52.5% 50%,
-    #ead6a2 0%,
-    #d0a045 100%
+    #EAD6A2 0%,
+    #FFB839 100%
   );
 }
 .img-carousel {
@@ -72,4 +72,3 @@
 .animate-shake {
   animation: shake 2s ease-in-out infinite;
 }
-
