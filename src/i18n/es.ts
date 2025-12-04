@@ -249,7 +249,7 @@ export default {
       hero: {
         image: {
           href: 'dog-1',
-          width: '478',
+          width: '575',
           height: '536',
         },
         subtitle: 'Cuidado tranquilo y personalizado en tu hogar',
@@ -302,7 +302,7 @@ export default {
             title: 'Y más servicios',
             description:
               'Ofrecemos servicios adicionales según las necesidades del animal y las solicitudes del propietario.',
-            icon: 'more',
+            icon: 'nail',
           },
         ],
         image: {
@@ -312,9 +312,9 @@ export default {
         },
       },
       process: {
-        title: 'Un proceso sencillo y cuidadoso para tu perro',
+        title: 'Un proceso sencillo y cuidadoso',
         description:
-          'En solo 3 pasos sencillos, tu perro disfruta de una experiencia de peluquería calmada, gentil y sin estrés en casa.',
+          'En solo 3 sencillos pasos, su mascota disfrutará de una experiencia de aseo tranquila y suave.',
         items: [
           {
             icon: 'process-1',
@@ -364,7 +364,7 @@ export default {
       hero: {
         image: {
           href: 'cat-1',
-          width: '388',
+          width: '626',
           height: '525',
         },
         subtitle: 'Peluquería delicada diseñada para la comodidad de tu gato',
@@ -417,19 +417,19 @@ export default {
             title: 'Y más servicios',
             description:
               'Servicios adicionales disponibles según las necesidades específicas de tu mascota.',
-            icon: 'more',
+            icon: 'nail',
           },
         ],
         image: {
           href: 'cat-2',
           width: '505',
-          height: '687',
+          height: '644',
         },
       },
       process: {
-        title: 'Un proceso sencillo y cuidadoso para tu gato',
+        title: 'Un proceso sencillo y cuidadoso',
         description:
-          'En solo 3 pasos sencillos, tu gato disfruta de una experiencia de peluquería calmada, gentil y sin estrés en casa.',
+          'En solo 3 sencillos pasos, su mascota disfrutará de una experiencia de aseo tranquila y suave.',
         items: [
           {
             icon: 'process-1',

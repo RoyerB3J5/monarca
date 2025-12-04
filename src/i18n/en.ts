@@ -248,7 +248,7 @@ export default {
       hero: {
         image: {
           href: 'dog-1',
-          width: '478',
+          width: '575',
           height: '536',
         },
         subtitle: 'Calm, one-to-one care at your home',
@@ -301,7 +301,7 @@ export default {
             title: 'And More Services',
             description:
               'A soothing bath using soft, pet safe shampoo that cleans, refreshes and prepares your dog for the full grooming session.',
-            icon: 'more',
+            icon: 'nail',
           },
         ],
         image: {
@@ -311,9 +311,9 @@ export default {
         },
       },
       process: {
-        title: 'A Simple and Caring Process for Your Dog',
+        title: 'A Simple and Caring Process',
         description:
-          'In just 3 easy steps, your dog enjoys a calm, gentle and stress free grooming experience at home.',
+          'In just 3 easy steps, your pet enjoys a calm and gentle grooming experience.',
         items: [
           {
             icon: 'process-1',
@@ -363,7 +363,7 @@ export default {
       hero: {
         image: {
           href: 'cat-1',
-          width: '388',
+          width: '626',
           height: '525',
         },
         subtitle: 'Gentle grooming designed for your cat’s comfort',
@@ -416,19 +416,19 @@ export default {
             title: 'And More Services',
             description:
               'A soothing bath using soft, pet safe shampoo that cleans, refreshes and prepares your cat for the full grooming session.',
-            icon: 'more',
+            icon: 'nail',
           },
         ],
         image: {
           href: 'cat-2',
           width: '505',
-          height: '687',
+          height: '644',
         },
       },
       process: {
-        title: 'A Simple and Caring Process for Your Cat',
+        title: 'A Simple and Caring Process ',
         description:
-          'In just 3 easy steps, your cat enjoys a calm, gentle and stress free grooming experience at home.',
+          'In just 3 easy steps, your pet enjoys a calm and gentle grooming experience.',
         items: [
           {
             icon: 'process-1',

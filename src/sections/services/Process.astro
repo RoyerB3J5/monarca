@@ -1,0 +1,79 @@
+---
+import { Icon } from 'astro-icon/components';
+type Translations = typeof import('../../i18n/es').default;
+type ProcessContent =
+  Translations['services']['mobile-dog-grooming']['process'];
+interface Props {
+  content: ProcessContent;
+}
+const { content } = Astro.props as Props;
+---
+
+<section
+  class="bg-primary-dark w-full flex justify-center items-center relative h-auto"
+>
+  <Icon
+    name={'ondulate'}
+    class={'absolute bottom-0 w-auto h-[50px] md:w-full md:h-auto z-10 left-0 rotate-180 block md:hidden'}
+    style="color: #FFFFFF"
+  />
+
+  <img
+    src="/images/main/bg-pets.webp"
+    alt="Fondo de Monarcas"
+    width="1599"
+    height="914"
+    class="absolute w-full h-full inset-0 top-0 z-0 object-cover object-top"
+    decoding="async"
+    loading="lazy"
+  />
+  <div
+    class="h-full w-full max-w-screen md:max-w-7xl flex flex-col justify-center items-center px-5 xl:px-0 gap-[59px] pt-[30px] pb-[150px] md:pb-[72px] relative"
+    data-aos="fade-down"
+    data-aos-offset="300"
+  >
+    <div class="flex flex-col justify-center items-center gap-3 text-white">
+      <h2
+        class="text-[32px] md:text-[40px] leading-[130%] font-title text-center"
+      >
+        {content.title}
+      </h2>
+      <p class="text-[20px] leading-[130%] text-center font-normal">
+        {content.description}
+      </p>
+    </div>
+    <div
+      class="w-full flex flex-col lg:flex-row justify-center items-center gap-6"
+    >
+      {
+        content.items.map((item, index) => {
+          return (
+            <div
+              class={`${index === 1 ? 'w-full sm:w-1/2 lg:w-[40%] min-h-[259px]' : 'w-full sm:w-1/2 lg:w-[30%] min-h-[323px]'}  sm:min-h-[407px] flex flex-col justify-start items-center rounded-[20px] bg-white overflow-hidden relative`}
+            >
+              {/* */}
+              <div
+                class={`w-full pt-5 sm:pt-[34px] px-4 sm:px-[22px] flex flex-col justify-center items-center gap-5 text-white z-20  relative ${item.back}`}
+              >
+                <h3 class="text-[28px] sm:text-[36px] leading-[110%] sm:leading-[120%] font-title text-center">
+                  {item.title}
+                </h3>
+                <p class="text-center text-[13px] sm:text-[16px] leading-[120%] font-normal">
+                  {item.description}
+                </p>
+              </div>
+              <Icon name={item.icon} class="w-full h-auto z-20" />
+              <img
+                src={`/images/main/${item.image}.webp`}
+                alt={item.title}
+                width="600"
+                height="400"
+                class={`h-auto absolute ${index === 1 ? 'z-30 bottom-5 sm:bottom-[74px] w-[289px] sm:w-[414px] left-1/2 -translate-x-1/2' : index === 2 ? 'z-0 scale-150 -bottom-[120px] sm:-bottom-[100px] w-full left-1/2 -translate-x-1/2' : 'z-0 -bottom-14 sm:-bottom-8 scale-150 w-full left-1/2 -translate-x-1/2'}`}
+              />
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>

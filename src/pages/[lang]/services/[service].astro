@@ -2,7 +2,10 @@
 import en from '../../../i18n/en';
 import es from '../../../i18n/es';
 import Layout from '../../../layouts/Layout.astro';
+import Information from '../../../sections/Information.astro';
 import Hero from '../../../sections/services/Hero.astro';
+import Included from '../../../sections/services/Included.astro';
+import Process from '../../../sections/services/Process.astro';
 import type { Language } from '../../../types/language.type';
 
 export function getStaticPaths() {
@@ -29,4 +32,7 @@ const serviceData = t.services[service as keyof typeof t.services];
 
 <Layout lang={lang} t={t}>
   <Hero content={serviceData.hero} />
+  <Included content={serviceData.included}/>
+  <Process content={serviceData.process} />
+  <Information content={serviceData.information}/>
 </Layout>

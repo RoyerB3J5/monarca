@@ -2,7 +2,7 @@
 import Button from '../components/Button.astro';
 
 type Translations = typeof import('../i18n/es').default;
-type InfoContent = Translations['services']['information'];
+type InfoContent = Translations['servicesPage']['information'];
 interface Props {
   content: InfoContent;
 }
@@ -15,17 +15,18 @@ const lang = match ? match[1] : 'en';
 ---
 
 <section
-  class="h-full w-full max-w-screen md:max-w-7xl flex flex-col md:flex-row justify-between items-center px-5 xl:px-0 pt-[83px] pb-5"
+  class="h-full w-full max-w-screen md:max-w-7xl flex flex-col md:flex-row justify-between items-center px-5 xl:px-0 mt-[30px] md:pt-[76px] pb-[62px] lg:pb-5"
 >
   <img
     src="/images/pet-info.webp"
     alt="Information Monarca"
     width="429"
     height="467"
-    class="w-[429px] h-auto"
+    class="w-[300px] lg:w-[389px] h-auto"
+    data-aos='fade-right'
   />
-  <div class="flex flex-col justify-center items-start gap-[18px] max-w-none md:max-w-[55%]">
-    <h2 class="text-[48px] leading-[120%] font-normal text-primary font-title">{content.title}</h2>
+  <div class="flex flex-col justify-center items-start gap-[18px] max-w-none md:max-w-[55%]" data-aos='fade-left'>
+    <h2 class="text-[32px] md:text-[48px] leading-[120%] font-normal text-primary font-title">{content.title}</h2>
     <p class="text-[16px] leading-[140%] text-paragraph text-normal">{content.description}</p>
     <div class="flex justify-center items-center gap-3">
       {

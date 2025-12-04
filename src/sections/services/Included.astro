@@ -1,0 +1,236 @@
+---
+import { Icon } from 'astro-icon/components';
+
+type Translations = typeof import('../../i18n/es').default;
+type IncludedContent =
+  Translations['services']['mobile-dog-grooming']['included'];
+interface Props {
+  content: IncludedContent;
+}
+const { content } = Astro.props as Props;
+---
+
+<style>
+  .accordion-item {
+    transition: all 0.4s ease-in-out;
+  }
+
+  .accordion-item.collapsed {
+    @apply gap-[16px];
+  }
+
+  .accordion-item.expanded {
+    @apply gap-[31px];
+  }
+
+  .accordion-icon {
+    transition:
+      width 0.4s ease-in-out,
+      height 0.4s ease-in-out;
+  }
+
+  .accordion-icon.collapsed {
+    @apply w-[25px] h-[25px];
+  }
+
+  .accordion-icon.expanded {
+    @apply w-[77px] h-[77px];
+  }
+
+  .accordion-text {
+    overflow: hidden;
+    transition:
+      opacity 0.4s ease-in-out,
+      height 0.4s ease-in-out;
+    display: block;
+  }
+
+  .accordion-text.collapsed {
+    height: 0;
+    opacity: 0;
+  }
+
+  .accordion-text.expanded {
+    height: auto;
+    opacity: 1;
+  }
+
+  .accordion-toggle {
+    cursor: pointer;
+    user-select: none;
+  }
+</style>
+
+<section class="w-full relative flex justify-center items-center">
+  <Icon
+    name={'ondulate'}
+    class={'absolute bottom-0 w-auto h-[50px] md:w-full md:h-auto z-10 left-0 rotate-180'}
+    style="color: #101C38"
+  />
+  <div
+    class="h-full w-full max-w-screen md:max-w-7xl flex flex-col justify-center items-center px-5 xl:px-0 gap-[46px] md:gap-[72px] pt-[109px] md:pt-[72px]"
+  >
+    <h2
+      class="text-[32px] md:text-[40px] leading-[130%] font-normal font-title text-primary-dark text-start md:text-center"
+    >
+      {content.title}
+    </h2>
+    <div
+      class="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-end w-full gap-[46px] md:gap-0"
+      data-aos="flip-down"
+      data-aos-offset="300"
+    >
+      <div
+        class="w-full flex flex-col justify-center items-center gap-[18px] pb-0 md:pb-[110px] max-w-none md:max-w-[55%]"
+      >
+        {
+          content.items.map((item, index) => {
+            const isFirst = index === 0;
+            return (
+              <div
+                class={`accordion-item accordion-toggle ${isFirst ? 'expanded' : 'collapsed'} w-full flex justify-start items-start md:items-start gap-[31px] bg-[#FFE1AC] rounded-2xl px-4 py-5`}
+                data-index={index}
+              >
+                <Icon
+                  name={item.icon}
+                  class={`accordion-icon flex-none ${isFirst ? 'expanded' : 'collapsed'}`}
+                />
+                <div
+                  class={`flex-1 flex flex-col justify-center items-start ${isFirst ? 'gap-[11px]' : 'gap-0'} text-black accordion-content`}
+                >
+                  <h3 class="text-[20px] leading-[120%] font-semibold font-subtitle ">
+                    {item.title}
+                  </h3>
+                  <p
+                    class={`accordion-text ${isFirst ? 'expanded' : 'collapsed'} text-[16px] leading-[130%] font-normal`}
+                  >
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            );
+          })
+        }
+      </div>
+      <img
+        src={`/images/services/${content.image.href}.webp`}
+        alt="Imagen de servicios incluidos"
+        width={content.image.width}
+        height={content.image.height}
+        loading="lazy"
+        decoding="async"
+        class={`w-[80%] ${content.image.href == 'dog-2' ? 'md:w-[43%]' : 'md:w-[36%]'}  h-auto`}
+      />
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const accordionItems = document.querySelectorAll('.accordion-toggle');
+    const parentContainer = accordionItems[0]?.parentElement;
+
+    // Función para calcular la altura del párrafo
+    function getTextHeight(textElement) {
+      textElement.style.height = 'auto';
+      textElement.style.visibility = 'hidden';
+      textElement.style.position = 'absolute';
+      const height = textElement.scrollHeight;
+      textElement.style.height = '';
+      textElement.style.visibility = '';
+      textElement.style.position = '';
+      return height;
+    }
+
+    // Guardar altura máxima de todos los items expandidos
+    function getMaxItemHeight() {
+      let maxHeight = 0;
+      accordionItems.forEach((item) => {
+        const text = item.querySelector('.accordion-text');
+        const textHeight = getTextHeight(text);
+        const itemHeight = item.scrollHeight + textHeight;
+        maxHeight = Math.max(maxHeight, itemHeight);
+      });
+      return maxHeight;
+    }
+
+    accordionItems.forEach((item) => {
+      item.addEventListener('click', () => {
+        const isExpanded = item.classList.contains('expanded');
+        const textElement = item.querySelector('.accordion-text');
+        const contentDiv = item.querySelector('div:nth-child(2)');
+
+        // Calcular altura del párrafo
+        const textHeight = getTextHeight(textElement);
+
+        // Establecer altura mínima al contenedor mientras anima
+        contentDiv.style.transition = 'height 0.4s ease-in-out';
+
+        // Fijar altura del contenedor padre para evitar saltos
+        const maxHeight = getMaxItemHeight();
+        if (parentContainer) {
+          parentContainer.style.transition = 'min-height 0.4s ease-in-out';
+          parentContainer.style.minHeight = maxHeight + 'px';
+        }
+
+        // Cerrar todos los items
+        accordionItems.forEach((el) => {
+          const elContent = el.querySelector('div:nth-child(2)');
+          const elContentDiv = el.querySelector('.accordion-content');
+
+          el.classList.remove('expanded');
+          el.classList.add('collapsed');
+          el.querySelectorAll('.accordion-icon').forEach((icon) => {
+            icon.classList.remove('expanded');
+            icon.classList.add('collapsed');
+          });
+          el.querySelectorAll('.accordion-text').forEach((text) => {
+            text.classList.remove('expanded');
+            text.classList.add('collapsed');
+          });
+
+          // Remover gap cuando se colapsa
+          if (elContentDiv) {
+            elContentDiv.style.gap = '0';
+          }
+
+          // Resetear altura
+          if (elContent) {
+            elContent.style.height = '';
+          }
+        });
+
+        // Si el item no estaba expandido, expandirlo
+        if (!isExpanded) {
+          const itemContentDiv = item.querySelector('.accordion-content');
+
+          item.classList.remove('collapsed');
+          item.classList.add('expanded');
+          item.querySelectorAll('.accordion-icon').forEach((icon) => {
+            icon.classList.remove('collapsed');
+            icon.classList.add('expanded');
+          });
+          item.querySelectorAll('.accordion-text').forEach((text) => {
+            text.classList.remove('collapsed');
+            text.classList.add('expanded');
+          });
+
+          // Restaurar gap cuando se expande
+          if (itemContentDiv) {
+            itemContentDiv.style.gap = '11px';
+          }
+
+          // Establecer altura fija durante la animación
+          contentDiv.style.height = contentDiv.scrollHeight + textHeight + 'px';
+        }
+
+        // Limpiar después de la animación
+        setTimeout(() => {
+          if (parentContainer) {
+            parentContainer.style.minHeight = '';
+          }
+        }, 400);
+      });
+    });
+  });
+</script>

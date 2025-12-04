@@ -23,16 +23,17 @@ const { content } = Astro.props as Props;
     decoding="async"
   />
   <img
-    src="/images/services/back.webp"
-    alt="Fondo de Servicios"
-    width="541"
-    height="466"
-    class="absolute bottom-0 left-0 w-[520px] h-auto z-10 pointer-events-none"
+    src={`/images/services/${content.image.href}.webp`}
+    alt={content.title}
+    width={content.image.width}
+    height={content.image.height}
     loading="lazy"
     decoding="async"
+    class={`${content.image.href == 'dog-1' ? 'w-[60%] lg:w-[575px]' : 'w-[60%] lg:w-[625px]'} h-auto z-20 absolute bottom-0 left-0 -translate-x-[25vw] lg:-translate-x-[15vw] xl:-translate-x-[5vw] 2xl:translate-x-0 hidden md:block`}
   />
   <div
-    class={`h-full w-full max-w-screen md:max-w-7xl flex justify-center items-end px-5 xl:px-0 pt-[138px] ${content.image.href == 'dog-1' ? 'gap-[100px]' : 'gap-[60px]'} z-20`}
+    class={`h-full w-full max-w-screen md:max-w-7xl flex flex-col md:flex-row justify-center md:justify-end items-center px-5 xl:px-0 pt-30 md:pt-[150px] gap-[42px] md:gap-0 z-20`}
+    data-aos='zoom-in' data-aos-offset='200'
   >
     <img
       src={`/images/services/${content.image.href}.webp`}
@@ -41,10 +42,10 @@ const { content } = Astro.props as Props;
       height={content.image.height}
       loading="lazy"
       decoding="async"
-      class={`${content.image.href == 'dog-1' ? 'w-[430px]' : 'w-[387px]'} h-auto z-20`}
+      class={`${content.image.href == 'dog-1' ? ' sm:w-[430px]' : 'sm:w-[387px]'} w-full h-auto z-20 block md:hidden`}
     />
     <div
-      class={`flex flex-col justify-center items-start gap-8 text-paragraph pb-[60px] ${content.image.href == 'dog-1' ? 'max-w-none' : 'max-w-[63%]'}`}
+      class={`flex flex-col justify-center items-start gap-8 text-paragraph pb-[60px] ${content.image.href == 'dog-1' ? 'max-w-none md:max-w-[60%] 3xl:max-w-[70%]' : 'max-w-none md:max-w-[62%] 3xl:max-w-[70%]'}`}
     >
       <div class="flex flex-col justify-center items-start gap-4">
         <p
@@ -52,15 +53,15 @@ const { content } = Astro.props as Props;
         >
           {content.subtitle}
         </p>
-        <h1 class="text-[48px] leading-[110%] font-normal font-title">
+        <h1 class="text-[36px] sm:text-[48px] leading-[110%] font-normal font-title">
           {content.title}
         </h1>
         <p class="text-[20px] leading-[120%] font-normal">
           {content.description}
         </p>
       </div>
-      <p class="text-[20px] leading-[120%] font-bold ">{content.text1}</p>
-      <div class="grid grid-cols-2 gap-x-12 gap-y-4">
+      <p class="text-[20px] leading-[120%] font-bold">{content.text1}</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-9 sm:gap-y-4">
         {
           content.items.map((item) => (
             <div class="flex justify-start items-center gap-2.5 min-w-0">
