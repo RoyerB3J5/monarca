@@ -476,7 +476,106 @@ export default {
       },
     },
   },
-
+  about: {
+    hero: {
+      title: 'Sobre Monarca Grooming',
+      description:
+        'Monarca Grooming nació de más de veinte años de experiencia familiar, amor por los animales y un viaje profundamente personal. Lo que comenzó hace años con Sandra aprendiendo a bañar perros después de la escuela se convirtió en una vocación de por vida moldeada por la dedicación, la compasión y el conocimiento práctico real.',
+      paragraph: [
+        'En 2022, después de la desgarradora pérdida de ambos padres en días separados, Sandra transformó su dolor en propósito. Con coraje, resiliencia y el deseo de honrar a su familia, comenzó un nuevo capítulo en Estados Unidos. Aquí es donde Monarca Grooming tomó vuelo, un servicio de peluquería móvil creado no solo para arreglar mascotas, sino para tocar vidas con empatía, paciencia y sinceridad.',
+        'Después de trabajar codo a codo con su hermano mayor en la industria de la peluquería y ayudar a crecer múltiples ubicaciones de cuidado de mascotas en Colombia, Sandra construyó una base de profesionalismo y conciencia emocional que ningún curso podría enseñar jamás. Su experiencia incluye peluquería, atención al cliente, operaciones, capacitación de nuevos peluqueros y gestión de cada detalle detrás de un negocio exitoso de cuidado de mascotas.',
+      ],
+    },
+    results: {
+      title: 'Mascotas felices. Resultados hermosos.',
+      description:
+        'Mira nuestras últimas transformaciones, mascotas felices y momentos reales de nuestras jornadas de peluquería. Cada foto recuerda nuestra misión de ofrecer calma, confort y resultados hermosos para cada perro y gato que atendemos en Florida. Actualizado a menudo con clientes reales, sonrisas reales y peluquería hecha con corazón.',
+    },
+    information: {
+      title: 'Brinda confort y cuidado a tu mascota',
+      description:
+        'Programa tu cita de peluquería móvil con Monarca Grooming y disfruta de una experiencia suave y sin estrés en casa. Nuestro equipo aporta experiencia, paciencia y un manejo tranquilo para cada perro y gato que atendemos en Florida.',
+      buttons: [
+        {
+          label: 'Obtener ahora',
+          href: '#',
+          color: 'secondary',
+        },
+        {
+          label: 'Reservar ahora',
+          href: 'book-appointment',
+          color: 'primary',
+        },
+      ],
+    },
+  },
+  faq: {
+    title: 'Preguntas Frecuentes',
+    questions: [
+      {
+        title: '¿Vienen a mi casa?',
+        answer:
+          'Sí. Somos un servicio de peluquería totalmente móvil. Nuestra furgoneta de peluquería llega directamente a tu puerta con todo el equipo necesario para arreglar a tu perro o gato de manera segura y cómoda.',
+      },
+      {
+        title: '¿Cuánto tiempo dura una sesión de peluquería?',
+        answer:
+          'Una sesión típica de peluquería dura entre 1 y 3 horas, dependiendo del tamaño, la raza y la condición de tu mascota. Siempre priorizamos la comodidad y seguridad de tu mascota durante todo el proceso.',
+      },
+      {
+        title: '¿Asean a gatos?',
+        answer:
+          'Sí. Somos un servicio de peluquería totalmente móvil. Nuestra furgoneta de peluquería llega directamente a tu puerta con todo el equipo necesario para arreglar a tu perro o gato de manera segura y cómoda.',
+      },
+      {
+        title: '¿Necesito estar en casa durante la cita?',
+        answer:
+          'Sí. Somos un servicio de peluquería totalmente móvil. Nuestra furgoneta de peluquería llega directamente a tu puerta con todo el equipo necesario para arreglar a tu perro o gato de manera segura y cómoda.',
+      },
+      {
+        title: '¿Qué áreas atienden?',
+        answer:
+          'Atendemos toda Florida con nuestro servicio de peluquería totalmente móvil. Nuestra furgoneta de peluquería llega directamente a tu puerta con todo el equipo necesario para arreglar a tu perro o gato de manera segura y cómoda.',
+      },
+      {
+        title: '¿Cómo reservo una cita?',
+        answer:
+          'Puedes reservar una cita fácilmente a través de nuestro sitio web o llamándonos. Estamos aquí para hacer el proceso lo más sencillo posible para ti y tu mascota.',
+      },
+      {
+        title: '¿Qué pasa si mi mascota está ansiosa o nerviosa?',
+        answer:
+          'Entendemos que algunas mascotas pueden estar ansiosas. Nuestro equipo está capacitado para manejar situaciones delicadas con paciencia y calma, asegurando una experiencia positiva para tu mascota.',
+      },
+      {
+        title: '¿Limpian la furgoneta entre citas?',
+        answer:
+          'Sí. Limpiamos y desinfectamos completamente la furgoneta entre cada cita para mantener un entorno higiénico y seguro para todas las mascotas.',
+      },
+      {
+        title: '¿Qué pasa si necesito cancelar o reprogramar?',
+        answer:
+          'Entendemos que los planes pueden cambiar. Por favor, contáctanos lo antes posible para cancelar o reprogramar. Aplicamos una política de cancelación razonable para asegurar la disponibilidad para otros clientes.',
+      },
+    ],
+    information: {
+      title: 'Si Necesitas Más Ayuda',
+      description:
+        'Sabemos que cada mascota es única. Si necesitas orientación personal, tienes preguntas sobre la peluquería o quieres ayuda para elegir el servicio adecuado para tu perro o gato, estamos aquí para ti. Tu tranquilidad siempre es nuestra prioridad.',
+      buttons: [
+        {
+          label: 'Obtener ahora',
+          href: '#',
+          color: 'secondary',
+        },
+        {
+          label: 'Reservar ahora',
+          href: 'book-appointment',
+          color: 'primary',
+        },
+      ],
+    },
+  },
   footer: {
     description: '25 años cuidando a <br/> tus mejores amigos',
     service: {

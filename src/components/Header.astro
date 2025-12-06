@@ -18,11 +18,11 @@ const lang = match ? match[1] : 'en';
 ---
 
 <header
-  class={`fixed left-0 right-0 z-50 w-full flex flex-col justify-center items-center transition-top duration-300 ease-in-out ${normalized == '/' ? 'border-b border-b-white/20 top-0' : ' border-0 top-3 lg:top-0'}`}
+  class={`fixed left-0 right-0 z-50 w-full flex flex-col justify-center items-center transition-top duration-300 ease-in-out border-0 top-3 lg:top-0 `}
   id="site-header"
 >
   <div
-    class={`${normalized == '/' ? 'bg-none xl:px-0' : 'bg-primary lg:top-5 xl:px-12 pb-1'} w-[calc(100%-24px)] xl:w-full sm:max-w-7xl py-0 lg:min-h-[90px] flex justify-between items-center px-5 md:px-4  relative  rounded-[20px] mx-auto shadow-lg sm:shadow-none`}
+    class={`w-[calc(100%-24px)] xl:w-full sm:max-w-7xl pt-[9px] md:py-0 lg:min-h-[90px] flex justify-between items-center px-[15px] md:px-4  relative bg-primary lg:top-5 xl:px-[51px] pb-[9px] md:pb-1 rounded-[20px] mx-auto shadow-lg sm:shadow-none`}
   >
     <!-- Menú desktop (lg y arriba) -->
     <div
@@ -93,23 +93,23 @@ const lang = match ? match[1] : 'en';
         alt="Logo de Monarca - Mobile Pet Grooming"
         width="1280"
         height="810"
-        class="cursor-pointer w-[120px] md:w-[130px] h-auto"
+        class="cursor-pointer w-[75px] md:w-[130px] h-auto"
       />
     </a>
     <div class="flex justify-center items-center gap-3">
       <Button
         text={content?.buttons[0].label}
         href={content?.buttons[0].href}
-        extraBtnClass={`border ${normalized == '/' ? 'border-transparent ' : 'border-transparent'} bg-secondary hidden sm:flex`}
+        extraBtnClass={` border border-white bg-primary `}
         iconName={content?.buttons[0].icon}
-        iconClass="text-secondary"
+        iconClass="text-primary"
       />
       <Button
         text={content?.buttons[1].label}
         href={content?.buttons[1].href}
-        extraBtnClass={`border ${normalized == '/' ? 'border-primary ' : 'border-white'}  bg-primary hidden sm:flex`}
+        extraBtnClass={`border border-transparent bg-secondary hidden sm:flex`}
         iconName={content?.buttons[1].icon}
-        iconClass="text-primary"
+        iconClass="text-secondary"
       />
       <div class="flex lg:hidden justify-center items-center gap-7">
         <button
@@ -168,7 +168,7 @@ const lang = match ? match[1] : 'en';
         const isServices = index === 0;
         return (
           <div
-            class={`flex flex-col items-center justify-center gap-3.5 px-0 hover:text-white w-full py-5 text-center ${isServices ? 'relative' : ''} ${isActive ? 'bg-accent-2 text-white ' : ''}`}
+            class={`flex flex-col items-center justify-center gap-3.5 px-0 hover:text-white w-full py-5 text-center ${isServices ? 'relative' : ''} ${isActive ? 'bg-[#BFDAF1] text-primary-dark uppercase' : ''}`}
             id={`mobile-services-${index}`}
           >
             <a
@@ -210,13 +210,6 @@ const lang = match ? match[1] : 'en';
   </nav>
 
   <div class="flex flex-col justify-center items-center gap-5">
-    <Button
-      text={content?.buttons[0].label}
-      href={content?.buttons[0].href}
-      extraBtnClass={`border border-white bg-primary w-full`}
-      iconName={content?.buttons[0].icon}
-      iconClass="text-primary"
-    />
     <Button
       text={content?.buttons[1].label}
       href={content?.buttons[1].href}

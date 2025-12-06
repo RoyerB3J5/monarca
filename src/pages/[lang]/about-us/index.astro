@@ -2,6 +2,9 @@
 import en from '../../../i18n/en';
 import es from '../../../i18n/es';
 import Layout from '../../../layouts/Layout.astro';
+import Hero from '../../../sections/about/Hero.astro';
+import Results from '../../../sections/about/Results.astro';
+import Information from '../../../sections/Information.astro';
 
 import type { Language } from '../../../types/language.type';
 export function getStaticPaths() {
@@ -14,6 +17,9 @@ const lang = Astro.params.lang as Language;
 const translations = { es, en };
 const t = translations[lang];
 ---
+
 <Layout lang={lang} t={t}>
-  <section class="h-[80vh]"></section>
+  <Hero content={t.about.hero} />
+  <Results content={t.about.results} />
+  <Information content={t.about.information} />
 </Layout>

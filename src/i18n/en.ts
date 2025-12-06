@@ -475,6 +475,106 @@ export default {
       },
     },
   },
+  about: {
+    hero: {
+      title: 'About Monarcas Grooming',
+      description:
+        'Monarca Grooming was born from more than twenty years of family experience, love for animals and a deeply personal journey. What began years ago with Sandra learning to bathe dogs after school evolved into a lifelong vocation shaped by dedication, compassion and real hands-on knowledge.',
+      paragraph: [
+        'In 2022, after the heartbreaking loss of both parents just days apart, Sandra transformed her pain into purpose. With courage, resilience and the desire to honor her family, she started a new chapter in the United States. This is where Monarca Grooming took flight, a mobile grooming service created not only to groom pets, but to touch lives with empathy, patience and sincerity.',
+        'After working side by side with her older brother in the grooming industry and helping grow multiple pet care locations in Colombia, Sandra built a foundation of professionalism and emotional awareness that no course could ever teach. Her experience includes grooming, customer care, operations, training new groomers and managing every detail behind a successful pet care business.',
+      ],
+    },
+    results: {
+      title: 'Happy Pets. Beautiful Results.',
+      description:
+        'See our latest transformations, happy pets and real moments from our grooming days. Every photo is a reminder of our mission to bring calm, comfort and beautiful results to every dog and cat we care for in Florida. Updated often with real clients, real smiles and grooming done with heart.',
+    },
+    information: {
+      title: 'Give Your Pet the Comfort and Care They Deserve',
+      description:
+        'Schedule your mobile grooming appointment with Monarca Grooming and enjoy gentle, stress free grooming at home. Our team brings experience, patience and calm handling to every dog and cat we care for in Florida.',
+      buttons: [
+        {
+          label: 'Get now',
+          href: '#',
+          color: 'secondary',
+        },
+        {
+          label: 'Book now',
+          href: 'book-appointment',
+          color: 'primary',
+        },
+      ],
+    },
+  },
+  faq: {
+    title: 'FAQs',
+    questions: [
+      {
+        title: 'Do you come to my home?',
+        answer:
+          'Yes. We are a fully mobile grooming service. Our grooming van arrives directly at your doorstep with all the equipment needed to groom your dog or cat safely and comfortably.',
+      },
+      {
+        title: 'How long does a grooming session take?',
+        answer:
+          'A typical grooming session takes between 1 to 3 hours, depending on the size, breed, and condition of your pet. We always prioritize your pet’s comfort and safety throughout the process.',
+      },
+      {
+        title: 'Do you groom cats?',
+        answer:
+          'Yes. We are a fully mobile grooming service. Our grooming van arrives directly at your doorstep with all the equipment needed to groom your dog or cat safely and comfortably.',
+      },
+      {
+        title: 'Do I need to be home during the appointment?',
+        answer:
+          'Yes. We are a fully mobile grooming service. Our grooming van arrives directly at your doorstep with all the equipment needed to groom your dog or cat safely and comfortably.',
+      },
+      {
+        title: 'What areas do you serve?',
+        answer:
+          'We serve all of Florida with our fully mobile grooming service. Our grooming van arrives directly at your doorstep with all the equipment needed to groom your dog or cat safely and comfortably.',
+      },
+      {
+        title: 'How do I book an appointment?',
+        answer:
+          'Yes. We are a fully mobile grooming service. Our grooming van arrives directly at your doorstep with all the equipment needed to groom your dog or cat safely and comfortably.',
+      },
+      {
+        title: 'What if my pet is anxious or nervous?',
+        answer:
+          'Yes. We are a fully mobile grooming service. Our grooming van arrives directly at your doorstep with all the equipment needed to groom your dog or cat safely and comfortably.',
+      },
+      {
+        title: 'Do you clean the van between appointments?',
+        answer:
+          'Yes. We are a fully mobile grooming service. Our grooming van arrives directly at your doorstep with all the equipment needed to groom your dog or cat safely and comfortably.',
+      },
+      {
+        title: 'What if I need to cancel or reschedule?',
+        answer:
+          'Yes. We are a fully mobile grooming service. Our grooming van arrives directly at your doorstep with all the equipment needed to groom your dog or cat safely and comfortably.',
+      },
+    ],
+    information: {
+      title: 'If You Need More Help',
+      description:
+        'We know every pet is unique. If you need personal guidance, have questions about grooming, or want help choosing the right service for your dog or cat, we are here for you. Your peace of mind is always our priority.',
+      buttons: [
+        {
+          label: 'Get now',
+          href: '#',
+          color: 'secondary',
+        },
+        {
+          label: 'Book now',
+          href: 'book-appointment',
+          color: 'primary',
+        },
+      ],
+    },
+  },
   footer: {
     description: '25 years taking care <br/> of your best friends',
     service: {

@@ -1,0 +1,54 @@
+---
+import { Icon } from 'astro-icon/components';
+
+type Translations = typeof import('../../i18n/es').default;
+type HeroContent = Translations['about']['hero'];
+interface Props {
+  content: HeroContent;
+}
+const { content } = Astro.props as Props;
+---
+
+<section
+  class="h-full w-full max-w-screen md:max-w-7xl flex flex-col justify-center items-center px-5 xl:px-0 pt-30 md:pt-[130px] lg:pt-[167px] gap-[50px] lg:gap-[76px] relative"
+>
+  <Icon
+    name={'ondulate'}
+    class={'absolute bottom-0 w-auto h-8 z-10 left-0 rotate-180 flex md:hidden'}
+    style="color: #101C38"
+  />
+  <div class="w-full flex flex-col justify-center items-center gap-5">
+    <h1
+      class="text-[32px] lg:text-[40px] leading-[110%] font-title text-primary-dark font-normal text-center"
+    >
+      {content.title}
+    </h1>
+    <p
+      class="text-[16px] lg:text-[20px] leading-[120%] font-normal text-center text-paragraph"
+    >
+      {content.description}
+    </p>
+  </div>
+  <div
+    class="w-full flex flex-col md:flex-row justify-center md:justify-between items-center md:items-end lg:items-center gap-[74px] md:gap-0"
+  >
+    <img
+      src="/images/about/pet-cat.webp"
+      alt="Imagenes de mascotas Monarca"
+      width="615"
+      height="405"
+      loading="lazy"
+      decoding="async"
+      class="w-full sm:w-[65%] md:w-[45%] h-auto order-2 md:order-1"
+    />
+    <div
+      class="flex flex-col justify-center items-start gap-[37px] max-w-none md:max-w-[48%] pb-0 md:pb-4 lg:pb-0 order-1 md:order-2"
+    >
+      {
+        content.paragraph.map((text) => (
+          <p class="text-[16px] text-paragraph leading-[120%]">{text}</p>
+        ))
+      }
+    </div>
+  </div>
+</section>

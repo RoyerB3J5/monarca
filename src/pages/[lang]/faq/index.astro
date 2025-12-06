@@ -1,0 +1,127 @@
+---
+import { Icon } from 'astro-icon/components';
+import en from '../../../i18n/en';
+import es from '../../../i18n/es';
+import Layout from '../../../layouts/Layout.astro';
+
+import type { Language } from '../../../types/language.type';
+import Button from '../../../components/Button.astro';
+export function getStaticPaths() {
+  return [{ params: { lang: 'es' } }, { params: { lang: 'en' } }];
+}
+
+export const defaultRedirect = '/en';
+
+const lang = Astro.params.lang as Language;
+const translations = { es, en };
+const t = translations[lang];
+const content = t.faq;
+---
+
+<Layout lang={lang} t={t}>
+  <style>
+    .faq-item .answer {
+      display: none;
+    }
+    .faq-item.open .answer {
+      display: block;
+    }
+    .faq-item .icon {
+      transition: transform 0.3s;
+    }
+    .faq-item.open .icon {
+      transform: rotate(90deg);
+    }
+  </style>
+  <section
+    class="h-full w-full flex flex-col justify-center items-center px-5 xl:px-0 bg-[#FFF0C4] gap-[86px] md:gap-[50px] pt-[133px] md:pt-[166px]"
+  >
+    <div
+      class="w-full max-w-[1112px] flex flex-col justify-center items-center gap-5 md:gap-[51px]"
+    >
+      <h1
+        class="text-[48px] font-title text-primary-dark leading-[110%] font-normal"
+      >
+        {content.title}
+      </h1>
+      <div class="w-full flex flex-col justify-center items-center gap-4">
+        {
+          content.questions.map((item, index) => (
+            <div
+              class={`faq-item w-full flex flex-col justify-center items-center bg-white gap-[11px] py-5 px-4 rounded-2xl${index === 0 ? ' open' : ''}`}
+            >
+              <div class="w-full flex justify-between items-center">
+                <h2 class="text-[20px] font-bold leading-[120%] text-paragraph">
+                  {item.title}
+                </h2>
+                <div class="icon-div bg-secondary p-3 rounded-full cursor-pointer">
+                  <Icon name={'arrow-r'} class={'w-3.5 h-3.5 icon'} />
+                </div>
+              </div>
+              <p class="answer text-[16px] leading-[130%] font-normal text-[#686868]">
+                {item.answer}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <div
+      class="w-full max-w-screen md:max-w-7xl flex flex-col md:flex-row justify-between items-center pb-[83px] lg:pb-5 gap-[46px] md:gap-0"
+    >
+      <div
+        class="flex flex-col justify-center items-start gap-[18px] max-w-none md:max-w-[55%]"
+        data-aos="fade-right"
+      >
+        <h2
+          class="text-[32px] md:text-[48px] leading-[120%] font-normal text-primary-dark font-title"
+        >
+          {content.information.title}
+        </h2>
+        <p class="text-[16px] leading-[140%] text-paragraph text-normal">
+          {content.information.description}
+        </p>
+        <div class="flex justify-center items-center gap-3">
+          {
+            content.information.buttons.map((btn) => (
+              <Button
+                text={btn.label}
+                href={`/${lang}/${btn.href}`}
+                extraBtnClass={`bg-${btn.color}`}
+                iconName={'arrow'}
+                iconClass={`text-${btn.color}`}
+              />
+            ))
+          }
+        </div>
+      </div>
+      <img
+        src="/images/dog-faq.webp"
+        alt="Information Monarca"
+        width="259"
+        height="269"
+        class="w-[90%] md:w-[259px] h-auto"
+        data-aos="fade-left"
+        decoding="async"
+        loading="lazy"
+      />
+    </div>
+  </section>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.faq-item').forEach((item) => {
+        const iconDiv = item.querySelector('.icon-div');
+        if (iconDiv) {
+          iconDiv.addEventListener('click', () => {
+            // Close all items
+            document
+              .querySelectorAll('.faq-item')
+              .forEach((i) => i.classList.remove('open'));
+            // Open the clicked item
+            item.classList.add('open');
+          });
+        }
+      });
+    });
+  </script>
+</Layout>

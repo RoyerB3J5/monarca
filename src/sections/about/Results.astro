@@ -1,0 +1,237 @@
+---
+import { Icon } from 'astro-icon/components';
+
+type Translations = typeof import('../../i18n/es').default;
+type ResultsContent = Translations['about']['results'];
+interface Props {
+  content: ResultsContent;
+}
+const { content } = Astro.props as Props;
+---
+
+<section
+  class="w-full flex justify-center items-center gap-[73px] flex-col pt-14 pb-[120px] relative bg-primary-dark"
+>
+  <img
+    src="/images/main/bg-pets.webp"
+    alt="Fondo de Monarcas"
+    width="1599"
+    height="914"
+    class="absolute w-full h-full inset-0 top-0 z-0 object-cover object-top"
+    decoding="async"
+    loading="lazy"
+  />
+  <Icon
+    name={'ondulate'}
+    class={'absolute -bottom-px h-10 w-auto md:w-full md:h-auto z-10 left-0 rotate-180'}
+    style="color: #FFF"
+  />
+  <div
+    class="w-full max-w-screen md:max-w-7xl flex flex-col justify-center items-center px-5 xl:px-0 gap-5"
+  >
+    <h2
+      class="text-[32px] md:text-[40px] font-normal font-title leading-[120%] text-white text-center"
+    >
+      {content.title}
+    </h2>
+    <p
+      class="text-[20px] md:text-[16px] leading-[130%] md:leading-[120%] font-normal text-center text-white"
+      set:html={content.description}
+    />
+  </div>
+  <div class="w-full">
+    <style>
+      .carousel-track {
+        gap: 17px;
+        align-items: stretch;
+      }
+      .carousel-slide {
+        flex: 0 0 100%;
+      }
+      .carousel {
+        overflow: hidden;
+      }
+    </style>
+
+    <div class="carousel overflow-hidden">
+      <!-- Track for md and below: each div is a separate slide -->
+      <div class="carousel-track flex md:hidden">
+        <!-- group A -->
+        <div class="carousel-slide w-full h-[50vh]">
+          <div
+            class="w-full h-full grid grid-cols-3 gap-[17px] grid-rows-[3fr_2fr]"
+          >
+            <div class="bg-primary rounded-[20px] col-span-2 h-full"></div>
+            <div class="bg-primary rounded-[20px] h-full"></div>
+            <div class="bg-primary rounded-[20px] h-full"></div>
+            <div class="bg-primary rounded-[20px] col-span-2 h-full"></div>
+          </div>
+        </div>
+        <div class="carousel-slide w-full h-[50vh]">
+          <div class="w-full h-full bg-primary-dark rounded-[20px]"></div>
+        </div>
+        <div class="carousel-slide w-full h-[50vh]">
+          <div
+            class="w-full h-full grid grid-cols-3 gap-[17px] grid-rows-[2fr_3fr]"
+          >
+            <div class="bg-secondary rounded-[20px] col-span-2"></div>
+            <div class="bg-secondary rounded-[20px]"></div>
+            <div class="bg-secondary rounded-[20px]"></div>
+            <div class="bg-secondary rounded-[20px] col-span-2"></div>
+          </div>
+        </div>
+        <!-- group B (duplicate) -->
+        <div class="carousel-slide w-full h-[50vh]">
+          <div
+            class="w-full h-full grid grid-cols-3 gap-[17px] grid-rows-[3fr_2fr]"
+          >
+            <div class="bg-primary rounded-[20px] col-span-2 h-full"></div>
+            <div class="bg-primary rounded-[20px] h-full"></div>
+            <div class="bg-primary rounded-[20px] h-full"></div>
+            <div class="bg-primary rounded-[20px] col-span-2 h-full"></div>
+          </div>
+        </div>
+        <div class="carousel-slide w-full h-[50vh]">
+          <div class="w-full h-full bg-primary-dark rounded-[20px]"></div>
+        </div>
+        <div class="carousel-slide w-full h-[50vh]">
+          <div
+            class="w-full h-full grid grid-cols-3 gap-[17px] grid-rows-[2fr_3fr]"
+          >
+            <div class="bg-secondary rounded-[20px] col-span-2"></div>
+            <div class="bg-secondary rounded-[20px]"></div>
+            <div class="bg-secondary rounded-[20px]"></div>
+            <div class="bg-secondary rounded-[20px] col-span-2"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Track for md and above: original structure -->
+      <div class="carousel-track hidden md:flex">
+        <!-- group A -->
+        <div
+          class="carousel-slide flex justify-center items-stretch gap-5 w-full h-[60vh]"
+        >
+          <div
+            class="w-full md:w-[33%] h-full grid grid-cols-3 gap-[17px] grid-rows-[3fr_2fr]"
+          >
+            <div class="bg-primary rounded-[20px] col-span-2 h-full"></div>
+            <div class="bg-primary rounded-[20px] h-full"></div>
+            <div class="bg-primary rounded-[20px] h-full"></div>
+            <div class="bg-primary rounded-[20px] col-span-2 h-full"></div>
+          </div>
+          <div class="w-full md:w-[34%] h-full bg-primary-dark rounded-[20px]">
+          </div>
+          <div
+            class="w-full md:w-[33%] h-full grid grid-cols-3 gap-[17px] grid-rows-[2fr_3fr]"
+          >
+            <div class="bg-secondary rounded-[20px] col-span-2"></div>
+            <div class="bg-secondary rounded-[20px]"></div>
+            <div class="bg-secondary rounded-[20px]"></div>
+            <div class="bg-secondary rounded-[20px] col-span-2"></div>
+          </div>
+        </div>
+
+        <!-- group B (duplicate) -->
+        <div
+          class="carousel-slide flex justify-center items-stretch gap-5 w-full h-[60vh]"
+        >
+          <div
+            class="w-full md:w-[33%] h-full grid grid-cols-3 gap-[17px] grid-rows-[3fr_2fr]"
+          >
+            <div class="bg-primary rounded-[20px] col-span-2 h-full"></div>
+            <div class="bg-primary rounded-[20px] h-full"></div>
+            <div class="bg-primary rounded-[20px] h-full"></div>
+            <div class="bg-primary rounded-[20px] col-span-2 h-full"></div>
+          </div>
+          <div class="w-full md:w-[34%] h-full bg-primary-dark rounded-[20px]">
+          </div>
+          <div
+            class="w-full md:w-[33%] h-full grid grid-cols-3 gap-[17px] grid-rows-[2fr_3fr]"
+          >
+            <div class="bg-secondary rounded-[20px] col-span-2"></div>
+            <div class="bg-secondary rounded-[20px]"></div>
+            <div class="bg-secondary rounded-[20px]"></div>
+            <div class="bg-secondary rounded-[20px] col-span-2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const tracks = document.querySelectorAll('.carousel-track');
+        let track: HTMLElement | null = null;
+        for (const t of tracks) {
+          if (getComputedStyle(t).display !== 'none') {
+            track = t as HTMLElement;
+            break;
+          }
+        }
+        if (!track) return;
+        const slides = Array.from(
+          track.querySelectorAll<HTMLElement>('.carousel-slide')
+        );
+        if (slides.length < 2) return;
+
+        // Use Web Animations API for a seamless scroll based on actual slide width + gap
+        let anim: Animation | null = null;
+        const trackEl = track as HTMLElement;
+        const speedPxPerSec = 50; // slower speed (px per second)
+
+        function startAnim() {
+          if (anim) anim.cancel();
+          const first = slides[0];
+          const slideRect = first.getBoundingClientRect();
+          const slideWidth = Math.round(slideRect.width);
+          if (!slideWidth) return;
+          const trackStyle = getComputedStyle(trackEl);
+          const gap = parseFloat(trackStyle.gap || '0') || 0;
+          let distance = slideWidth + gap;
+          if (slides.length > 3) {
+            distance *= 3; // For small screens with 6 slides, move by 3 slides to loop seamlessly
+          }
+          const duration = Math.max(3000, (distance / speedPxPerSec) * 1000);
+
+          anim = trackEl.animate(
+            [
+              { transform: 'translateX(0px)' },
+              { transform: `translateX(-${distance}px)` },
+            ],
+            {
+              duration,
+              iterations: Infinity,
+              easing: 'linear',
+            }
+          );
+
+          // pause on hover of the carousel container
+          const container = trackEl.closest('.carousel') as HTMLElement | null;
+          if (container) {
+            container.addEventListener('mouseenter', () => anim?.pause());
+            container.addEventListener('mouseleave', () => anim?.play());
+          }
+        }
+
+        startAnim();
+        window.addEventListener('resize', () => {
+          if (anim) anim.cancel();
+          // Re-select the visible track on resize
+          for (const t of tracks) {
+            if (getComputedStyle(t).display !== 'none') {
+              track = t as HTMLElement;
+              break;
+            }
+          }
+          if (track) {
+            const newSlides = Array.from(
+              track.querySelectorAll<HTMLElement>('.carousel-slide')
+            );
+            if (newSlides.length >= 2) {
+              startAnim();
+            }
+          }
+        });
+      });
+    </script>
+  </div>
+</section>
