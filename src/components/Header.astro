@@ -99,7 +99,8 @@ const lang = match ? match[1] : 'en';
     <div class="flex justify-center items-center gap-3">
       <Button
         text={content?.buttons[0].label}
-        href={content?.buttons[0].href}
+        textClass='text-[13px] sm:text-[16px] text-white'
+        href={`/${lang}/${content?.buttons[0].href}`}
         extraBtnClass={` border border-white bg-primary `}
         iconName={content?.buttons[0].icon}
         iconClass="text-primary"

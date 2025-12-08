@@ -30,7 +30,7 @@ export default {
     buttons: [
       {
         label: 'Book a appointment',
-        href: '#',
+        href: 'book-appointment',
         icon: 'arrow',
         background: 'bg-primary',
       },
@@ -112,6 +112,21 @@ export default {
           },
         ],
       },
+      dental: {
+        title: 'Dental Cleaning Non Anesthetic',
+        buttons: [
+          {
+            label: 'Call Now!',
+            href: '#',
+            color: 'secondary',
+          },
+          {
+            label: 'Book Now!',
+            href: 'book-appointment',
+            color: 'primary',
+          },
+        ],
+      },
       choose: {
         title: 'Why Choose Monarca Grooming',
         description:
@@ -181,7 +196,7 @@ export default {
     results: {
       title: 'Happy Pets. Beautiful Results.',
       description:
-        'See our latest transformations, happy pets and real moments from our grooming days. Every photo is a reminder of our mission to bring calm, comfort and beautiful results to every <br/> dog and cat we care for in Florida. Updated often with real clients, real smiles and grooming done with heart.',
+        'See our latest transformations, happy pets and real moments from our grooming days. Every photo is a reminder of our mission to bring calm, comfort and beautiful results to every dog and cat we care for in Florida. Updated often with real clients, real smiles and grooming done with heart.',
     },
     about: {
       title: 'What Pet Parents Say <br/> About Monarca Grooming',

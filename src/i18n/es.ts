@@ -30,7 +30,7 @@ export default {
     buttons: [
       {
         label: 'Reservar cita',
-        href: '#',
+        href: 'book-appointment',
         icon: 'arrow',
         background: 'bg-primary',
       },
@@ -110,6 +110,21 @@ export default {
               label: 'Ver servicio',
               href: '/mobile-cat-grooming',
             },
+          },
+        ],
+      },
+      dental: {
+        title: 'Dental Cleaning Non Anesthetic',
+        buttons: [
+          {
+            label: 'Call Now!',
+            href: '#',
+            color: 'secondary',
+          },
+          {
+            label: 'Book Now!',
+            href: 'book-appointment',
+            color: 'primary',
           },
         ],
       },

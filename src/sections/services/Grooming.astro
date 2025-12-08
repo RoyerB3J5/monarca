@@ -16,6 +16,7 @@ const lang = match ? match[1] : 'en';
 
 <section
   class="h-full w-full max-w-screen md:max-w-7xl flex flex-col justify-center items-center px-5 xl:px-0 gap-[68px] sm:gap-[150px] md:gap-[50px] lg:gap-[105px] pt-[110px] md:pt-[173px]"
+  data-aos="flip-up"
 >
   <div class="flex flex-col justify-center items-center gap-[18px]">
     <h2
@@ -39,7 +40,9 @@ const lang = match ? match[1] : 'en';
             alt={item.title}
             width={item.with}
             height={item.height}
-            class="w-[48%] sm:w-[32%] md:w-[50%] lg:w-[50%] h-auto absolute left-3 sm:left-10 md:left-3 bottom-7 md:bottom-10 "
+            decoding="async"
+            loading="lazy"
+            class="w-[48%] sm:w-[32%] md:w-[50%] lg:w-[50%] h-auto absolute left-3 sm:left-10 md:left-3 bottom-7 md:bottom-10 max-h-none md:max-h-[327px] lg:max-h-none"
           />
           <div class="flex flex-col justify-center items-start gap-[15px] md:gap-[18px] max-w-[45%] md:max-w-[246px] z-20">
             <p class="text-[24px] md:text-[42px] leading-[120%] font-title text-white">

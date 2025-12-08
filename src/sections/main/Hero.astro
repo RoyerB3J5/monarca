@@ -30,6 +30,8 @@ const lang = match ? match[1] : 'en';
     width="1200"
     height="800"
     class="absolute right-[2%] bottom-0 w-[75%] h-auto lg:h-[90%] xl:h-full lg:w-auto object-contain hidden sm:block"
+    decoding="async"
+    loading="eager"
   />
   <img
     data-aos="fade-left"
@@ -38,13 +40,17 @@ const lang = match ? match[1] : 'en';
     width="348"
     height="340"
     class="absolute left-10 xs:left-0 bottom-0 h-[40%] xs:h-[50%] w-auto block sm:hidden"
+    decoding="async"
+    loading="eager"
   />
   {/*<Icon
     name={'back-main'}
     class={'w-[55vw] h-auto absolute left-0 top-0 -z-10'}
   /> */}
-  <img src="/images/back-main.webp" alt="Background Main" class="w-[65vw] md:w-[55vw] h-auto absolute left-0 top-0 -z-10 hidden sm:block" width="1660" height="1157"/>
-  <img src="/images/back-main-2.webp" alt="Background Main" class="w-screen h-auto absolute left-0 top-0 -z-10 block sm:hidden" width="370" height="386"/>
+  <img src="/images/back-main.webp" alt="Background Main" class="w-[65vw] md:w-[55vw] h-auto absolute left-0 top-0 -z-10 hidden sm:block" width="1660" height="1157" decoding="async"
+    loading="eager"/>
+  <img src="/images/back-main-2.webp" alt="Background Main" class="w-screen h-auto absolute left-0 top-0 -z-10 block sm:hidden" width="370" height="386" decoding="async"
+    loading="eager"/>
   <img
     src={`/images/main/back.webp`}
     alt="Imagen de Fondo de Monarcas - Mobile Pet Grooming"

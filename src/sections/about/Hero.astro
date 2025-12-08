@@ -37,12 +37,13 @@ const { content } = Astro.props as Props;
       alt="Imagenes de mascotas Monarca"
       width="615"
       height="405"
-      loading="lazy"
+      loading="eager"
       decoding="async"
       class="w-full sm:w-[65%] md:w-[45%] h-auto order-2 md:order-1"
+      data-aos="zoom-out-right"
     />
     <div
-      class="flex flex-col justify-center items-start gap-[37px] max-w-none md:max-w-[48%] pb-0 md:pb-4 lg:pb-0 order-1 md:order-2"
+      class="flex flex-col justify-center items-start gap-[37px] max-w-none md:max-w-[48%] pb-0 md:pb-4 lg:pb-0 order-1 md:order-2" data-aos="zoom-out-left"
     >
       {
         content.paragraph.map((text) => (

@@ -19,29 +19,30 @@ const { content } = Astro.props as Props;
     width="1599"
     height="673"
     class="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
-    loading="lazy"
     decoding="async"
+    loading="eager"
   />
   <img
     src={`/images/services/${content.image.href}.webp`}
     alt={content.title}
     width={content.image.width}
     height={content.image.height}
-    loading="lazy"
+    loading="eager"
     decoding="async"
     class={`${content.image.href == 'dog-1' ? 'w-[60%] lg:w-[575px]' : 'w-[60%] lg:w-[625px]'} h-auto z-20 absolute bottom-0 left-0 -translate-x-[25vw] lg:-translate-x-[15vw] xl:-translate-x-[5vw] 2xl:translate-x-0 hidden md:block`}
   />
   <div
     class={`h-full w-full max-w-screen md:max-w-7xl flex flex-col md:flex-row justify-center md:justify-end items-center px-5 xl:px-0 pt-30 md:pt-[150px] gap-[42px] md:gap-0 z-20`}
-    data-aos='zoom-in' data-aos-offset='200'
+    data-aos="zoom-in"
+    data-aos-offset="200"
   >
     <img
       src={`/images/services/${content.image.href}.webp`}
       alt={content.title}
       width={content.image.width}
       height={content.image.height}
-      loading="lazy"
       decoding="async"
+      loading="eager"
       class={`${content.image.href == 'dog-1' ? ' sm:w-[430px]' : 'sm:w-[387px]'} w-full h-auto z-20 block md:hidden`}
     />
     <div
@@ -53,7 +54,9 @@ const { content } = Astro.props as Props;
         >
           {content.subtitle}
         </p>
-        <h1 class="text-[36px] sm:text-[48px] leading-[110%] font-normal font-title">
+        <h1
+          class="text-[36px] sm:text-[48px] leading-[110%] font-normal font-title"
+        >
           {content.title}
         </h1>
         <p class="text-[20px] leading-[120%] font-normal">

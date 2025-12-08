@@ -68,6 +68,8 @@ const { content } = Astro.props as Props;
                 alt={item.title}
                 width="600"
                 height="400"
+                loading="lazy"
+                decoding="async"
                 class={`h-auto absolute ${index === 1 ? 'z-30 bottom-5 sm:bottom-[74px] w-[289px] sm:w-[414px] left-1/2 -translate-x-1/2' : index === 2 ? 'z-0 scale-150 -bottom-[120px] sm:-bottom-[100px] w-full left-1/2 -translate-x-1/2' : 'z-0 -bottom-14 sm:-bottom-8 scale-150 w-full left-1/2 -translate-x-1/2'}`}
               />
             </div>

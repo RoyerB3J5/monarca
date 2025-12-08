@@ -24,11 +24,22 @@ const lang = match ? match[1] : 'en';
     width="429"
     height="467"
     class="w-[300px] lg:w-[389px] h-auto"
-    data-aos='fade-right'
+    data-aos="fade-right"
+    decoding="async"
+    loading="lazy"
   />
-  <div class="flex flex-col justify-center items-start gap-[18px] max-w-none md:max-w-[55%]" data-aos='fade-left'>
-    <h2 class="text-[32px] md:text-[48px] leading-[120%] font-normal text-primary font-title">{content.title}</h2>
-    <p class="text-[16px] leading-[140%] text-paragraph text-normal">{content.description}</p>
+  <div
+    class="flex flex-col justify-center items-start gap-[18px] max-w-none md:max-w-[55%]"
+    data-aos="fade-left"
+  >
+    <h2
+      class="text-[32px] md:text-[48px] leading-[120%] font-normal text-primary font-title"
+    >
+      {content.title}
+    </h2>
+    <p class="text-[16px] leading-[140%] text-paragraph text-normal">
+      {content.description}
+    </p>
     <div class="flex justify-center items-center gap-3">
       {
         content.buttons.map((btn) => (

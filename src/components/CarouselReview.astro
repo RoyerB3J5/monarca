@@ -7,7 +7,7 @@ const { interval = 8000 } = Astro.props as Props;
 ---
 
 <div
-  class="relative px-2 sm:px-5 lg:px-0 max-w-[900px] w-auto hero-carousel flex flex-col justify-center items-center gap-[27px]"
+  class="relative px-0 max-w-[550px] lg:max-w-[700px] xl:max-w-[900px] w-auto hero-carousel flex flex-col justify-center items-center gap-[27px]"
   data-interval={interval}
 >
   <!-- Viewport -->
@@ -18,7 +18,7 @@ const { interval = 8000 } = Astro.props as Props;
     >
       {
         Array.from({ length: 4 }, (_, i) => (
-          <div class="shrink-0 w-full md:w-[60%] h-full px-2 md:px-2.5">
+          <div class="shrink-0 w-full md:w-[60%] h-full px-0 md:px-2.5">
             <img
               src={`/images/main/slide-${i + 1}.webp`}
               alt="Slide image"
@@ -35,10 +35,10 @@ const { interval = 8000 } = Astro.props as Props;
   </div>
   <!-- Controles con barra de progreso y botones -->
   <div class="w-full flex justify-start items-center gap-12 px-1">
-    <div class="w-[60%] flex items-center gap-4">
-      <div class="flex-1 bg-white/50 rounded-full h-1 backdrop-blur-sm">
+    <div class="w-full md:w-[60%] flex items-center gap-4">
+      <div class="flex-1 bg-[#E8E8E8] md:bg-white/50 rounded-full h-[5px] md:h-1 backdrop-blur-sm">
         <div
-          class="hero-carousel-progress bg-white h-1 rounded-full transition-all duration-500 ease-out"
+          class="hero-carousel-progress bg-[#926412] md:bg-white h-1 rounded-full transition-all duration-500 ease-out"
           style="width: 0%"
         >
         </div>
@@ -46,7 +46,7 @@ const { interval = 8000 } = Astro.props as Props;
     </div>
 
     <!-- Botón anterior -->
-    <div class="flex justify-center items-center gap-3.5">
+    <div class="md:flex justify-center items-center gap-3.5 hidden">
       <button
         class="hero-carousel-prev border border-white text-white py-4 px-4 rounded-full transition-all duration-200 cursor-pointer hover:bg-white hover:text-primary"
         aria-label="Previous slide"
@@ -89,8 +89,16 @@ const { interval = 8000 } = Astro.props as Props;
 
 <style>
   .hero-carousel-progress {
-    background: linear-gradient(90deg, white 0%, white 100%);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    /* default: use brand brown on small screens */
+    background: #926412 !important;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15) !important;
+  }
+  @media (min-width: 768px) {
+    .hero-carousel-progress {
+      /* desktop: white progress as before */
+      background: linear-gradient(90deg, white 0%, white 100%) !important;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3) !important;
+    }
   }
 </style>
 

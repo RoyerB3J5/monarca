@@ -1,6 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
 import Button from '../../components/Button.astro';
+import BeforeAfter from '../../components/BeforeAfter.astro';
 type Translations = typeof import('../../i18n/es').default;
 type InfoContent = Translations['main']['information'];
 interface Props {
@@ -82,6 +83,8 @@ const lang = match ? match[1] : 'en';
                 alt={item.title}
                 width={item.with}
                 height={item.height}
+                decoding="async"
+                loading="lazy"
                 class="w-[48%] sm:w-[32%] md:w-[50%] lg:w-[50%] h-auto absolute left-3 sm:left-10 md:left-3 bottom-7 md:bottom-10 max-h-none md:max-h-[327px] lg:max-h-none"
               />
               <div class="flex flex-col justify-center items-start gap-[15px] md:gap-[18px] max-w-[45%] md:max-w-[246px] z-20">
@@ -107,6 +110,33 @@ const lang = match ? match[1] : 'en';
       </div>
     </div>
     <div
+      class="w-full flex flex-col justify-center items-center gap-10"
+      data-aos="zoom-out"
+    >
+      <h2
+        class="font-title text-[32px] md:text-[40px] leading-[120%] text-center text-primary-dark"
+      >
+        {content.dental.title}
+      </h2>
+      <BeforeAfter
+        beforeImage="/images/before.webp"
+        afterImage="/images/after.webp"
+      />
+      <div class="flex justify-center items-center gap-3">
+        {
+          content.dental.buttons.map((btn) => (
+            <Button
+              text={btn.label}
+              href={`/${lang}/${btn.href}`}
+              extraBtnClass={`bg-${btn.color}`}
+              iconName={'arrow'}
+              iconClass={`text-${btn.color}`}
+            />
+          ))
+        }
+      </div>
+    </div>
+    <div
       class="w-full flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-end gap-10 md:gap-0"
       data-aos="flip-left"
       data-aos-offset="400"
@@ -116,10 +146,12 @@ const lang = match ? match[1] : 'en';
         alt="why choose us"
         width="619"
         height="564"
+        decoding="async"
+        loading="lazy"
         class="w-full lg:w-[50%] xl:w-[580px] h-auto max-w-[623px] order-2 lg:order-1"
       />
       <div
-        class="flex flex-col justify-center items-start pt-[33px] pb-[85px] gap-[53px] max-w-[648px] order-1 lg:order-2"
+        class="flex flex-col justify-center items-start pt-0 md:pt-[33px] pb-[85px] gap-[53px] max-w-[648px] order-1 lg:order-2"
       >
         <div
           class="flex flex-col justify-center items-center lg:items-start gap-[19px]"
@@ -141,10 +173,7 @@ const lang = match ? match[1] : 'en';
               <>
                 <div class="flex flex-col lg:flex-row justify-start items-center lg:items-start gap-[31px] w-full">
                   <div class="shrink-0 w-[100px] h-[100px] flex items-center justify-center">
-                    <Icon
-                      name={item.icon}
-                      class={'w-[70px] md:w-[100px] h-[70px] md:h-[100px]'}
-                    />
+                    <Icon name={item.icon} class={'w-[100px] h-[100px]'} />
                   </div>
                   <div class="flex-1 min-w-0 flex flex-col justify-center items-start gap-[11px]">
                     <h3 class="text-[20px] font-subtitle leading-[120%] font-semibold">
