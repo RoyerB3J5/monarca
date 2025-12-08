@@ -25,11 +25,12 @@
   --color-accent-1: #cbf9ea;
   --color-accent-2: #5995ff;
   --color-paragraph: #1d1d1d;
-  --breakpoint-xs: 25rem;
+  --breakpoint-xs: 400px;
   --breakpoint-3xl: 106rem;
 }
 
 .banner-back {
+  /* Desktop / default gradient */
   background: linear-gradient(
     90deg,
     #8d6111 0%,
@@ -38,12 +39,25 @@
     #926412 99.99%
   );
 }
+
+/* Use alternate gradient for md and below (<= 768px) */
+@media (max-width: 768px) {
+  .banner-back {
+    background: linear-gradient(
+      182deg,
+      #8d6111 -72.81%,
+      #f6c56b -10.82%,
+      #f3a71d 41.62%,
+      #926412 92.46%
+    );
+  }
+}
 .carousel-back {
   /* moved gradient center upwards (52.5% horizontally, 30% vertically) */
   background: radial-gradient(
     47.79% 46.89% at 52.5% 50%,
-    #EAD6A2 0%,
-    #FFB839 100%
+    #ead6a2 0%,
+    #ffb839 100%
   );
 }
 .img-carousel {

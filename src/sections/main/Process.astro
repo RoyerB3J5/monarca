@@ -12,32 +12,47 @@ const { content } = Astro.props as Props;
 <section
   class="bg-primary-dark w-full flex justify-center items-center relative h-auto"
 >
-  
-  <img src="/images/main/bg-pets.webp" alt="Fondo de Monarcas" width="1599" height="914" class="absolute w-full h-full inset-0 top-0 z-0 object-cover object-top" decoding="async" loading="lazy" />
+  <img
+    src="/images/main/bg-pets.webp"
+    alt="Fondo de Monarcas"
+    width="1599"
+    height="914"
+    class="absolute w-full h-full inset-0 top-0 z-0 object-cover object-top"
+    decoding="async"
+    loading="lazy"
+  />
   <div
-    class="h-full w-full max-w-screen md:max-w-7xl flex flex-col justify-center items-center px-5 xl:px-0 gap-[59px] pt-[70px] pb-[220px] relative" data-aos="fade-down" data-aos-offset="300"
+    class="h-full w-full max-w-screen md:max-w-7xl flex flex-col justify-center items-center px-5 xl:px-0 gap-[59px] pt-[70px] pb-[350px] md:pb-[220px] relative"
+    data-aos="fade-down"
+    data-aos-offset="300"
   >
-    <div class="flex flex-col justify-center items-center gap-3 text-white" >
-      <h2 class="text-[40px] leading-[130%] font-title">{content.title}</h2>
+    <div class="flex flex-col justify-center items-center gap-3 text-white">
+      <h2
+        class="text-[32px] md:text-[40px] leading-[130%] font-title text-center"
+      >
+        {content.title}
+      </h2>
       <p class="text-[20px] leading-[130%] text-center font-normal">
         {content.description}
       </p>
     </div>
-    <div class="w-full flex justify-center items-center gap-6">
+    <div
+      class="w-full flex flex-col lg:flex-row justify-center items-center gap-6"
+    >
       {
         content.items.map((item, index) => {
           return (
             <div
-              class={`${index === 1 ? 'w-[40%]' : 'w-[30%]'} min-h-[407px] flex flex-col justify-start items-center rounded-[20px] bg-white overflow-hidden relative`}
+              class={`${index === 1 ? 'w-full sm:w-1/2 lg:w-[40%] min-h-[259px]' : 'w-full sm:w-1/2 lg:w-[30%] min-h-[323px]'}  sm:min-h-[407px] flex flex-col justify-start items-center rounded-[20px] bg-white overflow-hidden relative`}
             >
               {/* */}
               <div
-                class={`w-full pt-[34px] px-[22px] flex flex-col justify-center items-center gap-5 text-white z-20  relative ${item.back}`}
+                class={`w-full pt-5 sm:pt-[34px] px-4 sm:px-[22px] flex flex-col justify-center items-center gap-5 text-white z-20  relative ${item.back}`}
               >
-                <h3 class="text-[36px] leading-[120%] font-title text-center">
+                <h3 class="text-[28px] sm:text-[36px] leading-[110%] sm:leading-[120%] font-title text-center">
                   {item.title}
                 </h3>
-                <p class="text-center text-[16px] leading-[120%] font-normal">
+                <p class="text-center text-[13px] sm:text-[16px] leading-[120%] font-normal">
                   {item.description}
                 </p>
               </div>
@@ -47,30 +62,52 @@ const { content } = Astro.props as Props;
                 alt={item.title}
                 width="600"
                 height="400"
-                class={`h-auto absolute ${index === 1 ? 'z-30 bottom-5 w-[414px] left-1/2 -translate-x-1/2' : index === 2 ? 'z-0 scale-150 -bottom-[100px] w-full left-1/2 -translate-x-1/2' : 'z-0 -bottom-8 scale-150 w-full left-1/2 -translate-x-1/2'}`}
+                class={`h-auto absolute ${index === 1 ? 'z-30 bottom-5 sm:bottom-[74px] w-[289px] sm:w-[414px] left-1/2 -translate-x-1/2' : index === 2 ? 'z-0 scale-150 -bottom-[120px] sm:-bottom-[100px] w-full left-1/2 -translate-x-1/2' : 'z-0 -bottom-14 sm:-bottom-8 scale-150 w-full left-1/2 -translate-x-1/2'}`}
               />
             </div>
           );
         })
       }
     </div>
-    <div class="w-full h-auto absolute bottom-0 translate-y-1/2 left-0">
+    <div
+      class="w-full h-auto absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 max-w-screen sm:max-w-[70%] md:max-w-7xl px-5 xl:px-0 flex justify-center items-center"
+    >
       <div
-        class="w-full flex justify-start items-center banner-back rounded-[15px] relative overflow-visible h-[270px] gap-10"
+        class="w-full flex flex-col md:flex-row justify-start items-start md:items-end lg:items-center banner-back rounded-xl md:rounded-[15px] relative overflow-visible h-auto lg:h-[270px] gap-0 md:gap-10 rounded-tr-[200px]"
       >
         <img
           src="/images/main/back-banner.webp"
           alt="Banner de fondo"
           width="900"
           height="506"
-          class="w-[350px] h-full rounded-l-[15px] rounded-tr-[200px]"
+          class="w-[350px] h-full rounded-l-[15px] rounded-tr-[200px] hidden md:block"
         />
+        <div class="relative w-full h-auto block md:hidden">
+          <img
+            src="/images/main/back-banner.webp"
+            alt="Banner de fondo"
+            width="900"
+            height="506"
+            class="w-full h-auto rounded-l-[15px] rounded-tr-[200px]"
+          />
+          <img
+            src="/images/main/pets.webp"
+            alt="Decoration de Animals"
+            width="527"
+            height="600"
+            class="absolute bottom-0 w-[60%] h-auto left-1/2 -translate-x-1/2 "
+            decoding="async"
+            loading="lazy"
+          />
+        </div>
         <div
-          class="h-full w-auto py-6 flex flex-col justify-center items-start gap-5 max-w-[555px]"
+          class="h-full w-full md:w-auto pt-12 pb-6 md:py-6 flex flex-col justify-center items-start gap-5 max-w-[555px] px-[19px] md:pr-1 md:pl-0 lg:px-0"
         >
           <div class="flex justify-start items-center gap-5">
-            <Icon name={'fingerprint'} class="w-[35px] h-auto" />
-            <h3 class="text-[32px] leading-[120%] font-title text-white">
+            <Icon name={'fingerprint'} class="w-[25px] md:w-[35px] h-auto" />
+            <h3
+              class="text-[24px] lg:text-[32px] leading-[120%] font-title text-white"
+            >
               {content.banner.title}
             </h3>
           </div>
@@ -96,7 +133,7 @@ const { content } = Astro.props as Props;
           alt="Pet decoration"
           width="894"
           height="894"
-          class="absolute bottom-0 right-0 w-[290px] h-auto rounded-r-[15px] rounded-tl-[70px] z-10"
+          class="absolute bottom-0 right-0 w-[22%] xl:w-[290px] h-auto rounded-r-[15px] rounded-tl-[70px] z-10 hidden lg:block"
           loading="lazy"
           decoding="async"
         />
@@ -105,7 +142,7 @@ const { content } = Astro.props as Props;
           alt="Decoration de Animals"
           width="527"
           height="600"
-          class="absolute bottom-0 w-[257px] h-auto left-6"
+          class="absolute bottom-0 w-[257px] h-auto left-6 hidden md:block"
           decoding="async"
           loading="lazy"
         />
@@ -116,7 +153,7 @@ const { content } = Astro.props as Props;
           loading="lazy"
           width="866"
           height="271"
-          class="absolute top-0 left-1/2 -translate-x-1/2"
+          class="absolute top-0 left-1/2 -translate-x-1/2 hidden md:block"
         />
       </div>
     </div>

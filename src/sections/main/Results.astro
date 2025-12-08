@@ -10,7 +10,7 @@ const { content } = Astro.props as Props;
 ---
 
 <section
-  class="w-full flex justify-center items-center gap-[89px] flex-col pt-[223px] pb-[180px] relative"
+  class="w-full flex justify-center items-center gap-[45px] md:gap-[89px] flex-col pt-[330px] md:pt-[223px] pb-[180px] relative"
 >
   <Icon
     name={'ondulate'}
@@ -21,19 +21,18 @@ const { content } = Astro.props as Props;
     class="w-full max-w-screen md:max-w-7xl flex flex-col justify-center items-center px-5 xl:px-0 gap-5"
   >
     <h2
-      class="text-[40px] font-normal font-title leading-[120%] text-primary-dark"
+      class="text-[32px] md:text-[40px] font-normal font-title leading-[120%] text-primary-dark text-center"
     >
       {content.title}
     </h2>
     <p
-      class="text-[20px] leading-[120%] font-normal text-center text-paragraph"
+      class="text-[16px] md:text-[20px] leading-[120%] font-normal text-center text-paragraph"
       set:html={content.description}
     />
   </div>
   <div class="w-full">
     <style>
       .carousel-track {
-        display: flex;
         gap: 17px;
         align-items: stretch;
       }
@@ -46,22 +45,76 @@ const { content } = Astro.props as Props;
     </style>
 
     <div class="carousel overflow-hidden">
-      <div class="carousel-track">
+      <!-- Track for md and below: each div is a separate slide -->
+      <div class="carousel-track flex md:hidden">
         <!-- group A -->
-        <div
-          class="carousel-slide flex justify-center items-stretch gap-5 w-full h-[60vh]"
-        >
+        <div class="carousel-slide w-full h-[50vh]">
           <div
-            class="w-[33%] h-full grid grid-cols-3 gap-[17px] grid-rows-[3fr_2fr]"
+            class="w-full h-full grid grid-cols-3 gap-[17px] grid-rows-[3fr_2fr]"
           >
             <div class="bg-primary rounded-[20px] col-span-2 h-full"></div>
             <div class="bg-primary rounded-[20px] h-full"></div>
             <div class="bg-primary rounded-[20px] h-full"></div>
             <div class="bg-primary rounded-[20px] col-span-2 h-full"></div>
           </div>
-          <div class="w-[34%] h-full bg-primary-dark rounded-[20px]"></div>
+        </div>
+        <div class="carousel-slide w-full h-[50vh]">
+          <div class="w-full h-full bg-primary-dark rounded-[20px]"></div>
+        </div>
+        <div class="carousel-slide w-full h-[50vh]">
           <div
-            class="w-[33%] h-full grid grid-cols-3 gap-[17px] grid-rows-[2fr_3fr]"
+            class="w-full h-full grid grid-cols-3 gap-[17px] grid-rows-[2fr_3fr]"
+          >
+            <div class="bg-secondary rounded-[20px] col-span-2"></div>
+            <div class="bg-secondary rounded-[20px]"></div>
+            <div class="bg-secondary rounded-[20px]"></div>
+            <div class="bg-secondary rounded-[20px] col-span-2"></div>
+          </div>
+        </div>
+        <!-- group B (duplicate) -->
+        <div class="carousel-slide w-full h-[50vh]">
+          <div
+            class="w-full h-full grid grid-cols-3 gap-[17px] grid-rows-[3fr_2fr]"
+          >
+            <div class="bg-primary rounded-[20px] col-span-2 h-full"></div>
+            <div class="bg-primary rounded-[20px] h-full"></div>
+            <div class="bg-primary rounded-[20px] h-full"></div>
+            <div class="bg-primary rounded-[20px] col-span-2 h-full"></div>
+          </div>
+        </div>
+        <div class="carousel-slide w-full h-[50vh]">
+          <div class="w-full h-full bg-primary-dark rounded-[20px]"></div>
+        </div>
+        <div class="carousel-slide w-full h-[50vh]">
+          <div
+            class="w-full h-full grid grid-cols-3 gap-[17px] grid-rows-[2fr_3fr]"
+          >
+            <div class="bg-secondary rounded-[20px] col-span-2"></div>
+            <div class="bg-secondary rounded-[20px]"></div>
+            <div class="bg-secondary rounded-[20px]"></div>
+            <div class="bg-secondary rounded-[20px] col-span-2"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Track for md and above: original structure -->
+      <div class="carousel-track hidden md:flex">
+        <!-- group A -->
+        <div
+          class="carousel-slide flex justify-center items-stretch gap-5 w-full h-[60vh]"
+        >
+          <div
+            class="w-full md:w-[33%] h-full grid grid-cols-3 gap-[17px] grid-rows-[3fr_2fr]"
+          >
+            <div class="bg-primary rounded-[20px] col-span-2 h-full"></div>
+            <div class="bg-primary rounded-[20px] h-full"></div>
+            <div class="bg-primary rounded-[20px] h-full"></div>
+            <div class="bg-primary rounded-[20px] col-span-2 h-full"></div>
+          </div>
+          <div class="w-full md:w-[34%] h-full bg-primary-dark rounded-[20px]">
+          </div>
+          <div
+            class="w-full md:w-[33%] h-full grid grid-cols-3 gap-[17px] grid-rows-[2fr_3fr]"
           >
             <div class="bg-secondary rounded-[20px] col-span-2"></div>
             <div class="bg-secondary rounded-[20px]"></div>
@@ -75,16 +128,17 @@ const { content } = Astro.props as Props;
           class="carousel-slide flex justify-center items-stretch gap-5 w-full h-[60vh]"
         >
           <div
-            class="w-[33%] h-full grid grid-cols-3 gap-[17px] grid-rows-[3fr_2fr]"
+            class="w-full md:w-[33%] h-full grid grid-cols-3 gap-[17px] grid-rows-[3fr_2fr]"
           >
             <div class="bg-primary rounded-[20px] col-span-2 h-full"></div>
             <div class="bg-primary rounded-[20px] h-full"></div>
             <div class="bg-primary rounded-[20px] h-full"></div>
             <div class="bg-primary rounded-[20px] col-span-2 h-full"></div>
           </div>
-          <div class="w-[34%] h-full bg-primary-dark rounded-[20px]"></div>
+          <div class="w-full md:w-[34%] h-full bg-primary-dark rounded-[20px]">
+          </div>
           <div
-            class="w-[33%] h-full grid grid-cols-3 gap-[17px] grid-rows-[2fr_3fr]"
+            class="w-full md:w-[33%] h-full grid grid-cols-3 gap-[17px] grid-rows-[2fr_3fr]"
           >
             <div class="bg-secondary rounded-[20px] col-span-2"></div>
             <div class="bg-secondary rounded-[20px]"></div>
@@ -96,9 +150,14 @@ const { content } = Astro.props as Props;
     </div>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        const track = document.querySelector(
-          '.carousel-track'
-        ) as HTMLElement | null;
+        const tracks = document.querySelectorAll('.carousel-track');
+        let track: HTMLElement | null = null;
+        for (const t of tracks) {
+          if (getComputedStyle(t).display !== 'none') {
+            track = t as HTMLElement;
+            break;
+          }
+        }
         if (!track) return;
         const slides = Array.from(
           track.querySelectorAll<HTMLElement>('.carousel-slide')
@@ -118,7 +177,10 @@ const { content } = Astro.props as Props;
           if (!slideWidth) return;
           const trackStyle = getComputedStyle(trackEl);
           const gap = parseFloat(trackStyle.gap || '0') || 0;
-          const distance = slideWidth + gap;
+          let distance = slideWidth + gap;
+          if (slides.length > 3) {
+            distance *= 3; // For small screens with 6 slides, move by 3 slides to loop seamlessly
+          }
           const duration = Math.max(3000, (distance / speedPxPerSec) * 1000);
 
           anim = trackEl.animate(
@@ -144,7 +206,21 @@ const { content } = Astro.props as Props;
         startAnim();
         window.addEventListener('resize', () => {
           if (anim) anim.cancel();
-          startAnim();
+          // Re-select the visible track on resize
+          for (const t of tracks) {
+            if (getComputedStyle(t).display !== 'none') {
+              track = t as HTMLElement;
+              break;
+            }
+          }
+          if (track) {
+            const newSlides = Array.from(
+              track.querySelectorAll<HTMLElement>('.carousel-slide')
+            );
+            if (newSlides.length >= 2) {
+              startAnim();
+            }
+          }
         });
       });
     </script>

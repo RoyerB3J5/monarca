@@ -48,12 +48,12 @@ export default {
       description: 'Mobile Pet Grooming in Florida',
       buttons: [
         {
-          label: 'Get now',
+          label: 'Call Now!',
           href: '#',
           color: 'secondary',
         },
         {
-          label: 'Book now',
+          label: 'Book Now!',
           href: 'book-appointment',
           color: 'primary',
         },
@@ -199,7 +199,7 @@ export default {
     grooming: {
       title: 'Discover Our Mobile Grooming Services',
       description:
-        'Monarca Grooming offers gentle, stress free mobile grooming for dogs and cats in Florida. With more than twenty <br/> years of family experience, we provide calm  handling, premium care and consistent results right at your doorstep.',
+        'Monarca Grooming offers gentle, stress free mobile grooming for dogs and cats in Florida. With more than twenty <br class="hidden md:block"/> years of family experience, we provide calm  handling, premium care and consistent results right at your doorstep.',
       items: [
         {
           with: '309',

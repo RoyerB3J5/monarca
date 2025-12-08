@@ -9,13 +9,14 @@ interface Props {
 const { content } = Astro.props as Props;
 // Obtener la ruta actual y normalizar el path sin prefijo de idioma
 const currentPath = Astro.url.pathname;
+const normalized = currentPath.replace(/^\/(en|es)/, '');
 // Detectar el idioma actual ('en' o 'es')
 const match = currentPath.match(/^\/(en|es)/);
 const lang = match ? match[1] : 'en';
 ---
 
 <section
-  class="h-full w-full max-w-screen md:max-w-7xl flex flex-col md:flex-row justify-between items-center px-5 xl:px-0 pt-[30px] md:pt-[76px] pb-[62px] lg:pb-5"
+  class={`h-full w-full max-w-screen md:max-w-7xl flex flex-col md:flex-row justify-between items-center px-5 xl:px-0 ${normalized === '/services' ? 'pt-[86px] ' : 'pt-[30px]'} md:pt-[76px] pb-[62px] lg:pb-5`}
 >
   <img
     src="/images/pet-info.webp"

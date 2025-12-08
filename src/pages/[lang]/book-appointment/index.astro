@@ -23,7 +23,7 @@ const content = t.book;
     <div class="flex flex-col justify-center items-start gap-[69px]">
       <div class="flex flex-col justify-center items-start gap-3">
         <p class="text-[20px] tracking-[4px] leading-[120%] uppercase text-paragraph font-normal">WIDGET</p>
-        <h1 class="text-[40px] leading-[110%] font-normal text-primary-dark font-title">{content.title}</h1>
+        <h1 class="text-[32px] md:text-[40px] leading-[110%] font-normal text-primary-dark font-title">{content.title}</h1>
         <p class="text-[20px]  leading-[120%] uppercase text-paragraph font-normal">{content.description}</p>
       </div>
       <img
@@ -34,8 +34,8 @@ const content = t.book;
         class="w-[370px] h-auto"
       />
     </div>
-    <div class="bg-secondary/45 flex flex-col justify-center items-center gap-[50px] p-8 md:p-[60px] rounded-3xl max-w-none md:max-w-[47%]">
-      <p set:html={content.formText} class="text-[20px] text-center font-normal"></p>
+    <div class="bg-secondary/45 flex flex-col justify-center items-center gap-[23px] md:gap-[50px] py-5 px-4 md:p-[60px] rounded-[11px] md:rounded-3xl max-w-none md:max-w-[47%]">
+      <p set:html={content.formText} class="text-[14px] md:text-[20px] text-center font-normal"></p>
     </div>
   </section>
 </Layout>
