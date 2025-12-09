@@ -1,0 +1,12 @@
+# robots.txt for Monarca - Mobile Pet Grooming
+# Allow all crawlers by default; point to sitemap
+
+User-agent: *
+Disallow:
+
+# If you have staging or private paths, add them here, e.g.:
+# User-agent: *
+# Disallow: /staging/
+
+# Sitemap (replace with your preferred canonical domain if needed)
+Sitemap: https://monarcagrooming.com/sitemap.xml

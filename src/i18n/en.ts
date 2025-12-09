@@ -36,7 +36,7 @@ export default {
       },
       {
         label: 'Call Now',
-        href: '#',
+        href: 'tel:+19548684929',
         icon: 'phone',
         background: 'bg-secondary',
       },
@@ -49,7 +49,7 @@ export default {
       buttons: [
         {
           label: 'Call Now!',
-          href: '#',
+          href: 'tel:+19548684929',
           color: 'secondary',
         },
         {
@@ -117,7 +117,7 @@ export default {
         buttons: [
           {
             label: 'Call Now!',
-            href: '#',
+            href: 'tel:+19548684929',
             color: 'secondary',
           },
           {
@@ -184,7 +184,7 @@ export default {
         buttons: [
           {
             label: 'Call Now!',
-            href: '#',
+            href: 'tel:+19548684929',
           },
           {
             label: 'Book Now!',
@@ -246,8 +246,8 @@ export default {
         'Schedule your mobile grooming appointment with Monarca Grooming and enjoy gentle, stress free grooming at home. Our team brings experience, patience and calm handling to every dog and cat we care for in Florida.',
       buttons: [
         {
-          label: 'Get now',
-          href: '#',
+          label: 'Call now',
+          href: 'tel:+19548684929',
           color: 'secondary',
         },
         {
@@ -277,7 +277,10 @@ export default {
           'Breed-true styling and tidy finishing',
           'Clean skin and a healthy, shiny coat',
         ],
-        button: 'Book Now!',
+        button: {
+          title: 'Book Now!',
+          href: '/en/book-appointment',
+        },
       },
       included: {
         title: 'What’s Included in Our Mobile Dog Grooming Service',
@@ -362,8 +365,8 @@ export default {
           'Schedule your mobile grooming appointment with Monarca Grooming and enjoy gentle, stress free grooming at home. Our team brings experience, patience and calm handling to every dog and cat we care for in Florida.',
         buttons: [
           {
-            label: 'Get now',
-            href: '#',
+            label: 'Call now',
+            href: 'tel:+19548684929',
             color: 'secondary',
           },
           {
@@ -392,7 +395,10 @@ export default {
           'Prevents Matting',
           'Creates a Calmer Grooming Experience',
         ],
-        button: 'Book Now!',
+        button: {
+          title: 'Book Now!',
+          href: '/en/book-appointment',
+        },
       },
       included: {
         title: 'What’s Included in Our Mobile Cat Grooming Service',
@@ -477,8 +483,8 @@ export default {
           'Schedule your mobile grooming appointment with Monarca Grooming and enjoy gentle, stress free grooming at home. Our team brings experience, patience and calm handling to every dog and cat we care for in Florida.',
         buttons: [
           {
-            label: 'Get now',
-            href: '#',
+            label: 'Call now',
+            href: 'tel:+19548684929',
             color: 'secondary',
           },
           {
@@ -511,8 +517,8 @@ export default {
         'Schedule your mobile grooming appointment with Monarca Grooming and enjoy gentle, stress free grooming at home. Our team brings experience, patience and calm handling to every dog and cat we care for in Florida.',
       buttons: [
         {
-          label: 'Get now',
-          href: '#',
+          label: 'Call now',
+          href: 'tel:+19548684929',
           color: 'secondary',
         },
         {
@@ -578,8 +584,8 @@ export default {
         'We know every pet is unique. If you need personal guidance, have questions about grooming, or want help choosing the right service for your dog or cat, we are here for you. Your peace of mind is always our priority.',
       buttons: [
         {
-          label: 'Get now',
-          href: '#',
+          label: 'Call now',
+          href: 'tel:+19548684929',
           color: 'secondary',
         },
         {
@@ -619,8 +625,8 @@ export default {
         },
         {
           icon: 'mail-1',
-          text: 'monarca.grooming@gmail.com',
-          href: 'https://mail.google.com/mail/?view=cm&fs=1&to=monarca.grooming@gmail.com',
+          text: 'Monarca.grooming@gmail.com',
+          href: 'https://mail.google.com/mail/?view=cm&fs=1&to=Monarca.grooming@gmail.com',
         },
         {
           icon: 'phone-1',

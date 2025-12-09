@@ -77,8 +77,8 @@ const { content } = Astro.props as Props;
         }
       </div>
       <Button
-        text={content.button}
-        href="#"
+        text={content.button.title}
+        href={content.button.href}
         extraBtnClass="bg-primary"
         iconName="arrow"
         iconClass="text-primary"

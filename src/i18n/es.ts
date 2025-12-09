@@ -36,7 +36,7 @@ export default {
       },
       {
         label: 'Llamar ahora',
-        href: '#',
+        href: 'tel:+19548684929',
         icon: 'phone',
         background: 'bg-secondary',
       },
@@ -49,7 +49,7 @@ export default {
       buttons: [
         {
           label: 'Llama Ya!',
-          href: '#',
+          href: 'tel:+19548684929',
           color: 'secondary',
         },
         {
@@ -117,12 +117,12 @@ export default {
         title: 'Dental Cleaning Non Anesthetic',
         buttons: [
           {
-            label: 'Call Now!',
-            href: '#',
+            label: 'Llama Ya!',
+            href: 'tel:+19548684929',
             color: 'secondary',
           },
           {
-            label: 'Book Now!',
+            label: 'Reserva Ya!',
             href: 'book-appointment',
             color: 'primary',
           },
@@ -185,11 +185,11 @@ export default {
         buttons: [
           {
             label: '¡Llama ahora!',
-            href: '#',
+            href: 'tel:+19548684929',
           },
           {
             label: '¡Reserva ahora!',
-            href: '#',
+            href: '/es/book-appointment',
           },
         ],
       },
@@ -202,7 +202,7 @@ export default {
     about: {
       title: 'Lo que los dueños dicen <br/> sobre Monarca Grooming',
       description:
-        'Respaldados por reseñas reales de cinco estrellas de familias que confían en nosotros, Monarca Grooming es conocido por un cuidado amable, resultados limpios y una experiencia de peluquería calmada en casa.',
+        'Respaldados por reseñas reales de cinco estrellas de familias que confían <br/> en nosotros, Monarca Grooming es conocido por <br/> un cuidado amable, resultados limpios y una <br/>  experiencia de peluquería calmada en casa.',
     },
   },
   book: {
@@ -247,12 +247,12 @@ export default {
         'Programa tu cita de peluquería móvil con Monarca Grooming y disfruta de una experiencia suave y sin estrés en casa. Nuestro equipo aporta experiencia, paciencia y un manejo tranquilo para cada perro y gato que atendemos en Florida.',
       buttons: [
         {
-          label: 'Obtener ahora',
-          href: '#',
+          label: 'Llama Ya!',
+          href: 'tel:+19548684929',
           color: 'secondary',
         },
         {
-          label: 'Reservar ahora',
+          label: 'Reservar Ya!',
           href: 'book-appointment',
           color: 'primary',
         },
@@ -278,7 +278,10 @@ export default {
           'Estilo fiel a la raza y acabado cuidado',
           'Piel limpia y pelaje saludable y brillante',
         ],
-        button: 'Reservar ahora',
+        button: {
+          title: 'Reservar Ya!',
+          href: '/es/book-appointment',
+        },
       },
       included: {
         title: 'Qué incluye nuestro servicio de peluquería móvil para perros',
@@ -363,12 +366,12 @@ export default {
           'Programa tu cita de peluquería móvil con Monarca Grooming y disfruta de una experiencia suave y sin estrés en casa. Nuestro equipo aporta experiencia, paciencia y un manejo tranquilo para cada perro y gato que atendemos en Florida.',
         buttons: [
           {
-            label: 'Obtener ahora',
-            href: '#',
+            label: 'Llama Ya!',
+            href: 'tel:+19548684929',
             color: 'secondary',
           },
           {
-            label: 'Reservar ahora',
+            label: 'Reservar Ya!',
             href: 'book-appointment',
             color: 'primary',
           },
@@ -393,7 +396,10 @@ export default {
           'Previene los enredos',
           'Crea una experiencia de peluquería más calmada',
         ],
-        button: 'Reservar ahora',
+        button: {
+          title: 'Reservar Ya!',
+          href: '/es/book-appointment',
+        },
       },
       included: {
         title: 'Qué incluye nuestro servicio de peluquería móvil para gatos',
@@ -478,8 +484,8 @@ export default {
           'Programa tu cita de peluquería móvil con Monarca Grooming y disfruta de una experiencia suave y sin estrés en casa. Nuestro equipo aporta experiencia, paciencia y un manejo tranquilo para cada perro y gato que atendemos en Florida.',
         buttons: [
           {
-            label: 'Obtener ahora',
-            href: '#',
+            label: 'Llama Ya!',
+            href: 'tel:+19548684929',
             color: 'secondary',
           },
           {
@@ -512,12 +518,12 @@ export default {
         'Programa tu cita de peluquería móvil con Monarca Grooming y disfruta de una experiencia suave y sin estrés en casa. Nuestro equipo aporta experiencia, paciencia y un manejo tranquilo para cada perro y gato que atendemos en Florida.',
       buttons: [
         {
-          label: 'Obtener ahora',
-          href: '#',
+          label: 'Llama Ya!',
+          href: 'tel:+19548684929',
           color: 'secondary',
         },
         {
-          label: 'Reservar ahora',
+          label: 'Reservar Ya!',
           href: 'book-appointment',
           color: 'primary',
         },
@@ -579,12 +585,12 @@ export default {
         'Sabemos que cada mascota es única. Si necesitas orientación personal, tienes preguntas sobre la peluquería o quieres ayuda para elegir el servicio adecuado para tu perro o gato, estamos aquí para ti. Tu tranquilidad siempre es nuestra prioridad.',
       buttons: [
         {
-          label: 'Obtener ahora',
-          href: '#',
+          label: 'Llama Ya!',
+          href: 'tel:+19548684929',
           color: 'secondary',
         },
         {
-          label: 'Reservar ahora',
+          label: 'Reservar Ya!',
           href: 'book-appointment',
           color: 'primary',
         },
@@ -620,8 +626,8 @@ export default {
         },
         {
           icon: 'mail-1',
-          text: 'monarca.grooming@gmail.com',
-          href: 'https://mail.google.com/mail/?view=cm&fs=1&to=monarca.grooming@gmail.com',
+          text: 'Monarca.grooming@gmail.com',
+          href: 'https://mail.google.com/mail/?view=cm&fs=1&to=Monarca.grooming@gmail.com',
         },
         {
           icon: 'phone-1',

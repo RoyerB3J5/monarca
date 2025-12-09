@@ -8,7 +8,7 @@ export default function NuvisionForm() {
     // Only run in the browser
     if (typeof window === 'undefined' || typeof document === 'undefined') return;
 
-    const SRC = 'https://link.nuvisionwindowsusa.com/js/form_embed.js';
+    const SRC = 'https://link.inkshapecrm.com/js/form_embed.js';
     // Avoid injecting the script multiple times
     let addedByUs = false;
     let script = document.querySelector(`script[src="${SRC}"]`) as HTMLScriptElement | null;
@@ -38,7 +38,7 @@ export default function NuvisionForm() {
         overflow: 'hidden',
         // Oculta cualquier contenido que se desborde
       }}
-      className="bg-accent-3 rounded-[50px]"
+      className="bg-secondary "
     >
       {!loaded && (
         <div
@@ -51,15 +51,15 @@ export default function NuvisionForm() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            background: '#fff',
+            background: '#f3a71d',
           }}
         >
           Cargando…
         </div>
       )}
       <iframe
-        id="inline-OsQZDeAvTnQMdWxaa15Q"
-        src="https://link.nuvisionwindowsusa.com/widget/form/OsQZDeAvTnQMdWxaa15Q"
+        id="inline-Ml8LSIRGU8Xp51qwQ3Rv"
+        src="https://link.inkshapecrm.com/widget/form/Ml8LSIRGU8Xp51qwQ3Rv"
         title="Form Reviews"
         loading="lazy"
         onLoad={() => setLoaded(true)}
@@ -79,8 +79,8 @@ export default function NuvisionForm() {
         data-deactivation-type="neverDeactivate"
         data-form-name="Form Reviews"
         data-height="466"
-        data-layout-iframe-id="inline-OsQZDeAvTnQMdWxaa15Q"
-        data-form-id="OsQZDeAvTnQMdWxaa15Q"
+        data-layout-iframe-id="inline-Ml8LSIRGU8Xp51qwQ3Rv"
+        data-form-id="Ml8LSIRGU8Xp51qwQ3Rv"
       />
     </div>
   );
