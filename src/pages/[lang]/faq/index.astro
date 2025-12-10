@@ -20,14 +20,30 @@ const content = t.faq;
 
 <Layout lang={lang} t={t}>
   <style>
+    .faq-item {
+      gap: 0;
+      transition: gap 0.2s ease-out;
+    }
+    .faq-item.open {
+      gap: 11px;
+    }
     .faq-item .answer {
-      display: none;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition:
+        max-height 0.15s ease-in,
+        opacity 0.1s ease-in;
     }
     .faq-item.open .answer {
-      display: block;
+      max-height: 500px;
+      opacity: 1;
+      transition:
+        max-height 0.25s ease-out,
+        opacity 0.2s ease-out;
     }
     .faq-item .icon {
-      transition: transform 0.3s;
+      transition: transform 0.25s ease-in-out;
     }
     .faq-item.open .icon {
       transform: rotate(90deg);
@@ -37,7 +53,8 @@ const content = t.faq;
     class="h-full w-full flex flex-col justify-center items-center px-5 xl:px-0 bg-[#FFF0C4] gap-[86px] md:gap-[50px] pt-[133px] md:pt-[166px]"
   >
     <div
-      class="w-full max-w-[1112px] flex flex-col justify-center items-center gap-5 md:gap-[51px]" data-aos="flip-up"
+      class="w-full max-w-[1112px] flex flex-col justify-center items-center gap-5 md:gap-[51px]"
+      data-aos="flip-up"
     >
       <h1
         class="text-[48px] font-title text-primary-dark leading-[110%] font-normal"
@@ -48,13 +65,13 @@ const content = t.faq;
         {
           content.questions.map((item, index) => (
             <div
-              class={`faq-item w-full flex flex-col justify-center items-center bg-white gap-[11px] py-5 px-4 rounded-2xl${index === 0 ? ' open' : ''}`}
+              class={`faq-item w-full flex flex-col justify-center items-center bg-white py-5 px-4 rounded-2xl${index === 0 ? ' open' : ''}`}
             >
-              <div class="w-full flex justify-between items-center">
+              <div class="faq-header w-full flex justify-between items-center cursor-pointer">
                 <h2 class="text-[20px] font-bold leading-[120%] text-paragraph">
                   {item.title}
                 </h2>
-                <div class="icon-div bg-secondary p-3 rounded-full cursor-pointer">
+                <div class="bg-secondary p-3 rounded-full">
                   <Icon name={'arrow-r'} class={'w-3.5 h-3.5 icon'} />
                 </div>
               </div>
@@ -110,9 +127,9 @@ const content = t.faq;
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.faq-item').forEach((item) => {
-        const iconDiv = item.querySelector('.icon-div');
-        if (iconDiv) {
-          iconDiv.addEventListener('click', () => {
+        const header = item.querySelector('.faq-header');
+        if (header) {
+          header.addEventListener('click', () => {
             // Close all items
             document
               .querySelectorAll('.faq-item')
