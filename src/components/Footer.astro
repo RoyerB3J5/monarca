@@ -14,6 +14,14 @@ const normalized = currentPath.replace(/^\/(en|es)/, '') || '/';
 // Detectar el idioma actual ('en' o 'es')
 const match = currentPath.match(/^\/(en|es)/);
 const lang = match ? match[1] : 'en';
+
+// Determinar el color de fondo basado en la ruta
+const getBgColor = () => {
+  if (normalized === '/') return '#FFB839';
+  if (normalized === '/faq') return '#FFF0C4';
+  return 'transparent';
+};
+const bgColor = getBgColor();
 const icons = [
   {
     icon: 'facebook',
@@ -32,7 +40,8 @@ const icons = [
 
 <footer class="w-full flex flex-col justify-center items-center z-20">
   <div
-    class={`w-full relative h-full flex justify-center items-center ${normalized === '/' ? 'bg-[#FFB839]' : ''} ${normalized === '/faq' ? 'bg-[#FFF0C4]' : ''}`}
+    class="w-full relative h-full flex justify-center items-center"
+    style={`background-color: ${bgColor};`}
   >
     <img
       src="/images/line-footer.svg"
