@@ -10,7 +10,9 @@ interface Props {
 const { content } = Astro.props as Props;
 // Obtener la ruta actual y normalizar el path sin prefijo de idioma
 const currentPath = Astro.url.pathname;
-const normalized = currentPath.replace(/^\/(en|es)/, '') || '/';
+// Normalizar: remover idioma y trailing slash
+const normalized =
+  currentPath.replace(/^\/(en|es)/, '').replace(/\/$/, '') || '/';
 // Detectar el idioma actual ('en' o 'es')
 const match = currentPath.match(/^\/(en|es)/);
 const lang = match ? match[1] : 'en';
@@ -36,12 +38,16 @@ const icons = [
     href: '#',
   },
 ];
+console.log(normalized);
 ---
 
 <footer class="w-full flex flex-col justify-center items-center z-20">
   <div
     class="w-full relative h-full flex justify-center items-center"
     style={`background-color: ${bgColor};`}
+    data-path={currentPath}
+    data-normalized={normalized}
+    data-bg={bgColor}
   >
     <img
       src="/images/line-footer.svg"
