@@ -11,7 +11,9 @@ const { content } = Astro.props as Props;
 
 // Obtener la ruta actual y normalizar el path sin prefijo de idioma
 const currentPath = Astro.url.pathname;
-const normalized = currentPath.replace(/^\/(en|es)/, '') || '/';
+// Normalizar: remover idioma y trailing slash
+const normalized =
+  currentPath.replace(/^\/(en|es)/, '').replace(/\/$/, '') || '/';
 // Detectar el idioma actual ('en' o 'es')
 const match = currentPath.match(/^\/(en|es)/);
 const lang = match ? match[1] : 'en';
@@ -99,7 +101,7 @@ const lang = match ? match[1] : 'en';
     <div class="flex justify-center items-center gap-3">
       <Button
         text={content?.buttons[0].label}
-        textClass='text-[13px] sm:text-[16px] text-white'
+        textClass="text-[13px] sm:text-[16px] text-white"
         href={`/${lang}/${content?.buttons[0].href}`}
         extraBtnClass={` border border-white bg-primary `}
         iconName={content?.buttons[0].icon}
