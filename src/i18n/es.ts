@@ -55,8 +55,7 @@ export default {
     hero: {
       title:
         'Con Monarca <br class="hidden md:block"/> Grooming. Consentimos <br class="hidden md:block"/> a tus mascotas en casa',
-      description:
-        'Peluquería móvil para mascotas en Florida',
+      description: 'Peluquería móvil para mascotas en Florida',
       buttons: [
         {
           label: 'Llama Ya!',
@@ -97,7 +96,7 @@ export default {
       gromming: {
         title: 'Descubre nuestros servicios de peluquería móvil',
         description:
-          'Monarca Grooming ofrece peluquería móvil suave y sin estrés para perros y gatos en Florida. Con más de veinte años <br/> de experiencia familiar, ofrecemos un manejo tranquilo, cuidado premium y resultados consistentes en la puerta de tu casa.',
+          'Monarca Grooming ofrece peluquería móvil suave y sin estrés para perros y gatos en Florida. Con más de veinte años <br class="hidden md:block"/> de experiencia familiar, ofrecemos un manejo tranquilo, cuidado premium y resultados consistentes en la puerta de tu casa.',
         items: [
           {
             with: '309',

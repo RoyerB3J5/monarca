@@ -16,9 +16,9 @@ const lang = match ? match[1] : 'en';
 ---
 
 <section
-  class="w-full min-h-[78vh] lg:min-h-[88vh] flex items-start sm:items-center justify-center overflow-hidden relative"
+  class="w-full min-h-none sm:min-h-[78vh] lg:min-h-[88vh] flex items-start sm:items-center justify-center overflow-hidden relative"
 >
-    <Icon
+  <Icon
     name={'ondulate'}
     class={'absolute -bottom-px w-full h-auto z-10 left-0 rotate-180'}
     style="color: #FFFFFF"
@@ -33,7 +33,9 @@ const lang = match ? match[1] : 'en';
     decoding="async"
     loading="eager"
   />
-  <img
+
+  {
+    /*<img
     data-aos="fade-left"
     src="/images/main/image-2.webp"
     alt="Imagen de Perro"
@@ -42,15 +44,29 @@ const lang = match ? match[1] : 'en';
     class="absolute left-10 xs:left-0 bottom-0 h-[40%] xs:h-[50%] w-auto block sm:hidden"
     decoding="async"
     loading="eager"
-  />
-  {/*<Icon
+  /> <Icon
     name={'back-main'}
     class={'w-[55vw] h-auto absolute left-0 top-0 -z-10'}
-  /> */}
-  <img src="/images/back-main.webp" alt="Background Main" class="w-[65vw] md:w-[55vw] h-auto absolute left-0 top-0 -z-10 hidden sm:block" width="1660" height="1157" decoding="async"
-    loading="eager"/>
-  <img src="/images/back-main-2.webp" alt="Background Main" class="w-screen h-auto absolute left-0 top-0 -z-10 block sm:hidden" width="370" height="386" decoding="async"
-    loading="eager"/>
+  /> */
+  }
+  <img
+    src="/images/back-main.webp"
+    alt="Background Main"
+    class="w-[65vw] md:w-[55vw] h-auto absolute left-0 top-0 -z-10 hidden sm:block"
+    width="1660"
+    height="1157"
+    decoding="async"
+    loading="eager"
+  />
+  <img
+    src="/images/back-main-2.webp"
+    alt="Background Main"
+    class="w-screen h-auto absolute left-0 top-0 -z-10 block sm:hidden"
+    width="370"
+    height="386"
+    decoding="async"
+    loading="eager"
+  />
   <img
     src={`/images/main/back.webp`}
     alt="Imagen de Fondo de Monarcas - Mobile Pet Grooming"
@@ -61,15 +77,19 @@ const lang = match ? match[1] : 'en';
     decoding="async"
   />
   <div
-    class="h-full w-full max-w-screen md:max-w-7xl flex justify-between items-center px-5 xl:px-0 pt-[120px] sm:pt-0"
+    class="h-full w-full max-w-screen md:max-w-7xl flex flex-col sm:flex-row justify-center sm:justify-between items-center px-5 xl:px-0 pt-[120px] sm:pt-0"
     data-aos="fade-right"
   >
-    <div class="flex flex-col justify-center items-start gap-9 md:gap-[34px] max-w-none md:max-w-[63%] w-full">
-      <div class="flex flex-col justify-center items-start gap-3 text-white w-full">
+    <div
+      class="flex flex-col justify-center items-start gap-9 md:gap-[34px] max-w-none md:max-w-[63%] w-full"
+    >
+      <div
+        class="flex flex-col justify-center items-start gap-3 text-white w-full"
+      >
         <h2
-          class="text-[16px] md:text-[20px] font-normal uppercase leading-[120%] tracking-[4px]" set:html={content.description}
-        >
-        </h2>
+          class="text-[16px] md:text-[20px] font-normal uppercase leading-[120%] tracking-[4px]"
+          set:html={content.description}
+        />
         <h1
           set:html={content.title}
           class="font-title text-[36px] lg:text-[60px] leading-[110%]"
@@ -89,5 +109,15 @@ const lang = match ? match[1] : 'en';
         }
       </div>
     </div>
+    <img
+      data-aos="fade-left"
+      src="/images/main/image-3.webp"
+      alt="Imagen de Perro"
+      width="700"
+      height="557"
+      class="w-full h-auto block sm:hidden "
+      decoding="async"
+      loading="eager"
+    />
   </div>
 </section>

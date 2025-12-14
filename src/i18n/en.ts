@@ -54,7 +54,7 @@ export default {
   main: {
     hero: {
       title:
-        'With Monarca <br class="hidden md:block"/> Grooming. We Pamper <br class="hidden md:block"/> Your  Pets at Home',
+        'With Monarca <br class="hidden md:block"/> Grooming. We Pamper <br class="hidden md:block"/> Your <br class="xs:hidden block"/> Pets at Home',
       description:
         'Mobile Pet Grooming <br class="block md:hidden"/> in Florida',
       buttons: [
@@ -97,7 +97,7 @@ export default {
       gromming: {
         title: 'Discover Our Mobile Grooming Services',
         description:
-          'Monarca Grooming offers gentle, stress free mobile grooming for dogs and cats in Florida. With more than twenty years <br/> of  family experience, we provide calm  handling, premium care and consistent results right at your doorstep.',
+          'Monarca Grooming offers gentle, stress free mobile grooming for dogs and cats in Florida. With more than twenty years <br class="hidden md:block"/> of  family experience, we provide calm  handling, premium care and consistent results right at your doorstep.',
         items: [
           {
             with: '309',
