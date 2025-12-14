@@ -30,11 +30,11 @@ const lang = match ? match[1] : 'en';
     />
   </div>
   <div
-    class="w-full flex flex-col lg:flex-row justify-center items-center gap-14 sm:gap-[100px] md:gap-[58px] max-w-none md:max-w-[70%] lg:max-w-none"
+    class="w-full grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-14 sm:gap-[100px] md:gap-[58px] max-w-none md:max-w-[70%] lg:max-w-none"
   >
     {
       content.items.map((item) => (
-        <div class="w-full lg:w-1/2 rounded-4xl bg-primary pr-[23px] md:pl-0 py-7 md:py-14 flex justify-end items-center relative ">
+        <div class="w-full rounded-4xl bg-primary pr-[23px] md:pl-0 py-7 md:py-14 flex justify-end items-center relative ">
           <img
             src={`/images/main/${item.image}.webp`}
             alt={item.title}

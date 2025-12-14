@@ -1,0 +1,25 @@
+---
+import BeforeAfter from '../../components/BeforeAfter.astro';
+type Translations = typeof import('../../i18n/es').default;
+type GalleryContent = Translations['services']['mobile-dog-grooming']['title'];
+interface Props {
+  content: GalleryContent;
+}
+const { content } = Astro.props as Props;
+---
+
+<section
+  class="max-w-screen md:max-w-7xl flex flex-col justify-center items-center px-5 xl:px-0 w-full gap-8 pt-[60px] md:pt-[90px]"
+>
+  <h2 class="text-[32px] md:text-[40px] leading-[130%] font-normal font-title text-primary-dark text-start md:text-center">{content}</h2>
+  <div class="w-full flex flex-col md:flex-row justify-center items-center gap-8">
+    <BeforeAfter
+      beforeImage="/images/before.webp"
+      afterImage="/images/after.webp"
+    />
+    <BeforeAfter
+      beforeImage="/images/before.webp"
+      afterImage="/images/after.webp"
+    />
+  </div>
+</section>

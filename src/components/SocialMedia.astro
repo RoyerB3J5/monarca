@@ -3,8 +3,8 @@ import { Icon } from 'astro-icon/components';
 
 const icons = [
   {
-    name: 'email',
-    href: 'https://mail.google.com/mail/?view=cm&fs=1&to=Monarca.grooming@gmail.com',
+    name: 'tiktok',
+    href: 'https://www.tiktok.com/@monarcagrooming',
   },
   {
     name: 'instagram',
@@ -22,7 +22,7 @@ const icons = [
     icons.map((i) => (
       <a
         href={i.href}
-        class="w-[27px] h-[27px] md:w-[31px] md:h-[31px] rounded-full flex items-center justify-center bg-primary-dark shrink-0"
+        class="p-2 rounded-full flex items-center justify-center bg-primary-dark shrink-0"
       >
         <Icon name={i.name} class={'w-4 h-4  text-white'} />
       </a>

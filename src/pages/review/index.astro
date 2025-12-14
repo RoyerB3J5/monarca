@@ -8,7 +8,7 @@ import LayoutSec from '../../layouts/LayoutSec.astro';
   <img
     src="/images/share-dark.svg"
     alt="Compartir"
-    class="absolute top-6 right-6  w-6 h-6 cursor-pointer share-btn"
+    class="absolute top-6 right-6 w-6 h-6 cursor-pointer share-btn"
   />
   <section class="w-full flex flex-col justify-center items-center h-full">
     <div
@@ -29,7 +29,9 @@ import LayoutSec from '../../layouts/LayoutSec.astro';
           />
         </a>
         <div class="flex flex-col justify-center items-center">
-          <p class="text-[16px] leading-5 max-w-[320px] text-center text-primary-dark font-medium">
+          <p
+            class="text-[16px] leading-5 max-w-[320px] text-center text-primary-dark font-medium"
+          >
             We hope you loved the experience with <br /> Monarca. <br />
             <br />Your feedback means the world to us.
           </p>
@@ -61,14 +63,20 @@ import LayoutSec from '../../layouts/LayoutSec.astro';
     >
       <div class="flex justify-center items-center gap-3">
         <a
+          href="https://www.tiktok.com/@monarcagrooming"
+          class="p-2 rounded-full flex items-center justify-center bg-primary-dark shrink-0"
+        >
+          <Icon name={'tiktok'} class={'w-4  text-white'} />
+        </a>
+        <a
           href="https://www.facebook.com/Grooming.Monarca.spa/"
-          class="w-[27px] h-[27px] md:w-[31px] md:h-[31px] rounded-full flex items-center justify-center bg-primary-dark shrink-0"
+          class="p-2 rounded-full flex items-center justify-center bg-primary-dark shrink-0"
         >
           <Icon name={'facebook'} class={'w-4  text-white'} />
         </a>
         <a
           href="https://www.instagram.com/monarca.pets.spa/"
-          class="w-[27px] h-[27px] md:w-[31px] md:h-[31px] rounded-full flex items-center justify-center bg-primary-dark shrink-0"
+          class="p-2 rounded-full flex items-center justify-center bg-primary-dark shrink-0"
         >
           <Icon name={'instagram'} class={'w-4 h-4  text-white'} />
         </a>

@@ -16,6 +16,11 @@ export default {
         label: 'FAQ',
         href: '/faq',
       },
+      {
+        icon: '',
+        label: 'Gallery',
+        href: '/gallery',
+      },
     ],
     services: [
       {
@@ -25,6 +30,10 @@ export default {
       {
         label: 'Mobile Cat Grooming',
         href: 'mobile-cat-grooming',
+      },
+      {
+        label: 'Dental Cleaning Non-Anesthetic',
+        href: 'dental-cleaning',
       },
     ],
     buttons: [
@@ -44,8 +53,10 @@ export default {
   },
   main: {
     hero: {
-      title: 'With Monarca <br/> Grooming. We Pamper <br/> Your Pets at Home',
-      description: 'Mobile Pet Grooming in Florida',
+      title:
+        'With Monarca <br class="hidden md:block"/> Grooming. We Pamper <br class="hidden md:block"/> Your  Pets at Home',
+      description:
+        'Mobile Pet Grooming <br class="block md:hidden"/> in Florida',
       buttons: [
         {
           label: 'Call Now!',
@@ -108,6 +119,28 @@ export default {
             button: {
               label: 'View Service',
               href: '/mobile-cat-grooming',
+            },
+          },
+          {
+            with: '309',
+            height: '345',
+            image: 'dog-grooming',
+            title: 'Dental Cleaning for Dogs',
+            description: 'Professional dog grooming at home',
+            button: {
+              label: 'View Service',
+              href: '/dental-cleaning',
+            },
+          },
+          {
+            with: '315',
+            height: '311',
+            image: 'cat-grooming',
+            title: 'Dental Cleaning for Cats',
+            description: 'Calm and gentle cat grooming at your home.',
+            button: {
+              label: 'View Service',
+              href: '/dental-cleaning',
             },
           },
         ],
@@ -238,6 +271,28 @@ export default {
             href: '/mobile-cat-grooming',
           },
         },
+        {
+          with: '309',
+          height: '345',
+          image: 'dog-grooming',
+          title: 'Dental Cleaning for Dogs',
+          description: 'Professional dog grooming at home',
+          button: {
+            label: 'View Service',
+            href: '/dental-cleaning',
+          },
+        },
+        {
+          with: '315',
+          height: '311',
+          image: 'cat-grooming',
+          title: 'Dental Cleaning for Cats',
+          description: 'Calm and gentle cat grooming at your home.',
+          button: {
+            label: 'View Service',
+            href: '/dental-cleaning',
+          },
+        },
       ],
     },
     information: {
@@ -288,37 +343,37 @@ export default {
           {
             title: 'Warm Bath with Gentle Shampoo',
             description:
-              'A soothing bath using soft, pet safe shampoo that cleans, refreshes and prepares your dog for the full grooming session.',
+              'Cleans your dog’s coat deeply while keeping skin healthy and soft, using gentle, pet-safe shampoo.',
             icon: 'warm',
           },
           {
             title: 'Blow Dry and Full Brushing',
             description:
-              'A soothing bath using soft, pet safe shampoo that cleans, refreshes and prepares your dog for the full grooming session.',
+              'Dries and detangles the coat, leaving it smooth, shiny, and free of mats or knots.',
             icon: 'blow',
           },
           {
             title: 'Haircut and Styling (Breed or Custom)',
             description:
-              'A soothing bath using soft, pet safe shampoo that cleans, refreshes and prepares your dog for the full grooming session.',
+              'Give your dog a neat, breed-appropriate or custom haircut that fits their personality and lifestyle.',
             icon: 'haircut',
           },
           {
             title: 'Nail Trimming and Paw Pad Care',
             description:
-              'A soothing bath using soft, pet safe shampoo that cleans, refreshes and prepares your dog for the full grooming session.',
+              'Keeps nails at a safe length and maintains soft, healthy paw pads for comfort and mobility.',
             icon: 'nail',
           },
           {
             title: 'Ear Cleaning',
             description:
-              'A soothing bath using soft, pet safe shampoo that cleans, refreshes and prepares your dog for the full grooming session.',
+              'Removes dirt and wax buildup, helping prevent infections and maintain overall ear health.',
             icon: 'ear',
           },
           {
             title: 'And More Services',
             description:
-              'A soothing bath using soft, pet safe shampoo that cleans, refreshes and prepares your dog for the full grooming session.',
+              'We offer additional grooming options to call or message us to learn how we can customize your dog’s care.',
             icon: 'nail',
           },
         ],
@@ -376,6 +431,7 @@ export default {
           },
         ],
       },
+      title: ' ',
     },
     'mobile-cat-grooming': {
       hero: {
@@ -406,37 +462,37 @@ export default {
           {
             title: 'Warm Bath with Gentle Shampoo',
             description:
-              'A soothing bath using soft, pet safe shampoo that cleans, refreshes and prepares your cat for the full grooming session.',
+              'Cleans your cat’s coat gently while keeping skin healthy and soft, using pet-safe, calming shampoo.',
             icon: 'warm',
           },
           {
             title: 'Blow Dry and Full Brushing',
             description:
-              'A soothing bath using soft, pet safe shampoo that cleans, refreshes and prepares your cat for the full grooming session.',
+              'Dries and detangles the coat, leaving it smooth, shiny, and free of mats or knots, while keeping your cat calm.',
             icon: 'blow',
           },
           {
             title: 'Haircut and Styling (Breed or Custom)',
             description:
-              'A soothing bath using soft, pet safe shampoo that cleans, refreshes and prepares your cat for the full grooming session.',
+              'Provides a neat, coat-appropriate or custom haircut to suit your cat’s personality and comfort.',
             icon: 'haircut',
           },
           {
             title: 'Nail Trimming and Paw Pad Care',
             description:
-              'A soothing bath using soft, pet safe shampoo that cleans, refreshes and prepares your cat for the full grooming session.',
+              'Maintains safe nail length and healthy paw pads, helping your cat move comfortably.',
             icon: 'nail',
           },
           {
             title: 'Ear Cleaning',
             description:
-              'A soothing bath using soft, pet safe shampoo that cleans, refreshes and prepares your cat for the full grooming session.',
+              'Removes dirt and wax buildup safely, helping prevent infections and support ear health.',
             icon: 'ear',
           },
           {
             title: 'And More Services',
             description:
-              'A soothing bath using soft, pet safe shampoo that cleans, refreshes and prepares your cat for the full grooming session.',
+              'We offer additional grooming options to call or message us to learn how we can customize your cat’s care.',
             icon: 'nail',
           },
         ],
@@ -494,6 +550,126 @@ export default {
           },
         ],
       },
+      title: ' ',
+    },
+    'dental-cleaning': {
+      hero: {
+        image: {
+          href: 'cat-1',
+          width: '626',
+          height: '525',
+        },
+        subtitle: 'Calm, one-to-one care at your home',
+        title: 'Dental Cleaning Non-Anesthetic',
+        description:
+          'Our non-anesthetic dental cleaning helps maintain your pet’s oral health safely and gently, without the risks of anesthesia. This service removes plaque and tartar buildup while your pet remains calm and comfortable, helping prevent gum disease, bad breath, and future dental issues. Ideal for routine dental maintenance in a stress-free mobile setting.',
+        text1: 'Why pets parents choose Monarca',
+        items: [
+          'Reduces plaque and tartar without anesthesia risks',
+          'Helps prevent gum disease and tooth loss',
+          'Improves breath and overall oral hygiene',
+          'Less stress with a gentle, mobile, one-on-one approach',
+        ],
+        button: {
+          title: 'Book Now!',
+          href: '/en/book-appointment',
+        },
+      },
+      included: {
+        title: 'What’s Included in Our Dental Cleaning Service',
+        items: [
+          {
+            title: 'Warm Bath with Gentle Shampoo',
+            description:
+              'Cleans your cat’s coat gently while keeping skin healthy and soft, using pet-safe, calming shampoo.',
+            icon: 'warm',
+          },
+          {
+            title: 'Blow Dry and Full Brushing',
+            description:
+              'Dries and detangles the coat, leaving it smooth, shiny, and free of mats or knots, while keeping your cat calm.',
+            icon: 'blow',
+          },
+          {
+            title: 'Haircut and Styling (Breed or Custom)',
+            description:
+              'Provides a neat, coat-appropriate or custom haircut to suit your cat’s personality and comfort.',
+            icon: 'haircut',
+          },
+          {
+            title: 'Nail Trimming and Paw Pad Care',
+            description:
+              'Maintains safe nail length and healthy paw pads, helping your cat move comfortably.',
+            icon: 'nail',
+          },
+          {
+            title: 'Ear Cleaning',
+            description:
+              'Removes dirt and wax buildup safely, helping prevent infections and support ear health.',
+            icon: 'ear',
+          },
+          {
+            title: 'And More Services',
+            description:
+              'We offer additional grooming options to call or message us to learn how we can customize your cat’s care.',
+            icon: 'nail',
+          },
+        ],
+        image: {
+          href: 'cat-2',
+          width: '505',
+          height: '644',
+        },
+      },
+      process: {
+        title: 'A Simple and Caring Process ',
+        description:
+          'In just 3 easy steps, your pet enjoys a calm and gentle grooming experience.',
+        items: [
+          {
+            icon: 'process-1',
+            back: 'bg-primary',
+            title: '1. Easy Booking',
+            description:
+              'We schedule your appointment through our system and confirm all the details to ensure a smooth and stress free experience for you and your pet.',
+            image: 'bg-process-1',
+          },
+          {
+            icon: 'process-2',
+            back: 'bg-secondary',
+            title: '2. We Come to You',
+            description:
+              'Our fully equipped mobile grooming van arrives at your home with everything needed to groom your pet safely, calmly and comfortably.',
+            image: 'bg-process-2',
+          },
+          {
+            icon: 'process-3',
+            back: 'bg-primary',
+            title: '3. Professional and Loving Grooming',
+            description:
+              'Your pet receives patient, gentle and high quality grooming guided by more than twenty years of family experience and genuine love for animals.',
+            image: 'bg-process-3',
+          },
+        ],
+      },
+      information: {
+        title: 'Give Your Pet the Comfort and Care They Deserve',
+        description:
+          'Schedule your mobile grooming appointment with Monarca Grooming and enjoy gentle, stress free grooming at home. Our team brings experience, patience and calm handling to every dog and cat we care for in Florida.',
+        buttons: [
+          {
+            label: 'Call now',
+            href: 'tel:+19548684929',
+            color: 'secondary',
+          },
+          {
+            label: 'Book now',
+            href: 'book-appointment',
+            color: 'primary',
+          },
+        ],
+      },
+      title: 'See the Difference',
     },
   },
   about: {
@@ -596,6 +772,11 @@ export default {
       ],
     },
   },
+  gallery: {
+    title: 'Gallery',
+    description:
+      'Gallery of real Monarca Grooming transformations. Calm, clean, and  radiant pets after <br class="hidden md:block"/> our mobile at‑home grooming services across Florida.',
+  },
   footer: {
     description: '25 years taking care <br/> of your best friends',
     service: {
@@ -608,6 +789,10 @@ export default {
         {
           title: 'Mobile Dog Grooming',
           href: '/mobile-dog-grooming',
+        },
+        {
+          title: 'Dental Cleaning Non-Anesthetic',
+          href: '/dental-cleaning',
         },
       ],
     },

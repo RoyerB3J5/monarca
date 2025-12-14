@@ -3,6 +3,7 @@ import en from '../../../i18n/en';
 import es from '../../../i18n/es';
 import Layout from '../../../layouts/Layout.astro';
 import Information from '../../../sections/Information.astro';
+import Gallery from '../../../sections/services/Gallery.astro';
 import Hero from '../../../sections/services/Hero.astro';
 import Included from '../../../sections/services/Included.astro';
 import Process from '../../../sections/services/Process.astro';
@@ -12,6 +13,7 @@ export function getStaticPaths() {
   const services = [
     'mobile-dog-grooming',
     'mobile-cat-grooming',
+    'dental-cleaning'
   ];
   const languages = ['es', 'en'];
 
@@ -32,6 +34,7 @@ const serviceData = t.services[service as keyof typeof t.services];
 
 <Layout lang={lang} t={t}>
   <Hero content={serviceData.hero} />
+  {service === 'dental-cleaning' && <Gallery content={serviceData.title}/>}
   <Included content={serviceData.included}/>
   <Process content={serviceData.process} />
   <Information content={serviceData.information}/>

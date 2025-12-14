@@ -16,6 +16,11 @@ export default {
         label: 'FAQ',
         href: '/faq',
       },
+      {
+        icon: '',
+        label: 'Galería',
+        href: '/gallery',
+      },
     ],
     services: [
       {
@@ -25,6 +30,10 @@ export default {
       {
         label: 'Peluquería móvil para gatos',
         href: 'mobile-cat-grooming',
+      },
+      {
+        label: 'Limpieza dental sin anestesia',
+        href: 'dental-cleaning',
       },
     ],
     buttons: [
@@ -44,8 +53,10 @@ export default {
   },
   main: {
     hero: {
-      title: 'Con Monarca <br/> Grooming. Mimamos <br/> a tus mascotas en casa',
-      description: 'Peluquería móvil para mascotas en Florida',
+      title:
+        'Con Monarca <br class="hidden md:block"/> Grooming. Consentimos <br class="hidden md:block"/> a tus mascotas en casa',
+      description:
+        'Peluquería móvil para mascotas en Florida',
       buttons: [
         {
           label: 'Llama Ya!',
@@ -109,6 +120,28 @@ export default {
             button: {
               label: 'Ver servicio',
               href: '/mobile-cat-grooming',
+            },
+          },
+          {
+            with: '309',
+            height: '345',
+            image: 'dog-grooming',
+            title: 'Limpieza dental para perros',
+            description: 'Limpieza dental profesional para perros en casa',
+            button: {
+              label: 'Ver servicio',
+              href: '/dental-cleaning',
+            },
+          },
+          {
+            with: '315',
+            height: '311',
+            image: 'cat-grooming',
+            title: 'Limpieza dental para gatos',
+            description: 'Limpieza dental profesional para gatos en casa',
+            button: {
+              label: 'Ver servicio',
+              href: '/dental-cleaning',
             },
           },
         ],
@@ -239,6 +272,28 @@ export default {
             href: '/mobile-cat-grooming',
           },
         },
+        {
+          with: '309',
+          height: '345',
+          image: 'dog-grooming',
+          title: 'Limpieza dental para perros',
+          description: 'Limpieza dental profesional para perros en casa',
+          button: {
+            label: 'Ver servicio',
+            href: '/dental-cleaning',
+          },
+        },
+        {
+          with: '315',
+          height: '311',
+          image: 'cat-grooming',
+          title: 'Limpieza dental para gatos',
+          description: 'Limpieza dental profesional para gatos en casa',
+          button: {
+            label: 'Ver servicio',
+            href: '/dental-cleaning',
+          },
+        },
       ],
     },
     information: {
@@ -289,37 +344,37 @@ export default {
           {
             title: 'Baño tibio con champú suave',
             description:
-              'Un baño reconfortante con champú suave y seguro para mascotas que limpia, refresca y prepara a tu perro para la sesión completa de peluquería.',
+              'Limpia el pelaje de tu perro manteniendo la piel sana y suave con champú suave.',
             icon: 'warm',
           },
           {
-            title: 'Secado y cepillado completo',
+            title: 'Secado y cepillado en profundidad',
             description:
-              'Secado profesional y cepillado completo para eliminar nudos, dejar el pelaje suelto y facilitar el corte y el acabado.',
+              'Seca y desenreda el pelaje, dejándolo liso, brillante y completamente libre de nudos o enredos.',
             icon: 'blow',
           },
           {
-            title: 'Corte y estilismo (por raza o personalizado)',
+            title: 'Corte y peinado (raza o personalizado)',
             description:
-              'Cortes y peinados adaptados a la raza o al estilo deseado por el propietario, con acabados cuidados.',
+              'Realizamos corte pulcro por raza o personalizado que se adapte a su personalidad y vida.',
             icon: 'haircut',
           },
           {
             title: 'Corte de uñas y cuidado de almohadillas',
             description:
-              'Servicio de limado o corte de uñas y revisión y cuidado de las almohadillas para mayor confort.',
+              'Mantiene las uñas a longitud segura y las almohadillas suaves y saludables para comodidad y movilidad.',
             icon: 'nail',
           },
           {
             title: 'Limpieza de oídos',
             description:
-              'Limpieza suave de oídos para mantener la higiene y detectar posibles problemas.',
+              'Elimina suciedad y cerumen, previene infecciones y mantiene la salud del oído.',
             icon: 'ear',
           },
           {
             title: 'Y más servicios',
             description:
-              'Ofrecemos servicios adicionales según las necesidades del animal y las solicitudes del propietario.',
+              'Ofrecemos opciones adicionales de peluquería; llama o envíanos un mensaje para saber cómo personalizar el cuidado de tu perro.',
             icon: 'nail',
           },
         ],
@@ -377,6 +432,7 @@ export default {
           },
         ],
       },
+      title: ' ',
     },
     'mobile-cat-grooming': {
       hero: {
@@ -405,39 +461,39 @@ export default {
         title: 'Qué incluye nuestro servicio de peluquería móvil para gatos',
         items: [
           {
-            title: 'Baño tibio con champú suave',
+            title: 'Baño tibio con champú calmante',
             description:
-              'Un baño reconfortante con champú suave y seguro para mascotas que limpia, refresca y prepara a tu gato para la sesión completa de peluquería.',
+              'Limpia el pelaje de tu gato con suavidad, manteniendo la piel sana y sedosa con champú calmante.',
             icon: 'warm',
           },
           {
             title: 'Secado y cepillado completo',
             description:
-              'Secado cuidadoso y cepillado para eliminar pelo suelto y evitar enredos.',
+              'Seca y desenreda el pelaje, dejándolo suave, brillante y libre de nudos, manteniendo al gato tranquilo.',
             icon: 'blow',
           },
           {
-            title: 'Corte y estilismo (por raza o personalizado)',
+            title: 'Corte y peinado (raza o personalizado)',
             description:
-              'Cortes y acabados adaptados a las necesidades del gato y las preferencias del propietario.',
+              'Realizamos cortes apropiados al pelaje o personalizados para su comodidad y carácter.',
             icon: 'haircut',
           },
           {
             title: 'Corte de uñas y cuidado de almohadillas',
             description:
-              'Servicio de corte de uñas y revisión de las almohadillas para mayor confort.',
+              'Mantiene las uñas a longitud segura y las almohadillas saludables para una movilidad cómoda.',
             icon: 'nail',
           },
           {
             title: 'Limpieza de oídos',
             description:
-              'Limpieza suave de oídos para mantener la higiene y prevenir molestias.',
+              'Elimina suciedad y cerumen de forma segura, ayudando a prevenir infecciones y cuidar la salud del oído.',
             icon: 'ear',
           },
           {
             title: 'Y más servicios',
             description:
-              'Servicios adicionales disponibles según las necesidades específicas de tu mascota.',
+              'Ofrecemos opciones adicionales de peluquería; llámanos o envíanos un mensaje para personalizar el cuidado de tu gato.',
             icon: 'nail',
           },
         ],
@@ -495,7 +551,127 @@ export default {
           },
         ],
       },
+      title: ' ',
     },
+    'dental-cleaning': {
+      hero: {
+        image: {
+          href: 'cat-1',
+          width: '626',
+          height: '525',
+        },
+        subtitle: 'Cuidado tranquilo y personalizado en tu hogar',
+        title: 'Limpieza dental sin anestesia',
+        description:
+          'Nuestra limpieza dental sin anestesia mantiene la salud bucal de tu mascota de forma segura y suave, sin los riesgos asociados a la anestesia. Este servicio elimina placa y sarro mientras tu mascota permanece calmada y cómoda, ayudando a prevenir enfermedad de las encías, mal aliento y problemas dentales futuros. Ideal para mantenimiento dental rutinario en un entorno móvil sin estrés.',
+        text1: 'Por qué los dueños eligen Monarca',
+        items: [
+          'Reduce placa y sarro sin riesgos de anestesia',
+          'Ayuda a prevenir enfermedad de las encías y pérdida dental',
+          'Mejora el aliento y la higiene oral general',
+          'Menos estrés con un enfoque móvil, suave y personalizado',
+        ],
+        button: {
+          title: 'Reservar Ya!',
+          href: '/es/book-appointment',
+        },
+      },
+      included: {
+        title: 'Qué incluye nuestro servicio de limpieza dental',
+        items: [
+          {
+            title: 'Baño tibio con champú suave',
+            description:
+              'Limpia el pelaje suavemente, manteniendo la piel sana y tersa con champú seguro para mascotas.',
+            icon: 'warm',
+          },
+          {
+            title: 'Secado y cepillado completo',
+            description:
+              'Seca y desenreda el pelaje, dejándolo suave y brillante, además de mantener a la mascota tranquila.',
+            icon: 'blow',
+          },
+          {
+            title: 'Corte y peinado (raza o personalizado)',
+            description:
+              'Corte adecuado al tipo de pelaje o personalizado para mayor comodidad y apariencia.',
+            icon: 'haircut',
+          },
+          {
+            title: 'Corte de uñas y cuidado de almohadillas',
+            description:
+              'Mantiene las uñas a una longitud segura y las almohadillas saludables para mayor comodidad.',
+            icon: 'nail',
+          },
+          {
+            title: 'Limpieza de oídos',
+            description:
+              'Eliminamos suciedad y cerumen con seguridad para ayudar a prevenir infecciones y cuidar la salud auditiva.',
+            icon: 'ear',
+          },
+          {
+            title: 'Y más servicios',
+            description:
+              'Ofrecemos opciones adicionales; llámanos o envíanos un mensaje para personalizar el cuidado dental de tu mascota.',
+            icon: 'nail',
+          },
+        ],
+        image: {
+          href: 'cat-2',
+          width: '505',
+          height: '644',
+        },
+      },
+      process: {
+        title: 'Un proceso sencillo y cuidadoso',
+        description:
+          'En solo 3 pasos sencillos, tu mascota disfrutará de una experiencia calmada y cuidadosa.',
+        items: [
+          {
+            icon: 'process-1',
+            back: 'bg-primary',
+            title: '1. Reserva fácil',
+            description:
+              'Agendamos tu cita y confirmamos todos los detalles para garantizar una experiencia fluida y sin estrés.',
+            image: 'bg-process-1',
+          },
+          {
+            icon: 'process-2',
+            back: 'bg-secondary',
+            title: '2. Nosotros vamos a ti',
+            description:
+              'Nuestra unidad móvil llega equipada a tu hogar con todo lo necesario para atender a tu mascota de forma segura y cómoda.',
+            image: 'bg-process-2',
+          },
+          {
+            icon: 'process-3',
+            back: 'bg-primary',
+            title: '3. Limpieza profesional y con cariño',
+            description:
+              'Tu mascota recibe un cuidado paciente y profesional, guiado por más de veinte años de experiencia familiar y amor por los animales.',
+            image: 'bg-process-3',
+          },
+        ],
+      },
+      information: {
+        title: 'Brinda confort y cuidado a tu mascota',
+        description:
+          'Programa tu limpieza dental móvil con Monarca Grooming y disfruta de un servicio suave y seguro en casa. Nuestro equipo aporta experiencia, paciencia y manejo tranquilo en cada visita.',
+        buttons: [
+          {
+            label: 'Llama Ya!',
+            href: 'tel:+19548684929',
+            color: 'secondary',
+          },
+          {
+            label: 'Reservar Ya!',
+            href: 'book-appointment',
+            color: 'primary',
+          },
+        ],
+      },
+    },
+    title: 'Ve la diferencia',
   },
   about: {
     hero: {
@@ -597,6 +773,11 @@ export default {
       ],
     },
   },
+  gallery: {
+    title: 'Galería',
+    description:
+      'Galería de transformaciones reales de Monarca Grooming. Mascotas calmadas, limpias y  radiantes después de nuestros <br class="hidden md:block"/> servicios móviles de peluquería a domicilio en toda Florida.',
+  },
   footer: {
     description: '25 años cuidando a <br/> tus mejores amigos',
     service: {
@@ -609,6 +790,10 @@ export default {
         {
           title: 'Peluquería móvil para gatos',
           href: '/mobile-cat-grooming',
+        },
+        {
+          title: 'Limpieza dental sin anestesia',
+          href: '/dental-cleaning',
         },
       ],
     },

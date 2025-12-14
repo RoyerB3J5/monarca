@@ -67,9 +67,8 @@ const lang = match ? match[1] : 'en';
     <div class="flex flex-col justify-center items-start gap-9 md:gap-[34px] max-w-none md:max-w-[63%] w-full">
       <div class="flex flex-col justify-center items-start gap-3 text-white w-full">
         <h2
-          class="text-[16px] md:text-[20px] font-normal uppercase leading-[120%] tracking-[4px]"
+          class="text-[16px] md:text-[20px] font-normal uppercase leading-[120%] tracking-[4px]" set:html={content.description}
         >
-          {content.description}
         </h2>
         <h1
           set:html={content.title}

@@ -1,6 +1,7 @@
 ---
 import Button from './Button.astro';
 import { Icon } from 'astro-icon/components';
+import ChangeLanguage from './ChangeLanguage.astro';
 
 type Translations = typeof import('../i18n/en').default;
 type HeaderContent = Translations['header'];
@@ -86,7 +87,7 @@ const lang = match ? match[1] : 'en';
       </nav>
     </div>
     <a
-      href="/"
+      href={`/${lang}`}
       aria-label="Ir a la página principal"
       title="Inicio Monarca - Mobile Pet Grooming"
     >
@@ -103,17 +104,18 @@ const lang = match ? match[1] : 'en';
         text={content?.buttons[0].label}
         textClass="text-[13px] sm:text-[16px] text-white"
         href={`/${lang}/${content?.buttons[0].href}`}
-        extraBtnClass={` border border-white bg-primary `}
+        extraBtnClass={` border border-white bg-primary hidden md:flex `}
         iconName={content?.buttons[0].icon}
         iconClass="text-primary"
       />
       <Button
         text={content?.buttons[1].label}
         href={content?.buttons[1].href}
-        extraBtnClass={`border border-transparent bg-secondary hidden sm:flex`}
+        extraBtnClass={`border border-transparent bg-secondary hidden md:flex`}
         iconName={content?.buttons[1].icon}
         iconClass="text-secondary"
       />
+      <ChangeLanguage />
       <div class="flex lg:hidden justify-center items-center gap-7">
         <button
           type="button"
@@ -213,6 +215,14 @@ const lang = match ? match[1] : 'en';
   </nav>
 
   <div class="flex flex-col justify-center items-center gap-5">
+    <Button
+      text={content?.buttons[0].label}
+      textClass="text-[13px] sm:text-[16px] text-white"
+      href={`/${lang}/${content?.buttons[0].href}`}
+      extraBtnClass={` border border-white bg-primary `}
+      iconName={content?.buttons[0].icon}
+      iconClass="text-primary"
+    />
     <Button
       text={content?.buttons[1].label}
       href={content?.buttons[1].href}
