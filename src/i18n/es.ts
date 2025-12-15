@@ -87,7 +87,7 @@ export default {
         },
         {
           icon: 'pets-2',
-          numer: '20+ Years',
+          numer: '20+ años',
           title: 'Peluqueros expertos',
           description:
             'Una tradición familiar en peluquería cuidadosa con resultados premium.',
@@ -126,7 +126,7 @@ export default {
             height: '345',
             image: 'dog-grooming',
             title: 'Limpieza dental para perros',
-            description: 'Limpieza dental profesional para perros en casa',
+            description: 'Cuidado dental profesional para perros',
             button: {
               label: 'Ver servicio',
               href: '/dental-cleaning',
@@ -137,26 +137,11 @@ export default {
             height: '311',
             image: 'cat-grooming',
             title: 'Limpieza dental para gatos',
-            description: 'Limpieza dental profesional para gatos en casa',
+            description: 'Cuidado dental sin estrés para gatos',
             button: {
               label: 'Ver servicio',
               href: '/dental-cleaning',
             },
-          },
-        ],
-      },
-      dental: {
-        title: 'Dental Cleaning Non Anesthetic',
-        buttons: [
-          {
-            label: 'Llama Ya!',
-            href: 'tel:+19548684929',
-            color: 'secondary',
-          },
-          {
-            label: 'Reserva Ya!',
-            href: 'book-appointment',
-            color: 'primary',
           },
         ],
       },
@@ -579,39 +564,39 @@ export default {
         title: 'Qué incluye nuestro servicio de limpieza dental',
         items: [
           {
-            title: 'Baño tibio con champú suave',
+            title: 'Evaluación oral',
             description:
-              'Limpia el pelaje suavemente, manteniendo la piel sana y tersa con champú seguro para mascotas.',
+              'Examen visual suave de los dientes y encías de su mascota para valorar placa y salud bucal.',
             icon: 'warm',
           },
           {
-            title: 'Secado y cepillado completo',
+            title: 'Eliminación de placa y sarro',
             description:
-              'Seca y desenreda el pelaje, dejándolo suave y brillante, además de mantener a la mascota tranquila.',
+              'Retiro cuidadoso de placa y sarro para proteger los dientes y reducir el riesgo de enfermedad gingival.',
             icon: 'blow',
           },
           {
-            title: 'Corte y peinado (raza o personalizado)',
+            title: 'Limpieza de encías',
             description:
-              'Corte adecuado al tipo de pelaje o personalizado para mayor comodidad y apariencia.',
+              'Limpieza focal en la línea de encías para favorecer encías sanas y prevenir la inflamación.',
             icon: 'haircut',
           },
           {
-            title: 'Corte de uñas y cuidado de almohadillas',
+            title: 'Mejora del aliento',
             description:
-              'Mantiene las uñas a una longitud segura y las almohadillas saludables para mayor comodidad.',
+              'Reduce el mal aliento al tratar las causas dentales más comunes.',
             icon: 'nail',
           },
           {
-            title: 'Limpieza de oídos',
+            title: 'Manejo individual tranquilo',
             description:
-              'Eliminamos suciedad y cerumen con seguridad para ayudar a prevenir infecciones y cuidar la salud auditiva.',
+              'Realizado con manejo paciente y gentil para mantener a su mascota relajada y cómoda.',
             icon: 'ear',
           },
           {
-            title: 'Y más servicios',
+            title: 'Recomendaciones dentales',
             description:
-              'Ofrecemos opciones adicionales; llámanos o envíanos un mensaje para personalizar el cuidado dental de tu mascota.',
+              'Guía personalizada para el cuidado dental en casa y mantener la salud bucal entre limpiezas.',
             icon: 'nail',
           },
         ],
@@ -669,8 +654,8 @@ export default {
           },
         ],
       },
+      title: 'Ve la diferencia',
     },
-    title: 'Ve la diferencia',
   },
   about: {
     hero: {
@@ -709,49 +694,49 @@ export default {
     title: 'Preguntas Frecuentes',
     questions: [
       {
-        title: '¿Vienen a mi casa?',
+        title: '¿Ustedes vienen a mi casa?',
         answer:
-          'Sí. Somos un servicio de peluquería totalmente móvil. Nuestra furgoneta de peluquería llega directamente a tu puerta con todo el equipo necesario para arreglar a tu perro o gato de manera segura y cómoda.',
+          'Sí. Somos un servicio de peluquería 100% móvil. Nuestra furgoneta totalmente equipada llega directamente a su domicilio para atender a su perro o gato de forma segura, cómoda y sin estrés.',
       },
       {
-        title: '¿Cuánto tiempo dura una sesión de peluquería?',
+        title: '¿Cuánto dura una sesión de peluquería?',
         answer:
-          'Una sesión típica de peluquería dura entre 1 y 3 horas, dependiendo del tamaño, la raza y la condición de tu mascota. Siempre priorizamos la comodidad y seguridad de tu mascota durante todo el proceso.',
+          'La duración depende del tamaño, raza, estado del pelaje y necesidades de su mascota. En promedio, una sesión dura entre 1 y 2 horas.',
       },
       {
         title: '¿Asean a gatos?',
         answer:
-          'Sí. Somos un servicio de peluquería totalmente móvil. Nuestra furgoneta de peluquería llega directamente a tu puerta con todo el equipo necesario para arreglar a tu perro o gato de manera segura y cómoda.',
+          'Sí, ofrecemos servicio de peluquería para gatos. Cada cita se evalúa previamente para garantizar una experiencia segura y tranquila según el temperamento del gato.',
       },
       {
         title: '¿Necesito estar en casa durante la cita?',
         answer:
-          'Sí. Somos un servicio de peluquería totalmente móvil. Nuestra furgoneta de peluquería llega directamente a tu puerta con todo el equipo necesario para arreglar a tu perro o gato de manera segura y cómoda.',
+          'No es necesario. Solo requerimos acceso a su mascota y un espacio adecuado para estacionar la furgoneta cerca de su hogar.',
       },
       {
-        title: '¿Qué áreas atienden?',
+        title: '¿Qué zonas atienden?',
         answer:
-          'Atendemos toda Florida con nuestro servicio de peluquería totalmente móvil. Nuestra furgoneta de peluquería llega directamente a tu puerta con todo el equipo necesario para arreglar a tu perro o gato de manera segura y cómoda.',
+          'Atendemos zonas de Palm Beach y el condado de Broward, incluyendo Boca Raton, Delray Beach, Boynton Beach y áreas cercanas.',
       },
       {
         title: '¿Cómo reservo una cita?',
         answer:
-          'Puedes reservar una cita fácilmente a través de nuestro sitio web o llamándonos. Estamos aquí para hacer el proceso lo más sencillo posible para ti y tu mascota.',
+          'Puede reservar fácilmente contactándonos por WhatsApp, redes sociales o mediante nuestro sistema de reservas en línea.',
       },
       {
         title: '¿Qué pasa si mi mascota está ansiosa o nerviosa?',
         answer:
-          'Entendemos que algunas mascotas pueden estar ansiosas. Nuestro equipo está capacitado para manejar situaciones delicadas con paciencia y calma, asegurando una experiencia positiva para tu mascota.',
+          'Contamos con más de 15 años de experiencia atendiendo mascotas ansiosas. Nuestro servicio móvil, uno a uno y sin jaulas, ayuda a reducir considerablemente el estrés y la ansiedad.',
       },
       {
         title: '¿Limpian la furgoneta entre citas?',
         answer:
-          'Sí. Limpiamos y desinfectamos completamente la furgoneta entre cada cita para mantener un entorno higiénico y seguro para todas las mascotas.',
+          'Sí. Nuestra furgoneta se limpia y desinfecta a fondo entre cada cita para garantizar un entorno seguro e higiénico.',
       },
       {
         title: '¿Qué pasa si necesito cancelar o reprogramar?',
         answer:
-          'Entendemos que los planes pueden cambiar. Por favor, contáctanos lo antes posible para cancelar o reprogramar. Aplicamos una política de cancelación razonable para asegurar la disponibilidad para otros clientes.',
+          'Puede cancelar o reprogramar avisándonos con antelación. Le rogamos que nos contacte lo antes posible para que podamos ajustar nuestra agenda.',
       },
     ],
     information: {

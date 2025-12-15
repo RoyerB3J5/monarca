@@ -126,7 +126,7 @@ export default {
             height: '345',
             image: 'dog-grooming',
             title: 'Dental Cleaning for Dogs',
-            description: 'Professional dog grooming at home',
+            description: 'Professional dental care for dogs',
             button: {
               label: 'View Service',
               href: '/dental-cleaning',
@@ -137,26 +137,11 @@ export default {
             height: '311',
             image: 'cat-grooming',
             title: 'Dental Cleaning for Cats',
-            description: 'Calm and gentle cat grooming at your home.',
+            description: 'Low-stress dental care for cats',
             button: {
               label: 'View Service',
               href: '/dental-cleaning',
             },
-          },
-        ],
-      },
-      dental: {
-        title: 'Dental Cleaning Non Anesthetic',
-        buttons: [
-          {
-            label: 'Call Now!',
-            href: 'tel:+19548684929',
-            color: 'secondary',
-          },
-          {
-            label: 'Book Now!',
-            href: 'book-appointment',
-            color: 'primary',
           },
         ],
       },
@@ -496,6 +481,7 @@ export default {
             icon: 'nail',
           },
         ],
+
         image: {
           href: 'cat-2',
           width: '505',
@@ -579,39 +565,39 @@ export default {
         title: 'What’s Included in Our Dental Cleaning Service',
         items: [
           {
-            title: 'Warm Bath with Gentle Shampoo',
+            title: 'Oral Evaluation',
             description:
-              'Cleans your cat’s coat gently while keeping skin healthy and soft, using pet-safe, calming shampoo.',
+              'A gentle visual examination of your pet’s teeth and gums to assess plaque buildup and overall oral health.',
             icon: 'warm',
           },
           {
-            title: 'Blow Dry and Full Brushing',
+            title: 'Plaque and Tartar Removal',
             description:
-              'Dries and detangles the coat, leaving it smooth, shiny, and free of mats or knots, while keeping your cat calm.',
+              'Careful removal of surface plaque and tartar to help protect teeth and reduce the risk of gum disease.',
             icon: 'blow',
           },
           {
-            title: 'Haircut and Styling (Breed or Custom)',
+            title: 'Gum Line Cleaning',
             description:
-              'Provides a neat, coat-appropriate or custom haircut to suit your cat’s personality and comfort.',
+              'Focused cleaning along the gum line to support healthier gums and prevent inflammation.',
             icon: 'haircut',
           },
           {
-            title: 'Nail Trimming and Paw Pad Care',
+            title: 'Breath Improvement Care',
             description:
-              'Maintains safe nail length and healthy paw pads, helping your cat move comfortably.',
+              'Helps reduce bad breath by addressing the most common dental odor causes in pets.',
             icon: 'nail',
           },
           {
-            title: 'Ear Cleaning',
+            title: 'Calm, One-on-One Handling',
             description:
-              'Removes dirt and wax buildup safely, helping prevent infections and support ear health.',
+              'Performed with patient, gentle handling to keep your pet relaxed and comfortable during the service.',
             icon: 'ear',
           },
           {
-            title: 'And More Services',
+            title: 'Dental Care Recommendations',
             description:
-              'We offer additional grooming options to call or message us to learn how we can customize your cat’s care.',
+              'Personalized guidance for at-home dental care to maintain your pet’s oral health between cleanings.',
             icon: 'nail',
           },
         ],
@@ -711,47 +697,47 @@ export default {
       {
         title: 'Do you come to my home?',
         answer:
-          'Yes. We are a fully mobile grooming service. Our grooming van arrives directly at your doorstep with all the equipment needed to groom your dog or cat safely and comfortably.',
+          'Yes. We are a 100% mobile grooming service. Our fully equipped grooming van arrives directly at your home to care for your dog or cat in a safe, comfortable, and stress-free environment.',
       },
       {
         title: 'How long does a grooming session take?',
         answer:
-          'A typical grooming session takes between 1 to 3 hours, depending on the size, breed, and condition of your pet. We always prioritize your pet’s comfort and safety throughout the process.',
+          'The duration depends on your pet’s size, breed, coat condition, and needs. On average, a grooming session takes between 1 and 2 hours.',
       },
       {
         title: 'Do you groom cats?',
         answer:
-          'Yes. We are a fully mobile grooming service. Our grooming van arrives directly at your doorstep with all the equipment needed to groom your dog or cat safely and comfortably.',
+          'Yes, we offer grooming services for cats. Each appointment is evaluated in advance to ensure a safe and calm experience, based on the cat’s temperament.',
       },
       {
         title: 'Do I need to be home during the appointment?',
         answer:
-          'Yes. We are a fully mobile grooming service. Our grooming van arrives directly at your doorstep with all the equipment needed to groom your dog or cat safely and comfortably.',
+          'No, it is not required. We only need access to your pet and a suitable space to park the grooming van near your home.',
       },
       {
         title: 'What areas do you serve?',
         answer:
-          'We serve all of Florida with our fully mobile grooming service. Our grooming van arrives directly at your doorstep with all the equipment needed to groom your dog or cat safely and comfortably.',
+          'We serve areas throughout Palm Beach and Broward County, including Boca Raton, Delray Beach, Boynton Beach, and surrounding areas.',
       },
       {
         title: 'How do I book an appointment?',
         answer:
-          'Yes. We are a fully mobile grooming service. Our grooming van arrives directly at your doorstep with all the equipment needed to groom your dog or cat safely and comfortably.',
+          'You can easily book an appointment by contacting us via WhatsApp, social media, or through our online booking system.',
       },
       {
         title: 'What if my pet is anxious or nervous?',
         answer:
-          'Yes. We are a fully mobile grooming service. Our grooming van arrives directly at your doorstep with all the equipment needed to groom your dog or cat safely and comfortably.',
+          'We have over 15 years of experience handling anxious pets. Our cage-free, one-on-one mobile service helps significantly reduce stress and anxiety.',
       },
       {
         title: 'Do you clean the van between appointments?',
         answer:
-          'Yes. We are a fully mobile grooming service. Our grooming van arrives directly at your doorstep with all the equipment needed to groom your dog or cat safely and comfortably.',
+          'Yes. Our grooming van is thoroughly cleaned and disinfected between every appointment to ensure a safe and hygienic environment.',
       },
       {
         title: 'What if I need to cancel or reschedule?',
         answer:
-          'Yes. We are a fully mobile grooming service. Our grooming van arrives directly at your doorstep with all the equipment needed to groom your dog or cat safely and comfortably.',
+          'You may cancel or reschedule your appointment by notifying us in advance. We kindly ask that you contact us as soon as possible so we can adjust our schedule accordingly.',
       },
     ],
     information: {

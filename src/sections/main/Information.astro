@@ -113,33 +113,6 @@ const lang = match ? match[1] : 'en';
       </div>
     </div>
     <div
-      class="w-full flex-col justify-center items-center gap-10 hidden"
-      data-aos="zoom-out"
-    >
-      <h2
-        class="font-title text-[32px] md:text-[40px] leading-[120%] text-center text-primary-dark"
-      >
-        {content.dental.title}
-      </h2>
-      <BeforeAfter
-        beforeImage="/images/before.webp"
-        afterImage="/images/after.webp"
-      />
-      <div class="flex justify-center items-center gap-3">
-        {
-          content.dental.buttons.map((btn) => (
-            <Button
-              text={btn.label}
-              href={`/${lang}/${btn.href}`}
-              extraBtnClass={`bg-${btn.color}`}
-              iconName={'arrow'}
-              iconClass={`text-${btn.color}`}
-            />
-          ))
-        }
-      </div>
-    </div>
-    <div
       class="w-full flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-end gap-10 md:gap-0"
       data-aos="flip-left"
       data-aos-offset="400"
