@@ -121,27 +121,20 @@ export default {
               href: '/mobile-cat-grooming',
             },
           },
+        ],
+      },
+      dental: {
+        title: 'Non Anesthetic Dental Cleaning  ',
+        buttons: [
           {
-            with: '309',
-            height: '345',
-            image: 'dog-grooming',
-            title: 'Dental Cleaning for Dogs',
-            description: 'Professional dental care for dogs',
-            button: {
-              label: 'View Service',
-              href: '/dental-cleaning',
-            },
+            label: 'Call Now!',
+            href: 'tel:+19548684929',
+            color: 'secondary',
           },
           {
-            with: '315',
-            height: '311',
-            image: 'cat-grooming',
-            title: 'Dental Cleaning for Cats',
-            description: 'Low-stress dental care for cats',
-            button: {
-              label: 'View Service',
-              href: '/dental-cleaning',
-            },
+            label: 'Book Now!',
+            href: 'book-appointment',
+            color: 'primary',
           },
         ],
       },
@@ -256,27 +249,20 @@ export default {
             href: '/mobile-cat-grooming',
           },
         },
+      ],
+    },
+    dental: {
+      title: 'Non-Anesthetic Dental Cleaning  ',
+      buttons: [
         {
-          with: '309',
-          height: '345',
-          image: 'dog-grooming',
-          title: 'Dental Cleaning for Dogs',
-          description: 'Professional dog grooming at home',
-          button: {
-            label: 'View Service',
-            href: '/dental-cleaning',
-          },
+          label: 'Call Now!',
+          href: 'tel:+19548684929',
+          color: 'secondary',
         },
         {
-          with: '315',
-          height: '311',
-          image: 'cat-grooming',
-          title: 'Dental Cleaning for Cats',
-          description: 'Calm and gentle cat grooming at your home.',
-          button: {
-            label: 'View Service',
-            href: '/dental-cleaning',
-          },
+          label: 'Book Now!',
+          href: 'book-appointment',
+          color: 'primary',
         },
       ],
     },
@@ -541,9 +527,9 @@ export default {
     'dental-cleaning': {
       hero: {
         image: {
-          href: 'cat-1',
-          width: '626',
-          height: '525',
+          href: 'dental-1',
+          width: '612',
+          height: '514',
         },
         subtitle: 'Calm, one-to-one care at your home',
         title: 'Dental Cleaning Non-Anesthetic',
@@ -669,6 +655,7 @@ export default {
       ],
     },
     results: {
+      title2:'Our certifications',
       title: 'Happy Pets. Beautiful Results.',
       description:
         'See our latest transformations, happy pets and real moments from our grooming days. Every photo is a reminder of our mission to bring calm, comfort and beautiful results to every dog and cat we care for in Florida. Updated often with real clients, real smiles and grooming done with heart.',

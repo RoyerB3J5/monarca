@@ -1,0 +1,51 @@
+---
+import Button from '../../components/Button.astro';
+
+type Translations = typeof import('../../i18n/es').default;
+type DentalContent = Translations['servicesPage']['dental'];
+interface Props {
+  content: DentalContent;
+}
+const { content } = Astro.props as Props;
+// Obtener la ruta actual y normalizar el path sin prefijo de idioma
+const currentPath = Astro.url.pathname;
+// Detectar el idioma actual ('en' o 'es')
+const match = currentPath.match(/^\/(en|es)/);
+const lang = match ? match[1] : 'en';
+---
+
+<section class="h-full w-full max-w-screen md:max-w-7xl flex flex-col justify-center items-center px-5 xl:px-0 pt-[50px] md:pt-20">
+  <div
+    class="w-full rounded-3xl flex justify-start items-center relative py-7 px-5 md:px-[46px] overflow-hidden"
+  >
+    <img
+      src="/images/main/dental.webp"
+      alt="Limpieza Dental Monarca"
+      width="1402"
+      height="505"
+      decoding="async"
+      loading="lazy"
+      class="w-full h-full absolute inset-0 object-cover z-0 object-right"
+    />
+    <div
+      class="flex flex-col justify-center items-center md:items-start px-5 md:px-10 py-8 md:py-[52px] bg-primary-dark rounded-4xl gap-[72px] z-10 w-auto md:w-[491px]"
+    >
+      <h3 class="text-[58px] leading-[120%] text-white font-title">
+        {content.title}
+      </h3>
+      <div class="flex justify-center items-center gap-3">
+        {
+          content.buttons.map((btn) => (
+            <Button
+              text={btn.label}
+              href={`/${lang}/${btn.href}`}
+              extraBtnClass={`bg-${btn.color}`}
+              iconName={'arrow'}
+              iconClass={`text-${btn.color}`}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

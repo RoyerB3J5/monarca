@@ -3,6 +3,7 @@ import en from '../../../i18n/en';
 import es from '../../../i18n/es';
 import Layout from '../../../layouts/Layout.astro';
 import Information from '../../../sections/Information.astro';
+import Dental from '../../../sections/services/Dental.astro';
 import Grooming from '../../../sections/services/Grooming.astro';
 
 import type { Language } from '../../../types/language.type';
@@ -19,5 +20,6 @@ const t = translations[lang];
 
 <Layout lang={lang} t={t}>
   <Grooming content={t.servicesPage.grooming} />
+  <Dental content={t.servicesPage.dental} />
   <Information content={t.servicesPage.information}/>
 </Layout>

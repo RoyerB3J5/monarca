@@ -11,7 +11,7 @@ const { content } = Astro.props as Props;
 ---
 
 <section
-  class={`w-full ${content.image.href == 'dog-1' ? 'bg-[#006EC9]/25' : 'bg-[#FFC600]/35'} h-full relative flex justify-center items-center`}
+  class={`w-full ${content.image.href == 'dental-1' ? 'bg-[#8FA9E5]/35' : content.image.href == 'dog-1' ? 'bg-[#006EC9]/25' : 'bg-[#FFC600]/35'} h-full relative flex justify-center items-center`}
 >
   <img
     src="/images/services/bg-dogs.webp"

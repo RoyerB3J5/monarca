@@ -7,6 +7,28 @@ interface Props {
   content: ResultsContent;
 }
 const { content } = Astro.props as Props;
+const diplomas = [
+  {
+    src: 'diploma-1',
+    with: 786,
+    height: 600,
+  },
+  {
+    src: 'diploma-2',
+    with: 787,
+    height: 600,
+  },
+  {
+    src: 'diploma-3',
+    with: 721,
+    height: 600,
+  },
+  {
+    src: 'diploma-4',
+    with: 904,
+    height: 600,
+  },
+];
 ---
 
 <section
@@ -26,6 +48,30 @@ const { content } = Astro.props as Props;
     class={'absolute -bottom-px h-10 w-auto md:w-full md:h-auto z-10 left-0 rotate-180'}
     style="color: #FFF"
   />
+  <div
+    class="w-full max-w-screen md:max-w-7xl flex flex-col justify-center items-center px-5 xl:px-0 gap-10 z-10"
+  >
+    <h2 class="text-white text-[32px] md:text-[48px] font-title leading-[120%] text-center">
+      {content.title2}
+    </h2>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 justify-center items-center gap-4 w-full"
+    >
+      {
+        diplomas.map((diploma) => (
+          <img
+            src={`/images/about/${diploma.src}.webp`}
+            alt="Diplomas Monarca"
+            width={diploma.with}
+            height={diploma.height}
+            class="w-full sm:w-1/2 h-auto md:h-[255px] md:w-auto "
+            decoding="async"
+            loading="lazy"
+          />
+        ))
+      }
+    </div>
+  </div>
   <div
     class="w-full max-w-screen md:max-w-7xl flex flex-col justify-center items-center px-5 xl:px-0 gap-5"
   >

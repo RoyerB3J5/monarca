@@ -1,0 +1,3 @@
+- Imagen de Hero - Inicial
+- Subir calidad y eliminar fondo de imagen de DENTAL - Inicial
+- Definir imagenes de galeria
