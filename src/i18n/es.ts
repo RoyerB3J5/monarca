@@ -121,20 +121,27 @@ export default {
               href: '/mobile-cat-grooming',
             },
           },
-        ],
-      },
-      dental: {
-        title: 'Limpieza dental sin anestesia',
-        buttons: [
           {
-            label: 'Llama Ya!',
-            href: 'tel:+19548684929',
-            color: 'secondary',
+            with: '305',
+            height: '352',
+            image: 'dog-dental',
+            title: 'Limpieza Dental Perros',
+            description: 'Cuidado dental profesional para perros',
+            button: {
+              label: 'Ver servicio',
+              href: '/dental-cleaning',
+            },
           },
           {
-            label: 'Reservar Ya!',
-            href: 'book-appointment',
-            color: 'primary',
+            with: '294',
+            height: '303',
+            image: 'cat-dental',
+            title: 'Limpieza Dental Gatos',
+            description: 'Cuidado dental profesional para gatos',
+            button: {
+              label: 'Ver servicio',
+              href: '/dental-cleaning',
+            },
           },
         ],
       },
@@ -249,20 +256,27 @@ export default {
             href: '/mobile-cat-grooming',
           },
         },
-      ],
-    },
-    dental: {
-      title: 'Limpieza dental sin anestesia',
-      buttons: [
         {
-          label: 'Llama Ya!',
-          href: 'tel:+19548684929',
-          color: 'secondary',
+          with: '305',
+          height: '352',
+          image: 'dog-dental',
+          title: 'Limpieza Dental Perros',
+          description: 'Cuidado dental profesional para perros',
+          button: {
+            label: 'Ver servicio',
+            href: '/dental-cleaning',
+          },
         },
         {
-          label: 'Reservar Ya!',
-          href: 'book-appointment',
-          color: 'primary',
+          with: '294',
+          height: '303',
+          image: 'cat-dental',
+          title: 'Limpieza Dental Gatos',
+          description: 'Cuidado dental profesional para gatos',
+          button: {
+            label: 'Ver servicio',
+            href: '/dental-cleaning',
+          },
         },
       ],
     },
@@ -654,7 +668,7 @@ export default {
       ],
     },
     results: {
-      title2:'Nuestros certificados',
+      title2: 'Nuestros certificados',
       title: 'Mascotas felices. Resultados hermosos.',
       description:
         'Mira nuestras últimas transformaciones, mascotas felices y momentos reales de nuestras jornadas de peluquería. Cada foto recuerda nuestra misión de ofrecer calma, confort y resultados hermosos para cada perro y gato que atendemos en Florida. Actualizado a menudo con clientes reales, sonrisas reales y peluquería hecha con corazón.',

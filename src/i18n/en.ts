@@ -121,20 +121,27 @@ export default {
               href: '/mobile-cat-grooming',
             },
           },
-        ],
-      },
-      dental: {
-        title: 'Non Anesthetic Dental Cleaning  ',
-        buttons: [
           {
-            label: 'Call Now!',
-            href: 'tel:+19548684929',
-            color: 'secondary',
+            with: '305',
+            height: '352',
+            image: 'dog-dental',
+            title: 'Dental Cleaning for Dogs',
+            description: ' Professional dental care for dogs',
+            button: {
+              label: 'View Service',
+              href: '/dental-cleaning',
+            },
           },
           {
-            label: 'Book Now!',
-            href: 'book-appointment',
-            color: 'primary',
+            with: '294',
+            height: '303',
+            image: 'cat-dental',
+            title: 'Dental Cleaning for Cats',
+            description: 'Low-stress dental care for cats',
+            button: {
+              label: 'View Service',
+              href: '/dental-cleaning',
+            },
           },
         ],
       },
@@ -249,20 +256,27 @@ export default {
             href: '/mobile-cat-grooming',
           },
         },
-      ],
-    },
-    dental: {
-      title: 'Non-Anesthetic Dental Cleaning  ',
-      buttons: [
         {
-          label: 'Call Now!',
-          href: 'tel:+19548684929',
-          color: 'secondary',
+          with: '305',
+          height: '352',
+          image: 'dog-dental',
+          title: 'Dental Cleaning for Dogs',
+          description: ' Professional dental care for dogs',
+          button: {
+            label: 'View Service',
+            href: '/dental-cleaning',
+          },
         },
         {
-          label: 'Book Now!',
-          href: 'book-appointment',
-          color: 'primary',
+          with: '294',
+          height: '303',
+          image: 'cat-dental',
+          title: 'Dental Cleaning for Cats',
+          description: 'Low-stress dental care for cats',
+          button: {
+            label: 'View Service',
+            href: '/dental-cleaning',
+          },
         },
       ],
     },
@@ -655,7 +669,7 @@ export default {
       ],
     },
     results: {
-      title2:'Our certifications',
+      title2: 'Our certifications',
       title: 'Happy Pets. Beautiful Results.',
       description:
         'See our latest transformations, happy pets and real moments from our grooming days. Every photo is a reminder of our mission to bring calm, comfort and beautiful results to every dog and cat we care for in Florida. Updated often with real clients, real smiles and grooming done with heart.',

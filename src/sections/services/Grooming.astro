@@ -34,7 +34,9 @@ const lang = match ? match[1] : 'en';
   >
     {
       content.items.map((item) => (
-        <div class="w-full rounded-4xl bg-primary pr-[23px] md:pl-0 py-7 md:py-14 flex justify-end items-center relative ">
+        <div
+          class={`w-full rounded-4xl ${item.image === 'dog-dental' || item.image === 'cat-dental' ? 'bg-primary-dark' : 'bg-primary'} pr-[23px] md:pl-0 py-7 md:py-14 flex justify-end items-center relative `}
+        >
           <img
             src={`/images/main/${item.image}.webp`}
             alt={item.title}
@@ -56,9 +58,17 @@ const lang = match ? match[1] : 'en';
               href={`/${lang}/services${item.button.href}`}
               extraBtnClass="bg-white"
               iconName="arrow"
-              textClass="text-primary"
+              textClass={
+                item.image === 'dog-dental' || item.image === 'cat-dental'
+                  ? 'text-primary-dark'
+                  : 'text-primary'
+              }
               iconClass="text-white"
-              iconCircleClass="bg-primary"
+              iconCircleClass={
+                item.image === 'dog-dental' || item.image === 'cat-dental'
+                  ? 'bg-primary-dark'
+                  : 'bg-primary'
+              }
             />
           </div>
         </div>

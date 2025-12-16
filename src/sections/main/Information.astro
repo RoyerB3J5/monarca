@@ -80,7 +80,9 @@ const lang = match ? match[1] : 'en';
       >
         {
           content.gromming.items.map((item) => (
-            <div class="w-full rounded-4xl bg-primary pr-[23px] md:pl-0 py-7 md:py-14 flex justify-end items-center relative ">
+            <div
+              class={`w-full rounded-4xl ${item.image === 'dog-dental' || item.image === 'cat-dental' ? 'bg-primary-dark' : 'bg-primary'} pr-[23px] md:pl-0 py-7 md:py-14 flex justify-end items-center relative `}
+            >
               <img
                 src={`/images/main/${item.image}.webp`}
                 alt={item.title}
@@ -102,43 +104,22 @@ const lang = match ? match[1] : 'en';
                   href={`/${lang}/services${item.button.href}`}
                   extraBtnClass="bg-white"
                   iconName="arrow"
-                  textClass="text-primary"
+                  textClass={
+                    item.image === 'dog-dental' || item.image === 'cat-dental'
+                      ? 'text-primary-dark'
+                      : 'text-primary'
+                  }
                   iconClass="text-white"
-                  iconCircleClass="bg-primary"
+                  iconCircleClass={
+                    item.image === 'dog-dental' || item.image === 'cat-dental'
+                      ? 'bg-primary-dark'
+                      : 'bg-primary'
+                  }
                 />
               </div>
             </div>
           ))
         }
-      </div>
-    </div>
-    <div
-      class="w-full rounded-3xl flex justify-start items-center relative py-7 px-5 md:px-[46px] overflow-hidden"
-    >
-      <img
-        src="/images/main/dental.webp"
-        alt="Limpieza Dental Monarca"
-        width="1402"
-        height="505"
-        decoding="async"
-        loading="lazy"
-        class="w-full h-full absolute inset-0 object-cover z-0 object-right"
-      />
-      <div class="flex flex-col justify-center items-center md:items-start px-5 md:px-10 py-8 md:py-[52px] bg-primary-dark rounded-4xl gap-[72px] z-10 w-auto md:w-[491px]">
-        <h3 class="text-[58px] leading-[120%] text-white font-title">{content.dental.title}</h3>
-        <div class="flex justify-center items-center gap-3">
-          {
-            content.dental.buttons.map((btn) => (
-              <Button
-                text={btn.label}
-                href={`/${lang}/${btn.href}`}
-                extraBtnClass={`bg-${btn.color}`}
-                iconName={'arrow'}
-                iconClass={`text-${btn.color}`}
-              />
-            ))
-          }
-        </div>
       </div>
     </div>
     <div
