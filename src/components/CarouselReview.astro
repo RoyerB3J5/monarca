@@ -324,29 +324,50 @@ const { interval = 8000 } = Astro.props as Props;
         carousel.addEventListener('mouseenter', stopAuto, { passive: true });
         carousel.addEventListener('mouseleave', startAuto, { passive: true });
 
-        // Touch support
+        // Touch support (improved): support drag-follow and threshold relative to slide width
         let startX = 0,
-          deltaX = 0;
+          deltaX = 0,
+          isTouchDragging = false;
+
+        function onTouchMove(e) {
+          if (!isTouchDragging) return;
+          const clientX = e.touches ? e.touches[0].clientX : e.clientX || 0;
+          deltaX = clientX - startX;
+          const translate = -getSlideWidth() * currentIndex + deltaX;
+          track.style.transform = `translateX(${translate}px)`;
+        }
+
+        function onTouchEnd(e) {
+          if (!isTouchDragging) return;
+          isTouchDragging = false;
+          const clientX = e.changedTouches
+            ? e.changedTouches[0].clientX
+            : e.clientX || 0;
+          deltaX = clientX - startX;
+          const threshold = Math.max(50, getSlideWidth() * 0.18); // relative threshold
+          if (Math.abs(deltaX) > threshold) {
+            const dir = deltaX < 0 ? 1 : -1;
+            goTo(currentIndex + dir);
+          } else {
+            goTo(currentIndex, true);
+          }
+          resetAuto();
+          window.removeEventListener('touchmove', onTouchMove);
+          window.removeEventListener('touchend', onTouchEnd);
+        }
 
         track.addEventListener(
           'touchstart',
           (e) => {
             startX = e.touches[0].clientX;
+            deltaX = 0;
+            isTouchDragging = true;
             stopAuto();
-          },
-          { passive: true }
-        );
-
-        track.addEventListener(
-          'touchend',
-          (e) => {
-            deltaX = e.changedTouches[0].clientX - startX;
-            if (Math.abs(deltaX) > 50) {
-              const dir = deltaX < 0 ? 1 : -1;
-              // move one slide per swipe
-              goTo(currentIndex + dir);
-            }
-            resetAuto();
+            track.style.transition = 'none';
+            window.addEventListener('touchmove', onTouchMove, {
+              passive: true,
+            });
+            window.addEventListener('touchend', onTouchEnd, { passive: true });
           },
           { passive: true }
         );

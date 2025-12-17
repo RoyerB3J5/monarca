@@ -96,7 +96,7 @@ const { content } = Astro.props as Props;
                   class={`accordion-icon flex-none ${isFirst ? 'expanded' : 'collapsed'}`}
                 />
                 <div
-                  class={`flex-1 flex flex-col justify-center items-start ${isFirst ? 'gap-[11px]' : 'gap-0'} text-black accordion-content`}
+                  class={`flex-1 flex flex-col justify-start items-start ${isFirst ? 'gap-[11px]' : 'gap-0'} text-black accordion-content `}
                 >
                   <h3 class="text-[20px] leading-[120%] font-semibold font-subtitle ">
                     {item.title}
@@ -142,16 +142,38 @@ const { content } = Astro.props as Props;
       return height;
     }
 
-    // Guardar altura máxima de todos los items expandidos
-    function getMaxItemHeight() {
-      let maxHeight = 0;
-      accordionItems.forEach((item) => {
-        const text = item.querySelector('.accordion-text');
-        const textHeight = getTextHeight(text);
-        const itemHeight = item.scrollHeight + textHeight;
-        maxHeight = Math.max(maxHeight, itemHeight);
-      });
-      return maxHeight;
+    // Calcular la altura total de un contenedor de contenido (incluye gap/padding)
+    // Para evitar discrepancias por gap/padding/estilos, clonamos el nodo, lo expandimos
+    // fuera del flujo y medimos su scrollHeight.
+    function getContentHeight(contentDiv) {
+      try {
+        const clone = contentDiv.cloneNode(true);
+        // Force expanded text in clone
+        const cloneText = clone.querySelector('.accordion-text');
+        if (cloneText) {
+          cloneText.classList.remove('collapsed');
+          cloneText.classList.add('expanded');
+          cloneText.style.height = 'auto';
+        }
+        // place clone offscreen
+        clone.style.position = 'absolute';
+        clone.style.left = '-9999px';
+        clone.style.top = '0';
+        clone.style.width = contentDiv.offsetWidth + 'px';
+        clone.style.visibility = 'hidden';
+        document.body.appendChild(clone);
+        const h = clone.scrollHeight;
+        document.body.removeChild(clone);
+        return h;
+      } catch (e) {
+        // fallback: sum children heights
+        const otherHeight = Array.from(contentDiv.children)
+          .filter((c) => !c.classList.contains('accordion-text'))
+          .reduce((sum, c) => sum + c.scrollHeight, 0);
+        const text = contentDiv.querySelector('.accordion-text');
+        const textHeight = text ? getTextHeight(text) : 0;
+        return otherHeight + textHeight;
+      }
     }
 
     accordionItems.forEach((item) => {
@@ -163,15 +185,8 @@ const { content } = Astro.props as Props;
         // Calcular altura del párrafo
         const textHeight = getTextHeight(textElement);
 
-        // Establecer altura mínima al contenedor mientras anima
+        // Establecer transición en el bloque de contenido
         contentDiv.style.transition = 'height 0.4s ease-in-out';
-
-        // Fijar altura del contenedor padre para evitar saltos
-        const maxHeight = getMaxItemHeight();
-        if (parentContainer) {
-          parentContainer.style.transition = 'min-height 0.4s ease-in-out';
-          parentContainer.style.minHeight = maxHeight + 'px';
-        }
 
         // Cerrar todos los items
         accordionItems.forEach((el) => {
@@ -220,15 +235,17 @@ const { content } = Astro.props as Props;
             itemContentDiv.style.gap = '11px';
           }
 
-          // Establecer altura fija durante la animación
-          contentDiv.style.height = contentDiv.scrollHeight + textHeight + 'px';
+          // Establecer altura fija durante la animación calculada correctamente
+          const totalHeight = getContentHeight(itemContentDiv);
+          contentDiv.style.height = totalHeight + 'px';
         }
 
-        // Limpiar después de la animación
+        // Limpiar después de la animación: quitar alturas inline en todos los items
         setTimeout(() => {
-          if (parentContainer) {
-            parentContainer.style.minHeight = '';
-          }
+          accordionItems.forEach((el) => {
+            const elContent = el.querySelector('div:nth-child(2)');
+            if (elContent) elContent.style.height = '';
+          });
         }, 400);
       });
     });
