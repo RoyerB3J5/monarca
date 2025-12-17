@@ -24,6 +24,10 @@ interface Props {
   iconClass?: string;
   iconCircleClass?: string;
   iconCircle?: string;
+  /** Si se pasa (ms), aplica un 'shake' periódico al botón cada x milisegundos */
+  shakeInterval?: number;
+  /** Duración del shake en ms */
+  shakeDuration?: number;
 }
 
 const {
@@ -34,13 +38,17 @@ const {
   textClass = 'text-white text-[16px]',
   baseIconClass = 'h-[14px] w-[14px]',
   iconClass = '',
-  iconCircle ='flex p-3 rounded-full  justify-center items-center',
-  iconCircleClass='bg-white',
+  iconCircle = 'flex p-3 rounded-full  justify-center items-center',
+  iconCircleClass = 'bg-white',
+  shakeInterval,
+  shakeDuration = 700,
   iconName,
   href,
   target,
   rel,
 } = Astro.props as Props;
+
+// No id necesario: usamos atributos data- para el script cliente
 
 // Construir clases finales
 const buttonClasses = `${baseBtnClass} ${extraBtnClass}`.trim();
@@ -56,6 +64,8 @@ const iconCircleClasses = `${iconCircle} ${iconCircleClass}`.trim();
       class={buttonClasses}
       target={target}
       rel={rel ?? (target === '_blank' ? 'noopener noreferrer' : undefined)}
+      data-shake-interval={shakeInterval}
+      data-shake-duration={shakeDuration}
     >
       {text ? <p class={paragraphClasses}>{text}</p> : <slot />}
       <div class={iconCircleClasses}>
@@ -63,11 +73,71 @@ const iconCircleClasses = `${iconCircle} ${iconCircleClass}`.trim();
       </div>
     </a>
   ) : (
-    <button type="button" class={buttonClasses}>
+    <button
+      type="button"
+      class={buttonClasses}
+      data-shake-interval={shakeInterval}
+      data-shake-duration={shakeDuration}
+    >
       {text ? <p class={paragraphClasses}>{text}</p> : <slot />}
       <div class={iconCircleClasses}>
         <Icon name={iconName} class={iconClasses} />
       </div>
     </button>
   )
+}
+
+{
+  /* Shake animation and client script (only rendered when shakeInterval is provided) */
+}
+{
+  shakeInterval ? (
+    <>
+      <script>
+        {`(function(){
+          function initShake(){
+            try{
+              const nodes = document.querySelectorAll('[data-shake-interval]');
+              nodes.forEach((el)=>{
+                if(el.getAttribute('data-shake-inited')) return;
+                const rawInterval = el.getAttribute('data-shake-interval');
+                const rawDuration = el.getAttribute('data-shake-duration');
+                const intervalMs = parseInt(rawInterval || '0', 10);
+                const duration = parseInt(rawDuration || '700', 10);
+                if(!intervalMs) {
+                  console.debug('[shake] skipping element, invalid interval:', rawInterval, el);
+                  return;
+                }
+                el.setAttribute('data-shake-inited', '1');
+                // hint para rendimiento
+                try{ el.style.willChange = 'transform'; }catch(e){}
+                const keyframes = [
+                  { transform: 'translateX(0)' },
+                  { transform: 'translateX(-6px)' },
+                  { transform: 'translateX(6px)' },
+                  { transform: 'translateX(-4px)' },
+                  { transform: 'translateX(4px)' },
+                  { transform: 'translateX(0)' }
+                ];
+                const run = ()=>{
+                  // don't run if element detached or not visible
+                  if(!el.isConnected) return;
+                  if(el.offsetParent === null) return; // not visible
+                  try{
+                    el.animate(keyframes, { duration: duration, easing: 'ease-in-out' });
+                  }catch(err){ console.error('[shake] animate failed', err); }
+                };
+                console.debug('[shake] init', { intervalMs, duration, el });
+                // primera ejecución tras un pequeño delay para no golpear al cargar
+                setTimeout(()=> run(), 800 + Math.floor(Math.random()*800));
+                setInterval(run, intervalMs);
+              });
+            }catch(e){console.error(e)}
+          }
+          if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initShake);
+          else initShake();
+        })()`}
+      </script>
+    </>
+  ) : null
 }

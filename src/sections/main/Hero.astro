@@ -33,22 +33,6 @@ const lang = match ? match[1] : 'en';
     decoding="async"
     loading="eager"
   />
-
-  {
-    /*<img
-    data-aos="fade-left"
-    src="/images/main/image-2.webp"
-    alt="Imagen de Perro"
-    width="348"
-    height="340"
-    class="absolute left-10 xs:left-0 bottom-0 h-[40%] xs:h-[50%] w-auto block sm:hidden"
-    decoding="async"
-    loading="eager"
-  /> <Icon
-    name={'back-main'}
-    class={'w-[55vw] h-auto absolute left-0 top-0 -z-10'}
-  /> */
-  }
   <img
     src="/images/back-main.webp"
     alt="Background Main"
@@ -77,7 +61,7 @@ const lang = match ? match[1] : 'en';
     decoding="async"
   />
   <div
-    class="h-full w-full max-w-screen md:max-w-7xl flex flex-col sm:flex-row justify-center sm:justify-between items-center px-5 xl:px-0 pt-[120px] sm:pt-0"
+    class="h-full w-full max-w-screen md:max-w-7xl flex flex-col sm:flex-row justify-center sm:justify-between items-center px-5 xl:px-0 pt-[100px] sm:pt-0 gap-2 sm:gap-0"
     data-aos="fade-right"
   >
     <div
@@ -104,6 +88,8 @@ const lang = match ? match[1] : 'en';
               extraBtnClass={`bg-${btn.color}`}
               iconName={'arrow'}
               iconClass={`text-${btn.color}`}
+              shakeInterval={3000}
+              shakeDuration={800}
             />
           ))
         }
@@ -113,11 +99,12 @@ const lang = match ? match[1] : 'en';
       data-aos="fade-left"
       src="/images/main/image-3.webp"
       alt="Imagen de Perro"
-      width="700"
-      height="557"
-      class="w-full h-auto block sm:hidden "
+      width="800"
+      height="672"
+      class="w-full h-auto block sm:hidden"
       decoding="async"
       loading="eager"
     />
   </div>
+  <script src="/scripts/button-shake.js" defer></script>
 </section>

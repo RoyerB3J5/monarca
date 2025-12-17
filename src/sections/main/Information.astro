@@ -76,12 +76,12 @@ const lang = match ? match[1] : 'en';
         />
       </div>
       <div
-        class="w-full grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-14 sm:gap-[100px] md:gap-[58px] max-w-none md:max-w-[70%] lg:max-w-none"
+        class="w-full grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-14 sm:gap-[100px] md:gap-10 max-w-none md:max-w-[70%] lg:max-w-none"
       >
         {
           content.gromming.items.map((item) => (
             <div
-              class={`w-full rounded-4xl ${item.image === 'dog-dental' || item.image === 'cat-dental' ? 'bg-primary-dark' : 'bg-primary'} pr-[23px] md:pl-0 py-7 md:py-14 flex justify-end items-center relative `}
+              class={`w-full rounded-4xl ${item.image === 'dog-dental' || item.image === 'cat-dental' ? 'py-7 md:py-10' : 'py-7 md:py-14'} bg-primary pr-[23px] md:pl-0 flex justify-end items-center relative `}
             >
               <img
                 src={`/images/main/${item.image}.webp`}
@@ -90,7 +90,11 @@ const lang = match ? match[1] : 'en';
                 height={item.height}
                 decoding="async"
                 loading="lazy"
-                class="w-[48%] sm:w-[32%] md:w-[50%] lg:w-[50%] h-auto absolute left-3 sm:left-10 md:left-3 bottom-7 md:bottom-10 max-h-none md:max-h-[327px] lg:max-h-none"
+                class={`w-[48%] sm:w-[32%] md:w-[50%] lg:w-[50%] h-auto absolute left-3 sm:left-10 md:left-3 ${
+                  item.image === 'dog-dental' || item.image === 'cat-dental'
+                    ? 'bottom-0'
+                    : 'bottom-7 md:bottom-10'
+                } max-h-none md:max-h-[327px] lg:max-h-none`}
               />
               <div class="flex flex-col justify-center items-start gap-[15px] md:gap-[18px] max-w-[45%] md:max-w-[246px] z-20">
                 <p class="text-[24px] md:text-[42px] leading-[120%] font-title text-white">
@@ -104,17 +108,9 @@ const lang = match ? match[1] : 'en';
                   href={`/${lang}/services${item.button.href}`}
                   extraBtnClass="bg-white"
                   iconName="arrow"
-                  textClass={
-                    item.image === 'dog-dental' || item.image === 'cat-dental'
-                      ? 'text-primary-dark'
-                      : 'text-primary'
-                  }
+                  textClass={'text-primary'}
                   iconClass="text-white"
-                  iconCircleClass={
-                    item.image === 'dog-dental' || item.image === 'cat-dental'
-                      ? 'bg-primary-dark'
-                      : 'bg-primary'
-                  }
+                  iconCircleClass={'bg-primary'}
                 />
               </div>
             </div>
