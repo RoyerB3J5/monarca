@@ -104,14 +104,14 @@ const lang = match ? match[1] : 'en';
         text={content?.buttons[0].label}
         textClass="text-[13px] sm:text-[16px] text-white"
         href={`/${lang}/${content?.buttons[0].href}`}
-        extraBtnClass={` border border-white bg-primary hidden md:flex `}
+        extraBtnClass={` border border-white bg-primary hidden lg:flex `}
         iconName={content?.buttons[0].icon}
         iconClass="text-primary"
       />
       <Button
         text={content?.buttons[1].label}
         href={content?.buttons[1].href}
-        extraBtnClass={`border border-transparent bg-secondary hidden md:flex`}
+        extraBtnClass={`border border-transparent bg-secondary hidden lg:flex`}
         iconName={content?.buttons[1].icon}
         iconClass="text-secondary"
       />

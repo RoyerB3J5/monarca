@@ -662,10 +662,10 @@ export default {
     hero: {
       title: 'About Monarcas Grooming',
       description:
-        'Monarca Grooming was born from more than twenty years of family experience, love for animals and a deeply personal journey. What began years ago with Sandra learning to bathe dogs after school evolved into a lifelong vocation shaped by dedication, compassion and real hands-on knowledge.',
+        'Monarca Grooming was born from more than twenty years of family experience, love for animals and a deeply personal journey. What <span class="font-semibold">began years ago with Sandra learning </span> to bathe dogs after school evolved into a lifelong vocation shaped by dedication, compassion and real hands-on knowledge.',
       paragraph: [
-        'In 2022, after the heartbreaking loss of both parents just days apart, Sandra transformed her pain into purpose. With courage, resilience and the desire to honor her family, she started a new chapter in the United States. This is where Monarca Grooming took flight, a mobile grooming service created not only to groom pets, but to touch lives with empathy, patience and sincerity.',
-        'After working side by side with her older brother in the grooming industry and helping grow multiple pet care locations in Colombia, Sandra built a foundation of professionalism and emotional awareness that no course could ever teach. Her experience includes grooming, customer care, operations, training new groomers and managing every detail behind a successful pet care business.',
+        '<span class="font-semibold">In 2022, after the heartbreaking loss of both parents just days apart, Sandra transformed her pain into purpose </span>. With courage, resilience and the desire to honor her family, she started a new chapter in the United States. This is where Monarca Grooming took flight, a mobile grooming service created not only to groom pets, but to touch lives with empathy, patience and sincerity.',
+        'After working side by side with her <span class="font-semibold"> older brother</span> in the grooming industry and <span class="font-semibold"> helping grow multiple pet </span> care locations <span class="font-semibold"> in Colombia, Sandra built a </span> foundation of professionalism and emotional awareness that no course could ever teach. Her experience includes grooming, customer care, operations, training new groomers and managing every detail behind a successful pet care business.',
       ],
     },
     results: {

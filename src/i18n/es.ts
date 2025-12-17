@@ -661,10 +661,10 @@ export default {
     hero: {
       title: 'Sobre Monarca Grooming',
       description:
-        'Monarca Grooming nació de más de veinte años de experiencia familiar, amor por los animales y un viaje profundamente personal. Lo que comenzó hace años con Sandra aprendiendo a bañar perros después de la escuela se convirtió en una vocación de por vida moldeada por la dedicación, la compasión y el conocimiento práctico real.',
+        'Monarca Grooming nació de más de veinte años de experiencia familiar, amor por los animales y un viaje profundamente personal. Lo que <span class="font-semibold">comenzó hace años con Sandra aprendiendo </span> a bañar perros después del colegio se transformó en una vocación de por vida forjada por la dedicación, la compasión y el conocimiento práctico.',
       paragraph: [
-        'En 2022, después de la desgarradora pérdida de ambos padres en días separados, Sandra transformó su dolor en propósito. Con coraje, resiliencia y el deseo de honrar a su familia, comenzó un nuevo capítulo en Estados Unidos. Aquí es donde Monarca Grooming tomó vuelo, un servicio de peluquería móvil creado no solo para arreglar mascotas, sino para tocar vidas con empatía, paciencia y sinceridad.',
-        'Después de trabajar codo a codo con su hermano mayor en la industria de la peluquería y ayudar a crecer múltiples ubicaciones de cuidado de mascotas en Colombia, Sandra construyó una base de profesionalismo y conciencia emocional que ningún curso podría enseñar jamás. Su experiencia incluye peluquería, atención al cliente, operaciones, capacitación de nuevos peluqueros y gestión de cada detalle detrás de un negocio exitoso de cuidado de mascotas.',
+        '<span class="font-semibold">En 2022, tras la desgarradora pérdida de ambos padres en días consecutivos, Sandra convirtió su dolor en propósito </span>. Con coraje, resistencia y el deseo de honrar a su familia, inició un nuevo capítulo en Estados Unidos. Aquí fue donde Monarca Grooming despegó, un servicio de peluquería móvil creado no solo para arreglar mascotas, sino para tocar vidas con empatía, paciencia y sinceridad.',
+        'Después de trabajar codo a codo con su <span class="font-semibold">hermano mayor</span> en la industria de la peluquería y de <span class="font-semibold">ayudar a expandir varios</span> centros de cuidado de mascotas <span class="font-semibold">en Colombia, Sandra construyó una</span> base de profesionalismo y sensibilidad emocional que ningún curso podría enseñar. Su experiencia incluye peluquería, atención al cliente, operaciones, formación de nuevos peluqueros y la gestión de cada detalle detrás de un negocio de cuidado animal exitoso.',
       ],
     },
     results: {

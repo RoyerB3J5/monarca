@@ -25,9 +25,8 @@ const { content } = Astro.props as Props;
     </h1>
     <p
       class="text-[16px] lg:text-[20px] leading-[120%] font-normal text-center text-paragraph"
-    >
-      {content.description}
-    </p>
+      set:html={content.description}
+    />
   </div>
   <div
     class="w-full flex flex-col md:flex-row justify-center md:justify-between items-center md:items-end lg:items-center gap-[74px] md:gap-0"
@@ -43,11 +42,15 @@ const { content } = Astro.props as Props;
       data-aos="zoom-out-right"
     />
     <div
-      class="flex flex-col justify-center items-start gap-[37px] max-w-none md:max-w-[48%] pb-0 md:pb-4 lg:pb-0 order-1 md:order-2" data-aos="zoom-out-left"
+      class="flex flex-col justify-center items-center md:items-start gap-[37px] max-w-none md:max-w-[48%] pb-0 md:pb-4 lg:pb-0 order-1 md:order-2"
+      data-aos="zoom-out-left"
     >
       {
         content.paragraph.map((text) => (
-          <p class="text-[16px] text-paragraph leading-[120%]">{text}</p>
+          <p
+            class="text-[16px] text-paragraph leading-[120%] text-center md:text-start"
+            set:html={text}
+          />
         ))
       }
     </div>
