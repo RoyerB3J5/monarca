@@ -103,7 +103,7 @@ const content = t.faq;
             content.information.buttons.map((btn) => (
               <Button
                 text={btn.label}
-                href={`/${lang}/${btn.href}`}
+                href={btn.href}
                 extraBtnClass={`bg-${btn.color}`}
                 iconName={'arrow'}
                 iconClass={`text-${btn.color}`}

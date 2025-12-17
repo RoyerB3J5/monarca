@@ -39,13 +39,13 @@ export default {
     buttons: [
       {
         label: 'Reservar cita',
-        href: 'book-appointment',
+        href: 'https://booking.moego.pet/ol/book?name=MonarcaGroomingLLC',
         icon: 'arrow',
         background: 'bg-primary',
       },
       {
         label: 'Llamar ahora',
-        href: 'tel:+19548684929',
+        href: '/tel:+19548684929',
         icon: 'phone',
         background: 'bg-secondary',
       },
@@ -59,12 +59,12 @@ export default {
       buttons: [
         {
           label: 'Llama Ya!',
-          href: 'tel:+19548684929',
+          href: '/tel:+19548684929',
           color: 'secondary',
         },
         {
           label: 'Reservar Ya!',
-          href: 'book-appointment',
+          href: 'https://booking.moego.pet/ol/book?name=MonarcaGroomingLLC',
           color: 'primary',
         },
       ],
@@ -202,11 +202,11 @@ export default {
         buttons: [
           {
             label: '¡Llama ahora!',
-            href: 'tel:+19548684929',
+            href: '/tel:+19548684929',
           },
           {
             label: '¡Reserva ahora!',
-            href: '/es/book-appointment',
+            href: 'https://booking.moego.pet/ol/book?name=MonarcaGroomingLLC',
           },
         ],
       },
@@ -287,12 +287,12 @@ export default {
       buttons: [
         {
           label: 'Llama Ya!',
-          href: 'tel:+19548684929',
+          href: '/tel:+19548684929',
           color: 'secondary',
         },
         {
           label: 'Reservar Ya!',
-          href: 'book-appointment',
+          href: 'https://booking.moego.pet/ol/book?name=MonarcaGroomingLLC',
           color: 'primary',
         },
       ],
@@ -319,7 +319,7 @@ export default {
         ],
         button: {
           title: 'Reservar Ya!',
-          href: '/es/book-appointment',
+          href: 'https://booking.moego.pet/ol/book?name=MonarcaGroomingLLC',
         },
       },
       included: {
@@ -406,12 +406,12 @@ export default {
         buttons: [
           {
             label: 'Llama Ya!',
-            href: 'tel:+19548684929',
+            href: '/tel:+19548684929',
             color: 'secondary',
           },
           {
             label: 'Reservar Ya!',
-            href: 'book-appointment',
+            href: 'https://booking.moego.pet/ol/book?name=MonarcaGroomingLLC',
             color: 'primary',
           },
         ],
@@ -438,7 +438,7 @@ export default {
         ],
         button: {
           title: 'Reservar Ya!',
-          href: '/es/book-appointment',
+          href: 'https://booking.moego.pet/ol/book?name=MonarcaGroomingLLC',
         },
       },
       included: {
@@ -525,12 +525,12 @@ export default {
         buttons: [
           {
             label: 'Llama Ya!',
-            href: 'tel:+19548684929',
+            href: '/tel:+19548684929',
             color: 'secondary',
           },
           {
             label: 'Reservar ahora',
-            href: 'book-appointment',
+            href: 'https://booking.moego.pet/ol/book?name=MonarcaGroomingLLC',
             color: 'primary',
           },
         ],
@@ -557,7 +557,7 @@ export default {
         ],
         button: {
           title: 'Reservar Ya!',
-          href: '/es/book-appointment',
+          href: 'https://booking.moego.pet/ol/book?name=MonarcaGroomingLLC',
         },
       },
       included: {
@@ -644,12 +644,12 @@ export default {
         buttons: [
           {
             label: 'Llama Ya!',
-            href: 'tel:+19548684929',
+            href: '/tel:+19548684929',
             color: 'secondary',
           },
           {
             label: 'Reservar Ya!',
-            href: 'book-appointment',
+            href: 'https://booking.moego.pet/ol/book?name=MonarcaGroomingLLC',
             color: 'primary',
           },
         ],
@@ -680,12 +680,12 @@ export default {
       buttons: [
         {
           label: 'Llama Ya!',
-          href: 'tel:+19548684929',
+          href: '/tel:+19548684929',
           color: 'secondary',
         },
         {
           label: 'Reservar Ya!',
-          href: 'book-appointment',
+          href: 'https://booking.moego.pet/ol/book?name=MonarcaGroomingLLC',
           color: 'primary',
         },
       ],
@@ -747,12 +747,12 @@ export default {
       buttons: [
         {
           label: 'Llama Ya!',
-          href: 'tel:+19548684929',
+          href: '/tel:+19548684929',
           color: 'secondary',
         },
         {
           label: 'Reservar Ya!',
-          href: 'book-appointment',
+          href: 'https://booking.moego.pet/ol/book?name=MonarcaGroomingLLC',
           color: 'primary',
         },
       ],

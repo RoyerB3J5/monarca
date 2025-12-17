@@ -10,11 +10,11 @@ const { content } = Astro.props as Props;
 ---
 
 <section
-  class="bg-primary-dark w-full flex justify-center items-center relative h-auto"
+  class="bg-primary-dark w-full flex justify-center items-center relative h-auto z-5"
 >
   <img
     src="/images/main/bg-pets.webp"
-    alt="Fondo de Monarcas"
+    alt="Fondo de Monarca "
     width="1599"
     height="914"
     class="absolute w-full h-full inset-0 top-0 z-0 object-cover object-top opacity-30"
@@ -64,7 +64,7 @@ const { content } = Astro.props as Props;
                 height="400"
                 decoding="async"
                 loading="lazy"
-                class={`h-auto absolute ${index === 1 ? 'z-30 bottom-5 sm:bottom-[74px] w-[289px] sm:w-[414px] left-1/2 -translate-x-1/2' : index === 2 ? 'z-0 scale-150 -bottom-[120px] sm:-bottom-[100px] w-full left-1/2 -translate-x-1/2' : 'z-0 -bottom-14 sm:-bottom-8 scale-150 w-full left-1/2 -translate-x-1/2'}`}
+                class={`h-auto absolute pointer-events-none ${index === 1 ? 'z-30 bottom-5 sm:bottom-[74px] w-[289px] sm:w-[414px] left-1/2 -translate-x-1/2' : index === 2 ? 'z-0 scale-150 -bottom-[120px] sm:-bottom-[100px] w-full left-1/2 -translate-x-1/2' : 'z-0 -bottom-14 sm:-bottom-8 scale-150 w-full left-1/2 -translate-x-1/2'}`}
               />
             </div>
           );
@@ -72,7 +72,7 @@ const { content } = Astro.props as Props;
       }
     </div>
     <div
-      class="w-full h-auto absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 max-w-screen sm:max-w-[70%] md:max-w-7xl px-5 xl:px-0 flex justify-center items-center"
+      class="w-full h-auto absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 max-w-screen sm:max-w-[70%] md:max-w-7xl px-5 xl:px-0 flex justify-center items-center z-50"
     >
       <div
         class="w-full flex flex-col md:flex-row justify-start items-start md:items-end lg:items-center banner-back rounded-[15px] relative overflow-visible h-auto lg:h-[270px] gap-0 md:gap-10 rounded-tr-[200px] md:rounded-tr-[15px]"
@@ -84,7 +84,7 @@ const { content } = Astro.props as Props;
           height="506"
           decoding="async"
           loading="lazy"
-          class="w-[350px] h-full rounded-l-[15px] rounded-tr-[200px] hidden md:block"
+          class="w-[350px] h-full rounded-l-[15px] rounded-tr-[200px] hidden md:block pointer-events-none"
         />
         <div class="relative w-full h-auto block md:hidden">
           <img
@@ -94,14 +94,14 @@ const { content } = Astro.props as Props;
             height="506"
             decoding="async"
             loading="lazy"
-            class="w-full h-auto rounded-l-[15px] rounded-tr-[200px]"
+            class="w-full h-auto rounded-l-[15px] rounded-tr-[200px] pointer-events-none"
           />
           <img
             src="/images/main/pets.webp"
             alt="Decoration de Animals"
             width="527"
             height="600"
-            class="absolute bottom-0 w-[60%] h-auto left-1/2 -translate-x-1/2"
+            class="absolute bottom-0 w-[60%] h-auto left-1/2 -translate-x-1/2 pointer-events-none"
             decoding="async"
             loading="lazy"
           />
@@ -120,7 +120,7 @@ const { content } = Astro.props as Props;
           <p class="text-[16px] leading-[120%] text-white">
             {content.banner.description}
           </p>
-          <div class="flex justify-start items-center gap-5">
+          <div class="flex justify-start items-center gap-5 z-50">
             {
               content.banner.buttons.map((button) => (
                 <Button
@@ -148,7 +148,7 @@ const { content } = Astro.props as Props;
           alt="Decoration de Animals"
           width="527"
           height="600"
-          class="absolute bottom-0 w-[257px] h-auto left-6 hidden md:block"
+          class="absolute bottom-0 w-[257px] h-auto left-6 hidden md:block pointer-events-none"
           decoding="async"
           loading="lazy"
         />
@@ -159,7 +159,7 @@ const { content } = Astro.props as Props;
           loading="lazy"
           width="866"
           height="271"
-          class="absolute top-0 left-1/2 -translate-x-1/2 hidden md:block"
+          class="absolute top-0 left-1/2 -translate-x-1/2 hidden md:block pointer-events-none"
         />
       </div>
     </div>

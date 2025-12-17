@@ -63,7 +63,7 @@ const lang = match ? match[1] : 'en';
   />
   <img
     src={`/images/main/back.webp`}
-    alt="Imagen de Fondo de Monarcas - Mobile Pet Grooming"
+    alt="Imagen de Fondo de Monarca  - Mobile Pet Grooming"
     width="1920"
     height="1279"
     class="absolute inset-0 w-full h-full object-cover -z-20"
@@ -94,7 +94,7 @@ const lang = match ? match[1] : 'en';
           content.buttons.map((btn) => (
             <Button
               text={btn.label}
-              href={`/${lang}/${btn.href}`}
+              href={btn.href}
               extraBtnClass={`bg-${btn.color}`}
               iconName={'arrow'}
               iconClass={`text-${btn.color}`}

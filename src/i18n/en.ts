@@ -39,13 +39,13 @@ export default {
     buttons: [
       {
         label: 'Book a appointment',
-        href: 'book-appointment',
+        href: 'https://booking.moego.pet/ol/book?name=MonarcaGroomingLLC',
         icon: 'arrow',
         background: 'bg-primary',
       },
       {
         label: 'Call Now',
-        href: 'tel:+19548684929',
+        href: '/tel:+19548684929',
         icon: 'phone',
         background: 'bg-secondary',
       },
@@ -60,12 +60,12 @@ export default {
       buttons: [
         {
           label: 'Call Now!',
-          href: 'tel:+19548684929',
+          href: '/tel:+19548684929',
           color: 'secondary',
         },
         {
           label: 'Book Now!',
-          href: 'book-appointment',
+          href: 'https://booking.moego.pet/ol/book?name=MonarcaGroomingLLC',
           color: 'primary',
         },
       ],
@@ -202,11 +202,11 @@ export default {
         buttons: [
           {
             label: 'Call Now!',
-            href: 'tel:+19548684929',
+            href: '/tel:+19548684929',
           },
           {
             label: 'Book Now!',
-            href: '/en/book-appointment',
+            href: 'https://booking.moego.pet/ol/book?name=MonarcaGroomingLLC',
           },
         ],
       },
@@ -287,12 +287,12 @@ export default {
       buttons: [
         {
           label: 'Call now',
-          href: 'tel:+19548684929',
+          href: '/tel:+19548684929',
           color: 'secondary',
         },
         {
           label: 'Book now',
-          href: 'book-appointment',
+          href: 'https://booking.moego.pet/ol/book?name=MonarcaGroomingLLC',
           color: 'primary',
         },
       ],
@@ -319,7 +319,7 @@ export default {
         ],
         button: {
           title: 'Book Now!',
-          href: '/en/book-appointment',
+          href: 'https://booking.moego.pet/ol/book?name=MonarcaGroomingLLC',
         },
       },
       included: {
@@ -406,12 +406,12 @@ export default {
         buttons: [
           {
             label: 'Call now',
-            href: 'tel:+19548684929',
+            href: '/tel:+19548684929',
             color: 'secondary',
           },
           {
             label: 'Book now',
-            href: 'book-appointment',
+            href: 'https://booking.moego.pet/ol/book?name=MonarcaGroomingLLC',
             color: 'primary',
           },
         ],
@@ -438,7 +438,7 @@ export default {
         ],
         button: {
           title: 'Book Now!',
-          href: '/en/book-appointment',
+          href: 'https://booking.moego.pet/ol/book?name=MonarcaGroomingLLC',
         },
       },
       included: {
@@ -526,12 +526,12 @@ export default {
         buttons: [
           {
             label: 'Call now',
-            href: 'tel:+19548684929',
+            href: '/tel:+19548684929',
             color: 'secondary',
           },
           {
             label: 'Book now',
-            href: 'book-appointment',
+            href: 'https://booking.moego.pet/ol/book?name=MonarcaGroomingLLC',
             color: 'primary',
           },
         ],
@@ -558,7 +558,7 @@ export default {
         ],
         button: {
           title: 'Book Now!',
-          href: '/en/book-appointment',
+          href: 'https://booking.moego.pet/ol/book?name=MonarcaGroomingLLC',
         },
       },
       included: {
@@ -645,12 +645,12 @@ export default {
         buttons: [
           {
             label: 'Call now',
-            href: 'tel:+19548684929',
+            href: '/tel:+19548684929',
             color: 'secondary',
           },
           {
             label: 'Book now',
-            href: 'book-appointment',
+            href: 'https://booking.moego.pet/ol/book?name=MonarcaGroomingLLC',
             color: 'primary',
           },
         ],
@@ -660,7 +660,7 @@ export default {
   },
   about: {
     hero: {
-      title: 'About Monarcas Grooming',
+      title: 'About Monarca Grooming',
       description:
         'Monarca Grooming was born from more than twenty years of family experience, love for animals and a deeply personal journey. What <span class="font-semibold">began years ago with Sandra learning </span> to bathe dogs after school evolved into a lifelong vocation shaped by dedication, compassion and real hands-on knowledge.',
       paragraph: [
@@ -681,12 +681,12 @@ export default {
       buttons: [
         {
           label: 'Call now',
-          href: 'tel:+19548684929',
+          href: '/tel:+19548684929',
           color: 'secondary',
         },
         {
           label: 'Book now',
-          href: 'book-appointment',
+          href: 'https://booking.moego.pet/ol/book?name=MonarcaGroomingLLC',
           color: 'primary',
         },
       ],
@@ -748,12 +748,12 @@ export default {
       buttons: [
         {
           label: 'Call now',
-          href: 'tel:+19548684929',
+          href: '/tel:+19548684929',
           color: 'secondary',
         },
         {
           label: 'Book now',
-          href: 'book-appointment',
+          href: 'https://booking.moego.pet/ol/book?name=MonarcaGroomingLLC',
           color: 'primary',
         },
       ],
