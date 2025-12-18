@@ -1,3 +1,5 @@
+import { HiH1 } from "react-icons/hi2";
+
 export default {
   header: {
     nav: [
@@ -764,22 +766,28 @@ export default {
     description:
       'Gallery of real Monarca Grooming transformations. Calm, clean, and  radiant pets after <br class="hidden md:block"/> our mobile at‑home grooming services across Florida.',
   },
+  error:{
+    title: 'Oops! The page you are looking for cannot be found.',
+    description:
+      'The page you are looking for does not exist. It might have been moved or deleted.',
+    button:"Go Back Home",
+  },
   footer: {
-    description: '25 years taking care <br/> of your best friends',
+    description: '+15 Years of Experience ',
     service: {
       title: ' Services',
       items: [
         {
           title: 'Mobile Dog Grooming',
-          href: '/mobile-dog-grooming',
+          href: 'mobile-dog-grooming',
         },
         {
-          title: 'Mobile Dog Grooming',
-          href: '/mobile-dog-grooming',
+          title: 'Mobile Cat Grooming',
+          href: 'mobile-cat-grooming',
         },
         {
           title: 'Dental Cleaning Non-Anesthetic',
-          href: '/dental-cleaning',
+          href: 'dental-cleaning',
         },
       ],
     },

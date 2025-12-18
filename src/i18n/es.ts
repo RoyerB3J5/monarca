@@ -763,22 +763,28 @@ export default {
     description:
       'Galería de transformaciones reales de Monarca Grooming. Mascotas calmadas, limpias y  radiantes después de nuestros <br class="hidden md:block"/> servicios móviles de peluquería a domicilio en toda Florida.',
   },
+  error:{
+    title: 'Disculpa! La pagina que buscas no se encuentra disponible',
+    description:
+      'La página que buscas no existe. Puede que haya sido movida o eliminada.',
+    button:"Volver al Inicio",
+  },
   footer: {
-    description: '25 años cuidando a <br/> tus mejores amigos',
+    description: '+ 15 años de experiencia ',
     service: {
       title: 'Servicios',
       items: [
         {
           title: 'Peluquería móvil para perros',
-          href: '/mobile-dog-grooming',
+          href: 'mobile-dog-grooming',
         },
         {
           title: 'Peluquería móvil para gatos',
-          href: '/mobile-cat-grooming',
+          href: 'mobile-cat-grooming',
         },
         {
           title: 'Limpieza dental sin anestesia',
-          href: '/dental-cleaning',
+          href: 'dental-cleaning',
         },
       ],
     },

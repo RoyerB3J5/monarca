@@ -77,13 +77,14 @@ const icons = [
         <div class="justify-center items-center gap-3 hidden lg:flex">
           {
             icons.map((item) => (
-              <div class="w-8 h-8 flex justify-center items-center gap-2.5 rounded-full bg-white hover:bg-secondary cursor-pointer  transition-all duration-200 ease-in-out">
-                <Icon
-                  name={item.icon}
-                  href={item.href}
-                  class={'w-4 h-4 text-primary-dark'}
-                />
-              </div>
+              <a
+                href={item.href}
+                class="w-8 h-8 flex justify-center items-center gap-2.5 rounded-full bg-white hover:bg-secondary cursor-pointer  transition-all duration-200 ease-in-out"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon name={item.icon} class={'w-4 h-4 text-primary-dark'} />
+              </a>
             ))
           }
         </div>
@@ -99,7 +100,7 @@ const icons = [
             {
               content?.service.items.map((item) => (
                 <a
-                  href={`${lang}/service${item.href}`}
+                  href={`/${lang}/services/${item.href}`}
                   class="text-[16px] leading-[120%] font-normal hover:font-medium hover:text-secondary transition-all duration-300 ease-in-out"
                 >
                   {item.title}

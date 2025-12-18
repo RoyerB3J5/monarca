@@ -1,0 +1,56 @@
+---
+import Button from '../../../components/Button.astro';
+import en from '../../../i18n/en';
+import es from '../../../i18n/es';
+import Layout from '../../../layouts/Layout.astro';
+
+import type { Language } from '../../../types/language.type';
+export function getStaticPaths() {
+  return [{ params: { lang: 'es' } }, { params: { lang: 'en' } }];
+}
+
+export const defaultRedirect = '/en';
+
+const lang = Astro.params.lang as Language;
+const translations = { es, en };
+const t = translations[lang];
+const content = t.error;
+---
+
+<Layout lang={lang} t={t}>
+  <section
+    class="h-full w-full max-w-screen md:max-w-7xl flex flex-col md:flex-row justify-center items-center px-5 xl:px-0 gap-10 pt-30 md:pt-[150px]"
+  >
+    <div
+      class="flex flex-col justify-center items-center md:items-start gap-8 max-w-none md:max-w-[45%]"
+    >
+      <h1
+        class="text-[32px] md:text-[48px] leading-[120%] text-primary-dark font-title text-center md:text-left"
+      >
+        {content.title}
+      </h1>
+      <p
+        class="text-[16px] md:text-[20px] font-medium leading-[120%] text-paragraph text-center md:text-start"
+      >
+        {content.description}
+      </p>
+      <Button
+        text={content.button}
+        href={'/'}
+        extraBtnClass={`border border-transparent bg-primary flex`}
+        iconName={'arrow'}
+        iconClass="text-primary"
+      />
+    </div>
+    <img
+      src="/images/main/parents-pet.webp"
+      alt="Imagen de Parents Pets"
+      width="591"
+      height="727"
+      loading="lazy"
+      decoding="async"
+      class="md:img-carousel w-full md:w-[30%]"
+      data-aos="flip-up"
+    />
+  </section>
+</Layout>
