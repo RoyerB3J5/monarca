@@ -46,7 +46,7 @@ const { content } = Astro.props as Props;
 
       /* For the small-track (first track inside .carousel) show 2 slides per view
          on small screens >=640px and <768px */
-      @media (min-width: 640px) and (max-width: 767.98px) {
+      @media (min-width: 640px) and (max-width: 1279.98px) {
         .carousel > .carousel-track:first-child .carousel-slide {
           flex: 0 0 50%;
         }
@@ -55,7 +55,7 @@ const { content } = Astro.props as Props;
 
     <div class="carousel overflow-hidden">
       <!-- Track for md and below: each div is a separate slide -->
-      <div class="carousel-track flex md:hidden">
+      <div class="carousel-track flex xl:hidden">
         <!-- group A -->
         <div class="carousel-slide w-full h-[50vh]">
           <div
@@ -100,11 +100,11 @@ const { content } = Astro.props as Props;
               class="relative overflow-hidden rounded-[20px] col-span-2 h-full"
             >
               <img
-                src="/images/main/image-1-4.webp"
+                src="/images/main/gal-4.webp"
                 alt="Imagen de Carousel 1"
-                width="283"
-                height="311"
-                class="absolute w-full h-full inset-0 z-0 object-cover object-bottom"
+                width="533"
+                height="800"
+                class="absolute w-full h-full inset-0 z-0 object-cover"
                 loading="eager"
                 decoding="async"
               />
@@ -114,10 +114,10 @@ const { content } = Astro.props as Props;
         <div class="carousel-slide w-full h-[50vh]">
           <div class="w-full h-full rounded-[20px] relative overflow-hidden">
             <img
-              src="/images/main/image-2-1.webp"
+              src="/images/main/gal-3.webp"
               alt="Imagen de Carousel 2"
-              width="729"
-              height="588"
+              width="533"
+              height="800"
               loading="eager"
               decoding="async"
               class="absolute w-full h-full inset-0 z-0 object-cover"
@@ -130,11 +130,11 @@ const { content } = Astro.props as Props;
           >
             <div class="relative overflow-hidden rounded-[20px] col-span-2">
               <img
-                src="/images/main/image-3-1.webp"
+                src="/images/main/gal-2.webp"
                 alt="Imagen de Carousel 3"
-                width="283"
-                height="317"
-                class="absolute w-full h-full inset-0 z-0 object-cover object-bottom"
+                width="533"
+                height="800"
+                class="absolute w-full h-full inset-0 z-0 object-cover"
                 loading="eager"
                 decoding="async"
               />
@@ -163,10 +163,10 @@ const { content } = Astro.props as Props;
             </div>
             <div class="relative overflow-hidden rounded-[20px] col-span-2">
               <img
-                src="/images/main/image-3-4.webp"
+                src="/images/main/gal-1.webp"
                 alt="Imagen de Carousel 3"
-                width="338"
-                height="600"
+                width="600"
+                height="900"
                 class="absolute w-full h-full inset-0 z-0 object-cover object-[center_70%]"
                 loading="eager"
                 decoding="async"
@@ -218,11 +218,11 @@ const { content } = Astro.props as Props;
               class="relative overflow-hidden rounded-[20px] col-span-2 h-full"
             >
               <img
-                src="/images/main/image-1-4.webp"
+                src="/images/main/gal-4.webp"
                 alt="Imagen de Carousel 1"
-                width="283"
-                height="311"
-                class="absolute w-full h-full inset-0 z-0 object-cover object-bottom"
+                width="533"
+                height="800"
+                class="absolute w-full h-full inset-0 z-0 object-cover"
                 loading="eager"
                 decoding="async"
               />
@@ -232,10 +232,10 @@ const { content } = Astro.props as Props;
         <div class="carousel-slide w-full h-[50vh]">
           <div class="w-full h-full relative overflow-hidden rounded-[20px]">
             <img
-              src="/images/main/image-2-1.webp"
+              src="/images/main/gal-3.webp"
               alt="Imagen de Carousel 2"
-              width="729"
-              height="588"
+              width="533"
+              height="800"
               loading="eager"
               decoding="async"
               class="absolute w-full h-full inset-0 z-0 object-cover"
@@ -248,11 +248,11 @@ const { content } = Astro.props as Props;
           >
             <div class="relative overflow-hidden rounded-[20px] col-span-2">
               <img
-                src="/images/main/image-3-1.webp"
+                src="/images/main/gal-2.webp"
                 alt="Imagen de Carousel 3"
-                width="283"
-                height="317"
-                class="absolute w-full h-full inset-0 z-0 object-cover object-bottom"
+                width="533"
+                height="800"
+                class="absolute w-full h-full inset-0 z-0 object-cover"
                 loading="eager"
                 decoding="async"
               />
@@ -281,10 +281,10 @@ const { content } = Astro.props as Props;
             </div>
             <div class="relative overflow-hidden rounded-[20px] col-span-2">
               <img
-                src="/images/main/image-3-4.webp"
+                src="/images/main/gal-1.webp"
                 alt="Imagen de Carousel 3"
-                width="338"
-                height="600"
+                width="600"
+                height="900"
                 class="absolute w-full h-full inset-0 z-0 object-cover object-[center_70%]"
                 loading="eager"
                 decoding="async"
@@ -295,7 +295,7 @@ const { content } = Astro.props as Props;
       </div>
 
       <!-- Track for md and above: original structure -->
-      <div class="carousel-track hidden md:flex">
+      <div class="carousel-track hidden xl:flex">
         <!-- group A -->
         <div
           class="carousel-slide flex justify-center items-stretch gap-5 w-full h-[60vh]"
@@ -342,11 +342,11 @@ const { content } = Astro.props as Props;
               class="relative overflow-hidden rounded-[20px] col-span-2 h-full"
             >
               <img
-                src="/images/main/image-1-4.webp"
+                src="/images/main/gal-4.webp"
                 alt="Imagen de Carousel 1"
-                width="283"
-                height="311"
-                class="absolute w-full h-full inset-0 z-0 object-cover object-bottom"
+                width="533"
+                height="800"
+                class="absolute w-full h-full inset-0 z-0 object-cover"
                 loading="eager"
                 decoding="async"
               />
@@ -356,10 +356,10 @@ const { content } = Astro.props as Props;
             class="w-full md:w-[40%] h-full rounded-[20px] relative overflow-hidden"
           >
             <img
-              src="/images/main/image-2-1.webp"
+              src="/images/main/gal-3.webp"
               alt="Imagen de Carousel 2"
-              width="729"
-              height="588"
+              width="533"
+              height="800"
               loading="eager"
               decoding="async"
               class="absolute w-full h-full inset-0 z-0 object-cover"
@@ -370,11 +370,11 @@ const { content } = Astro.props as Props;
           >
             <div class="relative overflow-hidden rounded-[20px] col-span-2">
               <img
-                src="/images/main/image-3-1.webp"
+                src="/images/main/gal-2.webp"
                 alt="Imagen de Carousel 3"
-                width="283"
-                height="317"
-                class="absolute w-full h-full inset-0 z-0 object-cover object-bottom"
+                width="533"
+                height="800"
+                class="absolute w-full h-full inset-0 z-0 object-cover"
                 loading="eager"
                 decoding="async"
               />
@@ -403,10 +403,10 @@ const { content } = Astro.props as Props;
             </div>
             <div class="relative overflow-hidden rounded-[20px] col-span-2">
               <img
-                src="/images/main/image-3-4.webp"
+                src="/images/main/gal-1.webp"
                 alt="Imagen de Carousel 3"
-                width="338"
-                height="600"
+                width="600"
+                height="900"
                 class="absolute w-full h-full inset-0 z-0 object-cover object-[center_70%]"
                 loading="eager"
                 decoding="async"
@@ -461,11 +461,11 @@ const { content } = Astro.props as Props;
               class="relative overflow-hidden rounded-[20px] col-span-2 h-full"
             >
               <img
-                src="/images/main/image-1-4.webp"
+                src="/images/main/gal-4.webp"
                 alt="Imagen de Carousel 1"
-                width="283"
-                height="311"
-                class="absolute w-full h-full inset-0 z-0 object-cover object-bottom"
+                width="533"
+                height="800"
+                class="absolute w-full h-full inset-0 z-0 object-cover"
                 loading="eager"
                 decoding="async"
               />
@@ -475,13 +475,13 @@ const { content } = Astro.props as Props;
             class="w-full md:w-[40%] h-full rounded-[20px] relative overflow-hidden"
           >
             <img
-              src="/images/main/image-2-1.webp"
+              src="/images/main/gal-3.webp"
               alt="Imagen de Carousel 2"
-              width="729"
-              height="588"
-              class="absolute w-full h-full inset-0 z-0 object-cover"
+              width="533"
+              height="800"
               loading="eager"
               decoding="async"
+              class="absolute w-full h-full inset-0 z-0 object-cover"
             />
           </div>
           <div
@@ -489,11 +489,11 @@ const { content } = Astro.props as Props;
           >
             <div class="relative overflow-hidden rounded-[20px] col-span-2">
               <img
-                src="/images/main/image-3-1.webp"
+                src="/images/main/gal-2.webp"
                 alt="Imagen de Carousel 3"
-                width="283"
-                height="317"
-                class="absolute w-full h-full inset-0 z-0 object-cover object-bottom"
+                width="533"
+                height="800"
+                class="absolute w-full h-full inset-0 z-0 object-cover"
                 loading="eager"
                 decoding="async"
               />
@@ -522,10 +522,10 @@ const { content } = Astro.props as Props;
             </div>
             <div class="relative overflow-hidden rounded-[20px] col-span-2">
               <img
-                src="/images/main/image-3-4.webp"
+                src="/images/main/gal-1.webp"
                 alt="Imagen de Carousel 3"
-                width="338"
-                height="600"
+                width="600"
+                height="900"
                 class="absolute w-full h-full inset-0 z-0 object-cover object-[center_70%]"
                 loading="eager"
                 decoding="async"
