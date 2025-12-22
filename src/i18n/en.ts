@@ -1,5 +1,3 @@
-import { HiH1 } from "react-icons/hi2";
-
 export default {
   header: {
     nav: [
@@ -47,7 +45,7 @@ export default {
       },
       {
         label: 'Call Now',
-        href: '/tel:+19548684929',
+        href: 'tel:+19548684929',
         icon: 'phone',
         background: 'bg-secondary',
       },
@@ -62,7 +60,7 @@ export default {
       buttons: [
         {
           label: 'Call Now!',
-          href: '/tel:+19548684929',
+          href: 'tel:+19548684929',
           color: 'secondary',
         },
         {
@@ -204,7 +202,7 @@ export default {
         buttons: [
           {
             label: 'Call Now!',
-            href: '/tel:+19548684929',
+            href: 'tel:+19548684929',
           },
           {
             label: 'Book Now!',
@@ -289,7 +287,7 @@ export default {
       buttons: [
         {
           label: 'Call now',
-          href: '/tel:+19548684929',
+          href: 'tel:+19548684929',
           color: 'secondary',
         },
         {
@@ -408,7 +406,7 @@ export default {
         buttons: [
           {
             label: 'Call now',
-            href: '/tel:+19548684929',
+            href: 'tel:+19548684929',
             color: 'secondary',
           },
           {
@@ -528,7 +526,7 @@ export default {
         buttons: [
           {
             label: 'Call now',
-            href: '/tel:+19548684929',
+            href: 'tel:+19548684929',
             color: 'secondary',
           },
           {
@@ -647,7 +645,7 @@ export default {
         buttons: [
           {
             label: 'Call now',
-            href: '/tel:+19548684929',
+            href: 'tel:+19548684929',
             color: 'secondary',
           },
           {
@@ -683,7 +681,7 @@ export default {
       buttons: [
         {
           label: 'Call now',
-          href: '/tel:+19548684929',
+          href: 'tel:+19548684929',
           color: 'secondary',
         },
         {
@@ -750,7 +748,7 @@ export default {
       buttons: [
         {
           label: 'Call now',
-          href: '/tel:+19548684929',
+          href: 'tel:+19548684929',
           color: 'secondary',
         },
         {

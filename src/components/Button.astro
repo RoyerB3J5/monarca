@@ -48,6 +48,13 @@ const {
   rel,
 } = Astro.props as Props;
 
+// Normalizar hrefs comunes: si por error tiene una barra inicial antes
+// de un esquema `tel:` o `mailto:` la removemos para evitar rutas internas
+const normalizedHref =
+  typeof href === 'string' && /^\/(tel:|mailto:)/.test(href)
+    ? href.replace(/^\/+/, '')
+    : href;
+
 // No id necesario: usamos atributos data- para el script cliente
 
 // Construir clases finales
@@ -60,7 +67,7 @@ const iconCircleClasses = `${iconCircle} ${iconCircleClass}`.trim();
 {
   href ? (
     <a
-      href={href}
+      href={normalizedHref}
       class={buttonClasses}
       target={target}
       rel={rel ?? (target === '_blank' ? 'noopener noreferrer' : undefined)}

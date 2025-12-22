@@ -45,7 +45,7 @@ export default {
       },
       {
         label: 'Llamar ahora',
-        href: '/tel:+19548684929',
+        href: 'tel:+19548684929',
         icon: 'phone',
         background: 'bg-secondary',
       },
@@ -59,7 +59,7 @@ export default {
       buttons: [
         {
           label: 'Llama Ya!',
-          href: '/tel:+19548684929',
+          href: 'tel:+19548684929',
           color: 'secondary',
         },
         {
@@ -201,11 +201,11 @@ export default {
           'Programa tu cita de peluquería móvil con Monarca Grooming y disfruta de una experiencia suave y sin estrés en casa. Nuestro equipo aporta experiencia, paciencia y un manejo tranquilo para cada perro y gato que atendemos en Florida.',
         buttons: [
           {
-            label: '¡Llama ahora!',
-            href: '/tel:+19548684929',
+            label: '¡Llama Ya!',
+            href: 'tel:+19548684929',
           },
           {
-            label: '¡Reserva ahora!',
+            label: '¡Reserva Ya!',
             href: 'https://booking.moego.pet/ol/book?name=MonarcaGroomingLLC',
           },
         ],
@@ -287,7 +287,7 @@ export default {
       buttons: [
         {
           label: 'Llama Ya!',
-          href: '/tel:+19548684929',
+          href: 'tel:+19548684929',
           color: 'secondary',
         },
         {
@@ -406,7 +406,7 @@ export default {
         buttons: [
           {
             label: 'Llama Ya!',
-            href: '/tel:+19548684929',
+            href: 'tel:+19548684929',
             color: 'secondary',
           },
           {
@@ -525,7 +525,7 @@ export default {
         buttons: [
           {
             label: 'Llama Ya!',
-            href: '/tel:+19548684929',
+            href: 'tel:+19548684929',
             color: 'secondary',
           },
           {
@@ -644,7 +644,7 @@ export default {
         buttons: [
           {
             label: 'Llama Ya!',
-            href: '/tel:+19548684929',
+            href: 'tel:+19548684929',
             color: 'secondary',
           },
           {
@@ -680,7 +680,7 @@ export default {
       buttons: [
         {
           label: 'Llama Ya!',
-          href: '/tel:+19548684929',
+          href: 'tel:+19548684929',
           color: 'secondary',
         },
         {
@@ -747,7 +747,7 @@ export default {
       buttons: [
         {
           label: 'Llama Ya!',
-          href: '/tel:+19548684929',
+          href: 'tel:+19548684929',
           color: 'secondary',
         },
         {
@@ -763,11 +763,11 @@ export default {
     description:
       'Galería de transformaciones reales de Monarca Grooming. Mascotas calmadas, limpias y  radiantes después de nuestros <br class="hidden md:block"/> servicios móviles de peluquería a domicilio en toda Florida.',
   },
-  error:{
+  error: {
     title: 'Disculpa! La pagina que buscas no se encuentra disponible',
     description:
       'La página que buscas no existe. Puede que haya sido movida o eliminada.',
-    button:"Volver al Inicio",
+    button: 'Volver al Inicio',
   },
   footer: {
     description: '+ 15 años de experiencia ',

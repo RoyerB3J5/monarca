@@ -147,13 +147,12 @@ const icons = [
       <div class="w-full justify-center items-center gap-3 lg:hidden flex">
         {
           icons.map((item) => (
-            <div class="w-[53px] h-[53px] flex justify-center items-center gap-2.5 rounded-full bg-white hover:bg-secondary cursor-pointer  transition-all duration-200 ease-in-out">
-              <Icon
-                name={item.icon}
-                href={item.href}
-                class={'w-5 h-5 text-primary-dark'}
-              />
-            </div>
+            <a
+              class="w-[53px] h-[53px] flex justify-center items-center gap-2.5 rounded-full bg-white hover:bg-secondary cursor-pointer  transition-all duration-200 ease-in-out"
+              href={item.href}
+            >
+              <Icon name={item.icon} class={'w-5 h-5 text-primary-dark'} />
+            </a>
           ))
         }
       </div>

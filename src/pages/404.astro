@@ -1,23 +1,14 @@
 ---
-import Button from '../../../components/Button.astro';
-import en from '../../../i18n/en';
-import es from '../../../i18n/es';
-import Layout from '../../../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import en from '../i18n/en';
+import Layout from '../layouts/Layout.astro';
 
-import type { Language } from '../../../types/language.type';
-export function getStaticPaths() {
-  return [{ params: { lang: 'es' } }, { params: { lang: 'en' } }];
-}
-
-export const defaultRedirect = '/en';
-
-const lang = Astro.params.lang as Language;
-const translations = { es, en };
-const t = translations[lang];
+// Root 404 (non-localized). Useful for hosts that request /nonexistent
+const t = en;
 const content = t.error;
 ---
 
-<Layout lang={lang} t={t}>
+<Layout lang={'en'} t={t}>
   <section
     class="h-full w-full max-w-screen md:max-w-7xl flex flex-col md:flex-row justify-center items-center px-5 xl:px-0 gap-10 pt-30 md:pt-[150px]"
   >
