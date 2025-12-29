@@ -7,7 +7,7 @@ const { interval = 8000 } = Astro.props as Props;
 ---
 
 <div
-  class="relative px-0 max-w-[550px] lg:max-w-[700px] xl:max-w-[800px] 3xl:max-w-[900px] w-auto hero-carousel flex flex-col justify-center items-center gap-[27px]"
+  class="relative px-0 max-w-[550px] lg:max-w-[700px] xl:max-w-[50vw] 3xl:max-w-[900px] w-auto hero-carousel flex flex-col justify-center items-center gap-[27px]"
   data-interval={interval}
 >
   <!-- Viewport -->
@@ -149,7 +149,37 @@ const { interval = 8000 } = Astro.props as Props;
         total.textContent = totalSlides.toString();
       }
 
-      const setup = () => {
+      const waitForImages = async (nodes, opts = {}) => {
+        const timeout = typeof opts.timeout === 'number' ? opts.timeout : 400;
+        const imgs = Array.from(nodes || []).flatMap((n) =>
+          Array.from(n.querySelectorAll ? n.querySelectorAll('img') : [])
+        );
+        await Promise.all(
+          imgs.map(
+            (img) =>
+              new Promise((resolve) => {
+                if (img.complete) return resolve();
+                let done = false;
+                const onDone = () => {
+                  if (done) return;
+                  done = true;
+                  cleanup();
+                  resolve();
+                };
+                const cleanup = () => {
+                  img.removeEventListener('load', onDone);
+                  img.removeEventListener('error', onDone);
+                };
+                img.addEventListener('load', onDone, { once: true });
+                img.addEventListener('error', onDone, { once: true });
+                // fallback timeout so we never wait forever (lazy images, blocked loading, etc.)
+                setTimeout(onDone, timeout);
+              })
+          )
+        );
+      };
+
+      const setup = async () => {
         // helper to detect items per view
         function getItemsPerView() {
           // Determine items per view by measuring container and first slide width.
@@ -167,17 +197,23 @@ const { interval = 8000 } = Astro.props as Props;
           clearInterval(carousel._heroAuto);
           carousel._heroAuto = null;
         }
+        // remove any existing clones
+        Array.from(track.querySelectorAll('.clone')).forEach((n) => n.remove());
+
+        // recompute responsive values after images/styles are applied
+        // wait for images of the originals to load to get correct measurements
+        const originalsBefore = Array.from(track.children).filter(
+          (n) => !n.classList.contains('clone')
+        );
+        await waitForImages(originalsBefore);
 
         // recompute responsive values
         let itemsPerView = getItemsPerView();
         let step = itemsPerView >= 9 ? 2 : itemsPerView;
-
-        // Keep originals (non-clone) and remove previous clones
+        // Keep originals (non-clone)
         const originals = Array.from(track.children).filter(
           (n) => !n.classList.contains('clone')
         );
-        // remove any existing clones
-        Array.from(track.querySelectorAll('.clone')).forEach((n) => n.remove());
 
         // If there is only one original slide, nothing to clone
         if (originals.length <= 1) {
@@ -414,10 +450,15 @@ const { interval = 8000 } = Astro.props as Props;
 
         function init() {
           slides = Array.from(track.children);
+          // Force a non-animated positioning to the intended starting slide
           if (slides.length > 1) {
-            goTo(currentIndex, false);
+            track.style.transition = 'none';
+            track.style.transform = `translateX(-${Math.round(
+              getSlideWidth() * currentIndex
+            )}px)`;
           }
-          updateProgress();
+          // small rAF to ensure layout settled before enabling transitions
+          requestAnimationFrame(() => updateProgress());
         }
 
         // On resize re-run setup to rebuild clones for the new itemsPerView

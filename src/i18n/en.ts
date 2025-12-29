@@ -54,7 +54,7 @@ export default {
   main: {
     hero: {
       title:
-        'With Monarca <br class="hidden md:block"/> Grooming. We Pamper <br class="hidden md:block"/> Your <br class="xs:hidden block"/> Pets at Home',
+        'With Monarca <br class="hidden md:block"/> Grooming. We Pamper <br class="hidden md:block 3xl:hidden"/> Your <br class="xs:hidden block"/> Pets at Home',
       description:
         'Mobile Pet Grooming <br class="block md:hidden"/> in Florida',
       buttons: [

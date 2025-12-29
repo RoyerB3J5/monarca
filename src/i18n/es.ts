@@ -54,7 +54,7 @@ export default {
   main: {
     hero: {
       title:
-        'Con Monarca <br class="hidden md:block"/> Grooming. Consentimos <br class="hidden md:block"/> a tus mascotas en casa',
+        'Con Monarca <br class="hidden md:block"/> Grooming. Consentimos <br class="hidden md:block 3xl:hidden"/> a tus mascotas en casa',
       description: 'Peluquería móvil para mascotas en Florida',
       buttons: [
         {

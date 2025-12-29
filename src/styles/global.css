@@ -26,7 +26,8 @@
   --color-accent-2: #5995ff;
   --color-paragraph: #1d1d1d;
   --breakpoint-xs: 400px;
-  --breakpoint-3xl: 106rem;
+  --breakpoint-4xl: 1750px;
+  --breakpoint-3xl: 2000px;
 }
 
 .banner-back {

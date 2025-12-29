@@ -18,20 +18,27 @@ const content = t.gallery;
 const images = [
   'gal-1',
   'gal-2',
+  'gal-2-1',
   'gal-3',
+  'gal-2-2',
   'gal-4',
   'gal-5',
   'gal-6',
+  'gal-2-3',
   'gal-7',
   'gal-8',
+  'gal-2-4',
   'gal-9',
   'gal-10',
   'gal-11',
+  'gal-2-5',
   'gal-12',
   'gal-13',
   'gal-14',
+  'gal-2-6',
   'gal-15',
   'gal-16',
+  'gal-2-7',
   'gal-17',
   'gal-18',
 ];
@@ -82,7 +89,7 @@ const images = [
             height="800"
             loading="lazy"
             decoding="async"
-            class="absolute w-full h-full inset-0 z-0 object-cover"
+            class={`absolute w-full h-full inset-0 z-0 object-cover ${img === 'gal-2-1' || img === 'gal-2-6' ? 'object-bottom' : 'object-center'}`}
           />
         </div>
       ))
