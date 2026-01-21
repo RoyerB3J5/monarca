@@ -217,9 +217,9 @@ export default {
         'Mira nuestras últimas transformaciones, mascotas felices y momentos reales de nuestras jornadas de peluquería. Cada foto recuerda nuestra misión de ofrecer calma, confort y resultados hermosos para cada perro y gato que atendemos en Florida.',
     },
     about: {
-      title: 'Lo que los dueños dicen <br/> sobre Monarca Grooming',
+      title: 'Lo que los dueños dicen <br class="hidden md:block"/> sobre Monarca Grooming',
       description:
-        'Respaldados por reseñas reales de cinco estrellas de familias que confían <br/> en nosotros, Monarca Grooming es conocido por <br/> un cuidado amable, resultados limpios y una <br/>  experiencia de peluquería calmada en casa.',
+        'Respaldados por reseñas reales de cinco estrellas de familias que confían <br class="hidden md:block"/> en nosotros, Monarca Grooming es conocido por <br class="hidden md:block"/> un cuidado amable, resultados limpios y una <br class="hidden md:block"/>  experiencia de peluquería calmada en casa.',
     },
   },
   book: {

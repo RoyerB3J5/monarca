@@ -217,9 +217,9 @@ export default {
         'See our latest transformations, happy pets and real moments from our grooming days. Every photo is a reminder of our mission to bring calm, comfort and beautiful results to every dog and cat we care for in Florida. Updated often with real clients, real smiles and grooming done with heart.',
     },
     about: {
-      title: 'What Pet Parents Say <br/> About Monarca Grooming',
+      title: 'What Pet Parents Say <br class="hidden md:block"/> About Monarca Grooming',
       description:
-        'Backed by real five star reviews from families who trust <br/> us with their pets, Monarca Grooming is known for <br/> gentle care, clean results and a calm grooming <br/> experience right at home.',
+        'Backed by real five star reviews from families who trust <br class="hidden md:block"/> us with their pets, Monarca Grooming is known for <br class="hidden md:block"/> gentle care, clean results and a calm grooming <br class="hidden md:block"/> experience right at home.',
     },
   },
   book: {

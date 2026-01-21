@@ -81,7 +81,7 @@ const lang = match ? match[1] : 'en';
         {
           content.gromming.items.map((item) => (
             <div
-              class={`w-full rounded-4xl ${item.image === 'dog-dental' || item.image === 'cat-dental' ? 'py-7 md:py-10' : 'py-7 md:py-14'} bg-primary pr-[23px] md:pl-0 flex justify-end items-center relative `}
+              class={`w-full rounded-4xl ${item.image === 'dog-dental' || item.image === 'cat-dental' ? 'py-4 xs:py-7 md:py-10' : 'py-7 md:py-14'} bg-primary pr-[23px] md:pl-0 flex justify-end items-center relative `}
             >
               <img
                 src={`/images/main/${item.image}.webp`}
@@ -90,10 +90,10 @@ const lang = match ? match[1] : 'en';
                 height={item.height}
                 decoding="async"
                 loading="lazy"
-                class={`w-[48%] sm:w-[32%] md:w-[50%] lg:w-[50%] h-auto absolute left-3 sm:left-10 md:left-3 ${
+                class={` sm:w-[32%] md:w-[50%] lg:w-[50%] h-auto absolute  sm:left-10 md:left-3 ${
                   item.image === 'dog-dental' || item.image === 'cat-dental'
-                    ? 'bottom-0'
-                    : 'bottom-7 md:bottom-10'
+                    ? 'bottom-0 w-[53%] left-1'
+                    : 'bottom-7 md:bottom-10 w-[48%] left-3'
                 } max-h-none md:max-h-[327px] lg:max-h-none`}
               />
               <div class="flex flex-col justify-center items-start gap-[15px] md:gap-[18px] max-w-[45%] md:max-w-[246px] z-20">
@@ -153,7 +153,7 @@ const lang = match ? match[1] : 'en';
           {
             content.choose.items.map((item, index) => (
               <>
-                <div class="flex flex-col lg:flex-row justify-start items-center lg:items-start gap-[31px] w-full">
+                <div class="flex flex-col lg:flex-row justify-center md:justify-start items-center lg:items-start gap-[31px] w-full">
                   <div class="shrink-0 w-[100px] h-[100px] flex items-center justify-center">
                     <img
                       src={`/images/main/${item.icon}.svg`}
@@ -163,11 +163,11 @@ const lang = match ? match[1] : 'en';
                       class={'w-[100px] h-[100px]'}
                     />
                   </div>
-                  <div class="flex-1 min-w-0 flex flex-col justify-center items-start gap-[11px]">
-                    <h3 class="text-[20px] font-subtitle leading-[120%] font-semibold">
+                  <div class="flex-1 min-w-0 flex flex-col justify-center items-center md:items-start gap-[11px]">
+                    <h3 class="text-[20px] font-subtitle leading-[120%] font-semibold text-center md:text-start">
                       {item.title}
                     </h3>
-                    <p class="text-[16px] leading-[130%] text-[#686868]">
+                    <p class="text-[16px] leading-[130%] text-[#686868] text-center md:text-start">
                       {item.description}
                     </p>
                   </div>
