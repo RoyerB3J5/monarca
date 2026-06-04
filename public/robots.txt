@@ -1,0 +1,7 @@
+User-agent: *
+Disallow:
+
+User-agent: AdsBot-Google
+Allow: /
+
+Sitemap: https://monarcagrooming.com/sitemap-index.xml
